@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado RB — Frescura que se siente</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+
+<header class="barra-navegacion">
+    <div class="fila-superior-nav">
+        
+        <a href="#menu-lateral" class="boton-hamburguesa-nav" title="Abrir menú">
+            <svg class="icono-hamburguesa-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </a>
+        <a href="index.html" class="logo-imagen-link" title="Inicio Supermercado RB"></a>
+        <nav class="menu-carrito-solo">
+            <a href="#carrito-lateral" class="boton-carrito-nav">
+                <svg class="icono-carrito-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+                <span>Carrito</span>
+                <span class="contador-carrito">0</span>
+            </a>
+        </nav>
+    </div> <form class="buscador-barra" action="#" method="GET">
+        <input type="text" placeholder="¿Qué estás buscando hoy?...">
+        <button type="submit" class="boton-buscar">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+    </form>
+
+    <section id="menu-lateral" class="menu-panel">
+        <div class="menu-cabecera">
+            <h2>Categorías RB</h2>
+            <a href="#" class="boton-cerrar-menu">✕</a>
+        </div>
+        <nav class="menu-enlaces-verticales">
+            <a href="index.html">Inicio</a>
+            <a href="frutas.html">Frutas Frescas</a>
+            <a href="verduras.html">Verduras Orgánicas</a>
+            <a href="#ofertas">Ofertas Relámpago</a>
+            <a href="#beneficios">Sobre Nosotros</a>
+        </nav>
+    </section>
+</header>
+
+<section class="banner-principal">
+    <h1>Frescura que se siente</h1>
+        <p>Los mejores productos locales directo a tu hogar con la calidad que mereces.</p>
+        <a href="#productos" class="boton-accion">Ver Productos</a>
+</section>
+
+    <section id="categorias" class="seccion-contenedor">
+        <h2>Nuestras Categorías</h2>
+        <div class="grid-categorias">
+            <a href="verduras.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/verduras.jpg" alt="Verduras" class="imagen-categoria">
+                <span>Verduras</span>
+            </a>
+            <a href="frutas.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/frutas.jpg" alt="Frutas" class="imagen-categoria">
+                <span>Frutas</span>
+            </a>
+            <a href="carnes.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/carnes.jpg" alt="Carnes" class="imagen-categoria">
+                <span>Carnes</span>
+            </a>
+            <a href="lacteos.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/lacteos.jpg" alt="Lácteos" class="imagen-categoria">
+                <span>Lácteos</span>
+            </a>
+            <a href="envios.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/envios.jpg" alt="Envíos a Domicilio" class="imagen-categoria">
+                <span>Envíos a Domicilio</span>
+            </a>
+            <a href="novedades.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/novedades.jpg" alt="Novedades" class="imagen-categoria">
+                <span>Novedades</span>
+            </a>
+            <a href="lo-mas-vendido.html" class="tarjeta-categoria">
+                <img src="/Estilos/img_categorias/lo-mas-vendido.jpg" alt="Lo más Vendido" class="imagen-categoria">
+                <span>Lo más Vendido</span>
+            </a>
+        </div>
+    </section>
+
+<section id="ofertas" class="seccion-contenedor seccion-gris">
+    <h2>Ofertas de la Semana</h2>
+    <div class="grid-ofertas">
+        <div class="tarjeta-oferta fondo-rojo">
+            <h3>¡30% de Descuento!</h3>
+            <p>En toda la sección de frutas y verduras seleccionadas comprando hoy.</p>
+            <span class="etiqueta">Solo por hoy</span>
+        </div>
+        <div class="tarjeta-oferta fondo-verde">
+            <h3>Combo Familiar</h3>
+            <p>Lleva 1 Pollo Entero + 1 Litro de Leche fresca por solo S/ 14.50</p>
+            
+            <div class="temporizador-contenedor">
+                <span class="tiempo-texto">La oferta termina en:</span>
+                <div class="reloj">
+                    <div class="tiempo-bloque"><span id="horas">02</span><small>h</small></div>
+                    <div class="tiempo-bloque"><span id="minutos">45</span><small>m</small></div>
+                    <div class="tiempo-bloque"><span id="segundos">00</span><small>s</small></div>
+                </div>
+            </div>
+            <span class="etiqueta">Ahorra más</span>
+        </div>
+    </div>
+</section>
+
+<section id="productos" class="seccion-contenedor">
+    <h2>Productos Destacados</h2>
+    <div class="grid-productos">
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/descargar.jpg" alt="Manzana Roja" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Manzana Roja</h3>
+                <p class="precio">S/ 4.50 x kg</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/Leche-gloria.jpg" alt="Leche Gloria" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Leche Gloria</h3>
+                <p class="precio">S/ 3.80 litro</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/pollo-entero.jpg" alt="Pollo Entero" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Pollo Entero</h3>
+                <p class="precio">S/ 12.00 x kg</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+
+        <a href="verduras.html" class="tarjeta-producto tarjeta-ver-mas" title="Ver catálogo completo">
+            <div class="contenido-ver-mas">
+                <span class="simbolo-mas">+</span>
+                <p>Ver más productos</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section id="hogar-cocina" class="seccion-contenedor seccion-blanca-alterna">
+    <h2>Lo más vendido en Hogar y Cocina</h2>
+    <div class="grid-productos">
+        
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/licuadora-profesional.jpg" alt="Licuadora Profesional" class="imagen-producto">
+            <div class="tarjeta-producto-info">          
+                <h3>Manzana Roja</h3>
+                <p class="precio">S/ 4.50 x kg</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/set-sartenes.jpg" alt="Set de Sartenes" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Set de Sartenes</h3>
+                <p class="precio">S/ 89.90</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="/Estilos/img_produc/juego-cubiertos.jpg" alt="Juego de Cubiertos" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Juego de Cubiertos</h3>
+                <p class="precio">S/ 45.00</p>
+                <button class="boton-comprar">Ver detalles</button>
+            </div>
+        </div>
+
+        <a href="verduras.html" class="tarjeta-producto tarjeta-ver-mas" title="Ver catálogo completo">
+            <div class="contenido-ver-mas">
+                <span class="simbolo-mas">+</span>
+                <p>Ver más productos</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="seccion-contenedor seccion-recomendados">
+    
+    <h2>Los mejores productos para ti</h2>
+    
+    <div class="grid-productos">
+        
+        <div class="tarjeta-producto tarjeta-destacada">
+            <img src="/Estilos/img_produc/palta.jpg" alt="Palta Fuerte" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Palta Fuerte Premium</h3>
+                <p class="precio">S/ 6.50 x kg</p>
+                <span class="etiqueta-recom">Lo más vendido</span>
+                <button class="boton-comprar">Agregar</button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto tarjeta-destacada">
+            <img src="/Estilos/img_produc/arandanos.jpg" alt="Arándanos" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Arándanos Azules</h3>
+                <p class="precio">S/ 5.80 x caja</p>
+                <span class="etiqueta-recom">Recomendado</span>
+                <button class="boton-comprar">Agregar</button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto tarjeta-destacada">
+            <img src="/Estilos/img_produc/queso.jpg" alt="Queso Mantecoso" class="imagen-producto">
+            <div class="tarjeta-producto-info">
+                <h3>Queso Mantecoso Regional</h3>
+                <p class="precio">S/ 18.00 x kg</p>
+                <span class="etiqueta-recom">Calidad Premium</span>
+                <button class="boton-comprar">Agregar</button>
+            </div>
+        </div>
+
+        <a href="verduras.html" class="tarjeta-producto tarjeta-ver-mas" title="Ver catálogo completo">
+            <div class="contenido-ver-mas">
+                <span class="simbolo-mas">+</span>
+                <p>Ver más productos</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section id="beneficios" class="seccion-contenedor seccion-gris">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="flex-beneficios">
+        <div class="tarjeta-beneficio">
+            <svg class="icono-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-7l1.75 2.5H17v-2.5h2.5z"/>
+            </svg>
+            <h3>Envío Rápido</h3>
+            <p>Recibe tus productos en la comodidad de tu casa en tiempo récord.</p>
+        </div>
+        <div class="tarjeta-beneficio">
+            <svg class="icono-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+            </svg>
+            <h3>Garantía de Frescura</h3>
+            <p>Si algún producto no cumple tus expectativas, lo cambiamos al instante.</p>
+        </div>
+        <div class="tarjeta-beneficio">
+            <svg class="icono-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+            </svg>
+            <h3>Precios Bajos</h3>
+            <p>Cuidamos tu economía con ofertas insuperables en toda la región.</p>
+        </div>
+    </div>
+</section>
+
+<section id="carrito-lateral" class="carrito-panel">
+    <div class="carrito-cabecera">
+        <h2>Tu Carrito</h2>
+        <a href="#" class="boton-cerrar">✕</a>
+    </div>
+
+    <div class="carrito-contenido">
+        
+        <div class="producto-carrito">
+            <img src="/Estilos/img_produc/descargar.jpg" alt="Manzana">
+            <div class="producto-carrito-detalle">
+                <h4>Manzana Roja</h4>
+                <p class="precio-carrito">S/ 4.50</p>
+                <div class="carrito-cantidad">
+                    <span>Cant: 1</span>
+                </div>
+            </div>
+            <button class="eliminar-item">🗑️</button>
+        </div>
+
+        <div class="producto-carrito">
+            <img src="/Estilos/img_produc/Leche-gloria.jpg" alt="Leche">
+            <div class="producto-carrito-detalle">
+                <h4>Leche Gloria</h4>
+                <p class="precio-carrito">S/ 3.80</p>
+                <div class="carrito-cantidad">
+                    <span>Cant: 2</span>
+                </div>
+            </div>
+            <button class="eliminar-item">🗑️</button>
+        </div>
+
+    </div>
+
+    <div class="carrito-pie">
+        <div class="total-linea">
+            <span>Subtotal:</span>
+            <strong>S/ 12.10</strong>
+        </div>
+        <div class="total-linea">
+            <span>Envío (Amazonas):</span>
+            <span class="envío-gratis">Gratis</span>
+        </div>
+        <hr>
+        <div class="total-linea total-final">
+            <span>Total:</span>
+            <strong>S/ 12.10</strong>
+        </div>
+        <button class="boton-pagar">Proceder al Pago</button>
+    </div>
+</section> 
+
+<footer class="pie-pagina">
+    <p>© 2026 Supermercado RB. Todos los derechos reservados.</p>
+    <p>Hecho con ❤️ en Amazonas, Perú</p>
+</footer>
+
+</body>
+</html>
