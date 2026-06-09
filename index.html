@@ -4,49 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supermercado RB — Frescura que se siente</title>
+    <link rel="stylesheet" href="/Estilos/stylesBoos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/Estilos/styles.css">
 </head>
 <body>
 
-<header class="barra-navegacion">
-    <div class="fila-superior-nav">
-        
-        <a href="#menu-lateral" class="boton-hamburguesa-nav" title="Abrir menú">
-            <svg class="icono-hamburguesa-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-            </svg>
-        </a>
-        <a href="index.html" class="logo-imagen-link" title="Inicio Supermercado RB"></a>
-        <nav class="menu-carrito-solo">
-            <a href="#carrito-lateral" class="boton-carrito-nav">
-                <svg class="icono-carrito-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-                </svg>
-                <span>Carrito</span>
-                <span class="contador-carrito">0</span>
-            </a>
-        </nav>
-    </div> <form class="buscador-barra" action="#" method="GET">
-        <input type="text" placeholder="¿Qué estás buscando hoy?...">
-        <button type="submit" class="boton-buscar">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        </button>
-    </form>
+<header class="navbar navbar-expand-lg bg-white border-bottom py-3 shadow-sm custom-header">
+    <div class="container px-3 px-md-4">
+        <div class="row align-items-center w-100 gx-2 gy-3 gy-md-0 m-0">
+            
+            <div class="col-3 col-md-4 d-flex align-items-center order-1">
+                <button class="btn btn-light border rounded-circle p-0 d-flex align-items-center justify-content-center custom-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
+                <span class="d-none d-xl-inline text-muted small ms-3 fw-medium text-uppercase tracking-wider">Garantía de Origen</span>
+            </div>
 
-    <section id="menu-lateral" class="menu-panel">
-        <div class="menu-cabecera">
-            <h2>Categorías RB</h2>
-            <a href="#" class="boton-cerrar-menu">✕</a>
+            <div class="col-6 col-md-4 text-center order-2">
+                <a href="index.html" class="navbar-brand m-0 p-0 d-inline-flex flex-column align-items-center brand-wrap" title="RB MARKET">
+                    <span class="brand-main-text text-success">RB<span class="text-dark fw-light">MARKET</span></span>
+                    <small class="brand-subtext d-none d-sm-block">CULTURA DE FRESCURA</small>
+                </a>
+            </div>
+
+            <div class="col-3 col-md-4 d-flex align-items-center justify-content-end order-3">
+                <a href="#carrito-lateral" class="btn btn-light bg-light border-0 d-flex align-items-center gap-2 px-3 py-2 rounded-pill position-relative custom-cart-btn" title="Revisar mi orden">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span class="d-none d-lg-inline fw-bold text-dark small text-uppercase tracking-wider">Mi Orden</span>
+                    <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge-num">0</span>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-8 mx-auto order-4 mt-2 mt-md-3">
+                <form class="w-100 search-form-wrap" action="#" method="GET">
+                    <div class="input-group custom-search-group">
+                        <input type="text" class="form-control border-0 ps-4 py-2 bg-light text-dark custom-search-input" placeholder="Encuentra ingredientes selectos y frescura excepcional..." aria-label="Buscar productos">
+                        <button type="submit" class="btn btn-light bg-light border-0 px-3 text-muted d-flex align-items-center custom-search-submit">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <nav class="menu-enlaces-verticales">
-            <a href="index.html">Inicio</a>
-            <a href="frutas.html">Frutas Frescas</a>
-            <a href="verduras.html">Verduras Orgánicas</a>
-            <a href="#ofertas">Ofertas Relámpago</a>
-            <a href="#beneficios">Sobre Nosotros</a>
-        </nav>
-    </section>
+    </div>
 </header>
+
+<div class="offcanvas offcanvas-start border-0 custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">
+    
+    <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column" id="menu-lateral-label">
+            <span class="fs-4 fw-black text-success tracking-tight canvas-brand-text">RB<span class="text-dark fw-light">MARKET</span></span>
+            <small class="text-muted canvas-brand-subtext">EXPERIENCIA SELECTA</small>
+        </div>
+        <button type="button" class="btn-close text-reset p-2" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+    </div>
+
+    <div class="offcanvas-body p-0">
+        <div class="p-4">
+            <p class="text-uppercase text-muted fw-bold tracking-wider mb-3 header-seccion-menu">Explorar Categorías</p>
+            
+            <div class="list-group list-group-flush rounded-3 overflow-hidden custom-menu-list">
+                <a href="#frutas-verduras" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
+                    <span>Frutas y Verduras Orgánicas</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a href="#lacteos-huevos" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
+                    <span>Lácteos y Derivados Frescos</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a href="#carnes-pescados" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
+                    <span>Carnes y Cortes Selectos</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a href="#despensa" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
+                    <span>Despensa y Especialidades Gourmet</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a href="#bebidas" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
+                    <span>Bebidas y Cavas Selectas</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="p-4 bg-light border-top mt-auto position-absolute bottom-0 w-100">
+            <p class="text-uppercase text-muted fw-bold tracking-wider mb-2 header-seccion-menu">Atención Personalizada</p>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded fw-bold style-badge-text">LÍNEA DIRECTA</span>
+                <small class="text-secondary fw-semibold">Soporte Premium</small>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="banner-principal">
     <h1>Frescura que se siente</h1>
@@ -321,6 +380,8 @@
     <p>© 2026 Supermercado RB. Todos los derechos reservados.</p>
     <p>Hecho con ❤️ en Amazonas, Perú</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

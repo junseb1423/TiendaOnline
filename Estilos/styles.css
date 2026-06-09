@@ -2,196 +2,132 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
-body {
-    background-color: rgb(248, 249, 250);
-    color: rgb(26, 26, 26);
-    line-height: 1.6;
+a {
+    text-decoration: none !important;
 }
 
-.barra-navegacion {
-    display: flex;
-    flex-direction: column;       
-    padding: 12px 16px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(238, 238, 238);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.brand-wrap {
+    transition: transform 0.25s ease;
+}
+.brand-wrap:hover {
+    transform: translateY(-1px);
+}
+.brand-main-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.85rem !important;
+    line-height: 1;
+    font-weight: 800 !important;
+    letter-spacing: -0.04em;
+}
+.brand-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: #6c757d;
+    margin-top: 2px;
 }
 
-.fila-superior-nav {
-    display: flex;
-    flex-direction: row;          
-    align-items: center;          
-    justify-content: space-between; 
-    width: 100%;
-    margin-bottom: 8px;           
+.custom-toggle-btn {
+    width: 42px;
+    height: 42px;
+    transition: all 0.2s ease;
+    border-color: #e3e6e8 !important;
+}
+.custom-toggle-btn:hover {
+    background-color: #e8f5e9 !important;
+    border-color: #198754 !important;
+    color: #198754 !important;
 }
 
-.logo-imagen-link {
-    display: block;
-    background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZ2BL_qQys75Sw1zyTjk8x942slQYkiRFs9kFFwgsQZlvFYazJDnUqJcnxyqOAS8w4gLT9tdeo1Mqmb9EYmRYWPKSYMUrit1Ey6oD9ZJvyoZ5ZF-5oAnoydj8XsqAcnFLcn7c=s1360-w1360-h1020-rw'); 
-    background-size: contain;      
-    background-repeat: no-repeat; 
-    background-position: center;   
-    width: 120px;
-    height: 80px;
-    margin-bottom: 0 !important;
-    transition: transform 0.3s ease;
-}
-
-.logo-imagen-link:hover {
-    transform: scale(1.05); 
-}
-
-.buscador-barra {
-    display: flex;
-    align-items: center;
-    width: 100%;                 
-    max-width: 100%;
-    background-color: rgb(255, 255, 255);    
-    background-color: rgb(255, 255, 255);    
-    border: 1px solid ;
-    border-radius: 50px;          
-    padding: 2px 6px 2px 16px;    
-    margin: 4px 0 0 0 !important;        
+.custom-search-group {
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border: 1px solid #e3e6e8;
     transition: all 0.3s ease;
 }
-
-.buscador-barra:focus-within {
-    background-color: rgb(255, 255, 255);    
-    border-color: rgb(46, 125, 50);        
-    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+.custom-search-group:focus-within {
+    border-color: #198754;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.08);
 }
-
-.buscador-barra input {
-    flex: 1;                      
-    background: none;
-    border: none;
-    outline: none;                
-    padding: 10px 0;
+.custom-search-input {
     font-size: 14px;
-    color: rgb(26, 26, 26);
 }
-
-.buscador-barra input::placeholder {
-    color: rgb(117, 117, 117);              
-}
-
-.boton-buscar {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-}
-
-.boton-buscar:hover {
-    background-color: rgb(232, 245, 233);    
-}
-
-.boton-buscar svg {
-    width: 20px;
-    height: 20px;
-    fill: rgb(117, 117, 117);                
-    transition: fill 0.2s ease;
-}
-
-.buscador-barra:focus-within .boton-buscar svg {
-    fill: rgb(46, 125, 50);               
-}
-
-.boton-hamburguesa-nav {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-}
-
-.boton-hamburguesa-nav:hover {
-    background-color: rgb(232, 245, 233);
-}
-
-.icono-hamburguesa-svg {
-    width: 26px;
-    height: 26px;
-    fill: #1a1a1a; 
-}
-
-.menu-panel {
-    position: fixed;
-    top: 0;
-    left: -100%;             
-    width: 70%;              
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 0 25px rgba(0,0,0,0.15);
-    z-index: 9999;            
-    display: flex;
-    flex-direction: column;
-    transition: left 0.4s ease; 
-}
-
-.menu-panel:target {
-    left: 0;
-}
-
-.menu-cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #eeeeee;
-    background-color: #f8f9fa;
-}
-
-.menu-cabecera h2 {
-    margin: 0 !important;
-    font-size: 18px !important;
-    color: #2e7d32 !important; /* Verde de la marca */
-    background: none !important;
-    padding: 0 !important;
+.custom-search-input:focus {
     box-shadow: none !important;
+    background-color: transparent !important;
+}
+.custom-search-group:focus-within .custom-search-submit {
+    color: #198754 !important;
 }
 
-.boton-cerrar-menu {
-    font-size: 22px;
-    text-decoration: none;
-    color: #757575;
-}
-
-.menu-enlaces-verticales {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-}
-
-.menu-enlaces-verticales a {
-    padding: 16px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px solid #f1f3f5;
+.custom-cart-btn {
     transition: all 0.2s ease;
 }
+.custom-cart-btn:hover {
+    background-color: #e8f5e9 !important;
+    color: #198754 !important;
+}
+.cart-badge-num {
+    padding: 4px 6px !important;
+    font-size: 10px;
+    font-weight: 700;
+}
 
-.menu-enlaces-verticales a:hover {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-    padding-left: 32px; /* Pequeño desplazamiento interactivo en hover */
+/* DISEÑO DEL MENÚ LATERAL */
+
+.canvas-brand-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800 !important;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+.canvas-brand-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-top: 3px;
+}
+.header-seccion-menu {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+.custom-offcanvas {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05) !important;
+    width: 340px !important; 
+}
+
+.custom-menu-list .list-group-item {
+    border-color: #f1f3f5 !important;
+    font-size: 14px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.custom-menu-list .list-group-item:hover {
+    background-color: #e8f5e9 !important; 
+    color: #198754 !important; 
+    padding-left: 1.75rem !important; 
+}
+
+.style-badge-text {
+    font-size: 9px;
+    letter-spacing: 0.05em;
+}
+
+.custom-menu-list .list-group-item .arrow-icon {
+    transition: transform 0.25s ease, stroke 0.25s ease;
+}
+
+.custom-menu-list .list-group-item:hover .arrow-icon {
+    transform: translateX(4px);
+    stroke: #198754;
 }
 
 .boton-carrito-nav {
