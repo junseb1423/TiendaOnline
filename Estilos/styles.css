@@ -130,203 +130,60 @@ a {
     stroke: #198754;
 }
 
-.boton-carrito-nav {
-    background-color: rgb(241, 243, 245);
-    padding: 6px 14px !important; 
-    border-radius: 20px;
-    color: rgb(26, 26, 26) !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px; 
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+/* ==========================================================================
+   DISEÑO HERO PRINCIPAL (BANNER PREMIUM)
+   ========================================================================== */
+
+.custom-hero {
+    /* Un degradado radial muy sutil que aporta frescura sin saturar */
+    background: radial-gradient(circle at 90% 10%, #e8f5e9 0%, #ffffff 60%);
+    min-height: 480px;
+    overflow: hidden;
 }
 
-.boton-carrito-nav:hover {
-    background-color: rgb(232, 245, 233); 
-    color: rgb(46, 125, 50) !important;  
+.hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.85rem !important;
+    line-height: 1.15;
+    color: #1a1a1a !important;
+    font-weight: 800 !important;
 }
 
-.icono-carrito-svg {
-    width: 18px;  
-    height: 18px;
-    fill: currentColor; 
-    transition: fill 0.2s ease;
+.hero-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem !important;
+    max-width: 540px;
+    line-height: 1.6;
 }
 
-.contador-carrito {
-    background-color: rgb(227, 28, 37);
-    color: rgb(255, 255, 255);
-    font-size: 11px;
-    padding: 1px 6px;
-    border-radius: 50%;
+/* Efectos interactivos y fluidos para los botones */
+.custom-hero-btn {
+    font-size: 13px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.custom-hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.2) !important;
 }
 
-.carrito-panel {
-    position: fixed;
-    top: 0;
-    right: -100%;             
-    width: 100%;              
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    transition: right 0.4s ease; 
+.custom-hero-btn-secondary {
+    font-size: 13px !important;
+    transition: all 0.3s ease;
+}
+.custom-hero-btn-secondary:hover {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
 }
 
-.carrito-panel:target {
-    right: 0; 
+/* Caja de diseño interactiva de la derecha */
+.hero-image-overlay {
+    border: 1px solid rgba(25, 135, 84, 0.1);
+    transition: transform 0.5s ease;
 }
-
-.carrito-cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgb(238, 238, 238);
+.hero-image-overlay:hover {
+    transform: scale(1.02);
 }
-
-.carrito-cabecera h2 {
-    margin-bottom: 0 !important;
-    font-size: 20px !important;
-    background: none !important;
-    color: rgb(26, 26, 26) !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-}
-
-.boton-cerrar {
-    font-size: 22px;
-    text-decoration: none;
-    color: rgb(117, 117, 117);
-}
-
-.carrito-contenido {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.producto-carrito {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgb(238, 238, 238);
-}
-
-.producto-carrito img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.producto-carrito-detalle {
-    flex: 1;
-}
-
-.producto-carrito-detalle h4 {
-    font-size: 14px;
-    margin-bottom: 2px;
-}
-
-.precio-carrito {
-    color: rgb(227, 28, 37);
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.carrito-cantidad {
-    font-size: 12px;
-    color: rgb(117, 117, 117);
-}
-
-.eliminar-item {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.carrito-pie {
-    padding: 20px;
-    border-top: 1px solid rgb(238, 238, 238);
-    background-color: rgb(248, 249, 250);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.total-linea {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.envío-gratis {
-    color: rgb(46, 125, 50);
-    font-weight: bold;
-}
-
-.total-final {
-    font-size: 18px;
-    color: rgb(26, 26, 26);
-}
-
-.boton-pagar {
-    background-color: rgb(46, 125, 50);
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 8px;
-}
-
-.boton-pagar:hover {
-    background-color: rgb(27, 94, 32);
-}
-
-.banner-principal {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/Estilos/banner.png'); 
-    background-size: cover;        
-    background-position: center;  
-    background-repeat: no-repeat;
-    padding: 60px 20px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.banner-principal h1 {
-    color: rgb(255, 255, 255);              
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner-principal p {
-    color: rgb(224, 224, 224);               
-    font-size: 15px;
-    margin-bottom: 24px;
-    max-width: 100%;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.banner-frutas {
-    background-color: rgb(255, 248, 225);
-    background-image: linear-gradient(rgba(230, 81, 0, 0.05), rgba(230, 81, 0, 0.1));
-}
-
 .boton-accion {
     display: inline-block;
     background-color: rgb(227, 28, 37);
