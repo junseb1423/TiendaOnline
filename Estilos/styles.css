@@ -347,6 +347,29 @@ a {
     max-width: 85% !important; 
 }
 
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA LA TARJETA DE VER MÁS (HOGAR)
+   ========================================================================== */
+
+.custom-view-more-card {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-view-more-card .btn-mas-wrap {
+    transition: transform 0.3s ease;
+}
+
+/* Al pasar el mouse por encima de la tarjeta, el signo '+' rota levemente y la tarjeta sube */
+.custom-view-more-card:hover {
+    transform: translateY(-4px);
+    background-color: #d1e7dd !important; /* Un verde sutilmente más intenso */
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.1) !important;
+}
+
+.custom-view-more-card:hover .btn-mas-wrap {
+    transform: rotate(90deg) scale(1.05);
+}
+
 
 @media (min-width: 481px) {
 

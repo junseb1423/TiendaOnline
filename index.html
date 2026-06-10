@@ -428,43 +428,86 @@
 </section>
 
 <section id="hogar-cocina" class="seccion-contenedor seccion-blanca-alterna">
-    <h2>Lo más vendido en Hogar y Cocina</h2>
-    <div class="grid-productos">
+    <div class="container px-4">
         
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/licuadora-profesional.jpg" alt="Licuadora Profesional" class="imagen-producto">
-            <div class="tarjeta-producto-info">          
-                <h3>Manzana Roja</h3>
-                <p class="precio">S/ 4.50 x kg</p>
-                <button class="boton-comprar">Ver detalles</button>
+        <div class="d-flex align-items-center justify-content-between mb-4 border-bottom pb-2">
+            <div class="d-flex align-items-baseline gap-2">
+                <h2 class="fs-3 fw-black text-dark tracking-tight m-0 title-categoria">Hogar & Estilo de Cocina</h2>
+                <span class="text-muted small fw-medium item-counter">Equipamiento Selecto</span>
             </div>
+            <a href="#hogar" class="text-success fw-bold text-uppercase small tracking-wider link-ver-todo">Ver Todo</a>
         </div>
-
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/set-sartenes.jpg" alt="Set de Sartenes" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Set de Sartenes</h3>
-                <p class="precio">S/ 89.90</p>
-                <button class="boton-comprar">Ver detalles</button>
+        
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <img src="Estilos/img_produc/licuadora-profesional.jpg" class="card-img-top img-fluid p-3" alt="Licuadora Profesional Ultra" style="max-height: 100%; object-fit: contain;">
+                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Top Ventas</span>
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Electrohogar</span>
+                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Licuadora Profesional Premium">Licuadora Profesional Premium</h3>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                            <span class="fs-5 fw-black text-dark">S/ 189.90</span>
+                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <img src="Estilos/img_produc/set-sartenes.jpg" class="card-img-top img-fluid p-3" alt="Set de Sartenes Antiadherentes" style="max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Menaje</span>
+                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Set de Sartenes Antiadherentes x3">Set de Sartenes Antiadherentes x3</h3>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                            <span class="fs-5 fw-black text-dark">S/ 89.90</span>
+                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <img src="Estilos/img_produc/juego-cubiertos.jpg" class="card-img-top img-fluid p-3" alt="Juego de Cubiertos Acero Inoxidable" style="max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Mesa</span>
+                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Juego de Cubiertos Acero Inox">Juego de Cubiertos Inox x24</h3>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                            <span class="fs-5 fw-black text-dark">S/ 45.00</span>
+                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <a href="hogar-completo.html" class="card h-100 border-0 shadow-sm rounded-4 text-decoration-none bg-success-subtle d-flex align-items-center justify-content-center p-4 text-center custom-view-more-card" style="min-height: 280px;">
+                    <div class="text-success">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm btn-mas-wrap" style="width: 48px; height: 48px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                        <h4 class="fs-6 fw-bold text-dark mb-1">Explorar Más</h4>
+                        <p class="small text-success-dark opacity-75 m-0">Línea de Diseño Integral</p>
+                    </div>
+                </a>
+            </div>
+
         </div>
-
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/juego-cubiertos.jpg" alt="Juego de Cubiertos" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Juego de Cubiertos</h3>
-                <p class="precio">S/ 45.00</p>
-                <button class="boton-comprar">Ver detalles</button>
-            </div>
-        </div>
-
-        <a href="verduras.html" class="tarjeta-producto tarjeta-ver-mas" title="Ver catálogo completo">
-            <div class="contenido-ver-mas">
-                <span class="simbolo-mas">+</span>
-                <p>Ver más productos</p>
-            </div>
-        </a>
-
     </div>
 </section>
 
