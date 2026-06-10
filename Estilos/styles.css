@@ -493,7 +493,7 @@ body {
     width: 100%; 
     height: 100%;
     /* Asegúrate de colocar aquí la ruta correcta de tu imagen del logo */
-    background-image: url('Estilos/img_produc/rb-market-logo-sin-fondo.png'); 
+    background-image: url('Estilos/img_categorias/LogoRB.png'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
