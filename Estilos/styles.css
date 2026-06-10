@@ -370,6 +370,67 @@ a {
     transform: rotate(90deg) scale(1.05);
 }
 
+/* ==========================================================================
+   ESTILOS PREMIUM PARA LA SECCIÓN DE CONTACTO
+   ========================================================================== */
+
+.custom-input {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #1a202c !important;
+    transition: all 0.25s ease;
+}
+
+/* Cambia sutilmente el fondo al hacer clic para dar feedback visual */
+.custom-input:focus {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.15) !important;
+    border: 1px solid #198754 !important;
+}
+
+.custom-submit-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px !important;
+    letter-spacing: 0.05em;
+    transition: all 0.25s ease;
+}
+
+.custom-submit-btn:hover {
+    background-color: #145a32 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.2) !important;
+}
+
+/* ==========================================================================
+   ESTILOS PREMIUM PARA LA SECCIÓN DE BENEFICIOS
+   ========================================================================== */
+
+.header-beneficio {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.body-beneficio {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.custom-benefit-card {
+    border-radius: 16px;
+    transition: all 0.25s ease;
+}
+
+/* El truco del hover: cambia la intensidad del verde del fondo del icono al pasar por la tarjeta */
+.custom-benefit-card:hover .benefit-icon-wrap {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    transform: scale(1.05);
+}
+
+.benefit-icon-wrap {
+    transition: all 0.25s ease;
+}
+
 
 @media (min-width: 481px) {
 
