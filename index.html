@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="Estilos/styles.css">
 </head>
 <body>
 
@@ -33,13 +33,13 @@
             </div>
 
             <div class="col-3 col-md-4 d-flex align-items-center justify-content-end order-3">
-                <a href="#carrito-lateral" class="btn btn-light bg-light border-0 d-flex align-items-center gap-2 px-3 py-2 rounded-pill position-relative custom-cart-btn" title="Revisar mi orden">
+                <button class="btn btn-light bg-light border-0 d-flex align-items-center gap-2 px-3 py-2 rounded-pill position-relative custom-cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito-lateral" aria-controls="carrito-lateral" title="Revisar mi orden">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
                     </svg>
                     <span class="d-none d-lg-inline fw-bold text-dark small text-uppercase tracking-wider">Mi Orden</span>
                     <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge-num">0</span>
-                </a>
+                </button>
             </div>
 
             <div class="col-12 col-md-8 mx-auto order-4 mt-2 mt-md-3">
@@ -58,8 +58,7 @@
     </div>
 </header>
 
-<div class="offcanvas offcanvas-start border-0 custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">
-    
+<div class="offcanvas offcanvas-start border-0 custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">   
     <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
         <div class="d-flex flex-column" id="menu-lateral-label">
             <span class="fs-4 fw-black text-success tracking-tight canvas-brand-text">RB<span class="text-dark fw-light">MARKET</span></span>
@@ -145,36 +144,234 @@
 </section>
 
     <section id="categorias" class="seccion-contenedor">
-        <h2>Nuestras Categorías</h2>
-        <div class="grid-categorias">
-            <a href="verduras.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/verduras.jpg" alt="Verduras" class="imagen-categoria">
-                <span>Verduras</span>
-            </a>
-            <a href="frutas.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/frutas.jpg" alt="Frutas" class="imagen-categoria">
-                <span>Frutas</span>
-            </a>
-            <a href="carnes.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/carnes.jpg" alt="Carnes" class="imagen-categoria">
-                <span>Carnes</span>
-            </a>
-            <a href="lacteos.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/lacteos.jpg" alt="Lácteos" class="imagen-categoria">
-                <span>Lácteos</span>
-            </a>
-            <a href="envios.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/envios.jpg" alt="Envíos a Domicilio" class="imagen-categoria">
-                <span>Envíos a Domicilio</span>
-            </a>
-            <a href="novedades.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/novedades.jpg" alt="Novedades" class="imagen-categoria">
-                <span>Novedades</span>
-            </a>
-            <a href="lo-mas-vendido.html" class="tarjeta-categoria">
-                <img src="/Estilos/img_categorias/lo-mas-vendido.jpg" alt="Lo más Vendido" class="imagen-categoria">
-                <span>Lo más Vendido</span>
-            </a>
+        <div class="container px-4">
+            
+            <div class="mb-5">
+                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Frutas y Verduras Orgánicas</h2>
+                        <span class="text-muted small fw-medium item-counter">12 variedades</span>
+                    </div>
+                    <a href="#frutas-verduras" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                        <span>Ver Todo</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/descargar.jpg" class="card-img-top img-fluid p-3" alt="Manzana Roja Selecta" style="max-height: 100%; object-fit: contain;">
+                                <span class="badge bg-success-subtle text-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Fresco</span>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Manzana Roja Selecta">Manzana Roja Selecta</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 4.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/palta.jpg" class="card-img-top img-fluid p-3" alt="Plátano de Seda de Origen" style="max-height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Plátano de Seda de Origen">Plátano de Seda de Origen</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Lácteos y Derivados Frescos</h2>
+                        <span class="text-muted small fw-medium item-counter">8 productos</span>
+                    </div>
+                    <a href="#lacteos-huevos" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                        <span>Ver Todo</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/Leche-gloria.jpg" class="card-img-top img-fluid p-3" alt="Leche Evaporada Clásica" style="max-height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Leche Evaporada Clásica">Leche Evaporada Clásica</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Carnes y Cortes Selectos</h2>
+                        <span class="text-muted small fw-medium item-counter">6 productos</span>
+                    </div>
+                    <a href="#carnes-pescados" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                        <span>Ver Todo</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/carne-res.jpg" class="card-img-top img-fluid p-3" alt="Bife Ancho de Res" style="max-height: 100%; object-fit: contain;">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide text-white">Premium</span>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cortes Selectos</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Bife Ancho de Res Premium">Bife Ancho de Res Premium</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 32.90 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/pechuga-pollo.jpg" class="card-img-top img-fluid p-3" alt="Pechuga de Pollo Fresca" style="max-height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Aves</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Pechuga de Pollo Deshuesada">Pechuga de Pollo Deshuesada</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 14.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Despensa y Especialidades Gourmet</h2>
+                        <span class="text-muted small fw-medium item-counter">15 productos</span>
+                    </div>
+                    <a href="#despensa" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                        <span>Ver Todo</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/aceite-oliva.jpg" class="card-img-top img-fluid p-3" alt="Aceite de Oliva Extra Virgen" style="max-height: 100%; object-fit: contain;">
+                                <span class="badge bg-success-subtle text-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Importado</span>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Gourmet</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Aceite de Oliva Extra Virgen 500ml">Aceite de Oliva Extra Virgen 500ml</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 24.90 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/arroz-costeno.jpg" class="card-img-top img-fluid p-3" alt="Arroz Costeño Extra" style="max-height: 100%; object-fit: contain;">
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Abarrotes</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Arroz Extra Costeño Superior 750g">Arroz Extra Costeño Superior 750g</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 4.20 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Bebidas y Cavas Selectas</h2>
+                        <span class="text-muted small fw-medium item-counter">10 productos</span>
+                    </div>
+                    <a href="#bebidas" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                        <span>Ver Todo</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="Estilos/img_produc/vino-tinto.jpg" class="card-img-top img-fluid p-3" alt="Vino Tinto Reserva" style="max-height: 100%; object-fit: contain;">
+                                <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Exclusivo</span>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cava</span>
+                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Vino Tinto Malbec Reserva 750ml">Vino Tinto Malbec Reserva 750ml</h3>
+                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                    <span class="fs-5 fw-black text-dark">S/ 48.00 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -203,41 +400,81 @@
     </div>
 </section>
 
-<section id="productos" class="seccion-contenedor">
-    <h2>Productos Destacados</h2>
-    <div class="grid-productos">
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/descargar.jpg" alt="Manzana Roja" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Manzana Roja</h3>
-                <p class="precio">S/ 4.50 x kg</p>
-                <button class="boton-comprar">Ver detalles</button>
+<section id="categorias" class="py-5">
+    <div class="container px-4">
+        
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom pb-2">
+                <h2 class="fs-3 fw-black text-dark tracking-tight m-0 title-categoria">Frutas y Verduras Orgánicas</h2>
+                <a href="#frutas-verduras" class="text-success fw-bold text-uppercase small tracking-wider link-ver-todo">Ver Todo</a>
+            </div>
+            
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                        <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <img src="Estilos/img_produc/Manzana.jpg" class="card-img-top img-fluid p-3" alt="Manzana Roja Selecta" style="max-height: 100%; object-fit: contain;">
+                            <span class="badge bg-success-subtle text-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Fresco</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column">
+                            <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
+                            <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Manzana Roja Selecta">Manzana Roja Selecta</h3>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                <span class="fs-5 fw-black text-dark">S/ 4.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                        <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <img src="Estilos/img_produc/Platano.jpg" class="card-img-top img-fluid p-3" alt="Plátano de Seda de Origen" style="max-height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column">
+                            <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
+                            <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Plátano de Seda de Origen">Plátano de Seda de Origen</h3>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                <span class="fs-5 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                                <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/Leche-gloria.jpg" alt="Leche Gloria" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Leche Gloria</h3>
-                <p class="precio">S/ 3.80 litro</p>
-                <button class="boton-comprar">Ver detalles</button>
+        <div>
+            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom pb-2">
+                <h2 class="fs-3 fw-black text-dark tracking-tight m-0 title-categoria">Lácteos y Derivados Frescos</h2>
+                <a href="#lacteos-huevos" class="text-success fw-bold text-uppercase small tracking-wider link-ver-todo">Ver Todo</a>
+            </div>
+            
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                        <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <img src="Estilos/img_produc/Leche-gloria.jpg" class="card-img-top img-fluid p-3" alt="Leche Evaporada Clásica" style="max-height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column">
+                            <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
+                            <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Leche Evaporada Clásica">Leche Evaporada Clásica</h3>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                                <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                                <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="tarjeta-producto">
-            <img src="/Estilos/img_produc/pollo-entero.jpg" alt="Pollo Entero" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Pollo Entero</h3>
-                <p class="precio">S/ 12.00 x kg</p>
-                <button class="boton-comprar">Ver detalles</button>
-            </div>
-        </div>
-
-        <a href="verduras.html" class="tarjeta-producto tarjeta-ver-mas" title="Ver catálogo completo">
-            <div class="contenido-ver-mas">
-                <span class="simbolo-mas">+</span>
-                <p>Ver más productos</p>
-            </div>
-        </a>
-
     </div>
 </section>
 
@@ -355,57 +592,42 @@
     </div>
 </section>
 
-<section id="carrito-lateral" class="carrito-panel">
-    <div class="carrito-cabecera">
-        <h2>Tu Carrito</h2>
-        <a href="#" class="boton-cerrar">✕</a>
-    </div>
-
-    <div class="carrito-contenido">
+<div class="offcanvas offcanvas-end border-0 custom-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label">
         
-        <div class="producto-carrito">
-            <img src="/Estilos/img_produc/descargar.jpg" alt="Manzana">
-            <div class="producto-carrito-detalle">
-                <h4>Manzana Roja</h4>
-                <p class="precio-carrito">S/ 4.50</p>
-                <div class="carrito-cantidad">
-                    <span>Cant: 1</span>
-                </div>
+        <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-column" id="carrito-lateral-label">
+                <span class="fs-4 fw-black text-dark tracking-tight canvas-brand-text">Mi<span class="text-success fw-light">Orden</span></span>
+                <small class="text-muted canvas-brand-subtext">RESUMEN DE COMPRA</small>
             </div>
-            <button class="eliminar-item">🗑️</button>
+            <button type="button" class="btn-close text-reset p-2" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
         </div>
 
-        <div class="producto-carrito">
-            <img src="/Estilos/img_produc/Leche-gloria.jpg" alt="Leche">
-            <div class="producto-carrito-detalle">
-                <h4>Leche Gloria</h4>
-                <p class="precio-carrito">S/ 3.80</p>
-                <div class="carrito-cantidad">
-                    <span>Cant: 2</span>
+        <div class="offcanvas-body p-4 d-flex flex-column">
+            <div class="carrito-items-wrap flex-grow-1 overflow-y-auto mb-4">
+                
+                <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border custom-cart-item">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="Estilos/img_produc/Manzana.jpg" alt="Manzana Roja" class="img-fluid rounded-3 bg-white border p-1" style="width: 55px; height: 55px; object-fit: contain;">
+                        <div>
+                            <h4 class="fs-6 fw-bold text-dark mb-1 m-0">Manzana Roja Selecta</h4>
+                            <span class="text-success fw-black small">S/ 4.50</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <button class="eliminar-item">🗑️</button>
-        </div>
 
-    </div>
-
-    <div class="carrito-pie">
-        <div class="total-linea">
-            <span>Subtotal:</span>
-            <strong>S/ 12.10</strong>
+            <div class="border-top pt-4 mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <span class="text-dark fw-black fs-5">Total Estimado</span>
+                    <span class="text-success fw-black fs-4">S/ 4.50</span>
+                </div>
+                <button class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm custom-checkout-btn">
+                    Proceder al Pago
+                </button>
+            </div>
         </div>
-        <div class="total-linea">
-            <span>Envío (Amazonas):</span>
-            <span class="envío-gratis">Gratis</span>
-        </div>
-        <hr>
-        <div class="total-linea total-final">
-            <span>Total:</span>
-            <strong>S/ 12.10</strong>
-        </div>
-        <button class="boton-pagar">Proceder al Pago</button>
-    </div>
-</section> 
+</div>
 
 <footer class="pie-pagina">
     <p>© 2026 Supermercado RB. Todos los derechos reservados.</p>

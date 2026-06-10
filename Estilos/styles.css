@@ -184,44 +184,113 @@ a {
 .hero-image-overlay:hover {
     transform: scale(1.02);
 }
-.boton-accion {
-    display: inline-block;
-    background-color: rgb(227, 28, 37);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 14px;
+
+/* ==========================================================================
+   SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
+   ========================================================================== */
+
+.title-categoria {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800 !important;
 }
 
-.boton-accion:hover {
-    background-color: rgb(183, 28, 28);
+.link-ver-todo {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+.link-ver-todo:hover {
+    color: #145a32 !important; /* Verde más oscuro al pasar cursor */
 }
 
-.seccion-contenedor {
-    padding: 36px 16px;
-    text-align: center;
+/* Tarjeta contenedora de producto */
+.custom-product-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+.custom-product-card:hover {
+    transform: translateY(-4px); /* Sutil elevación flotante */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06) !important;
 }
 
-.seccion-contenedor h2 {
-    background-color: rgb(227, 28, 37); 
-    color: rgb(255, 255, 255);                  
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;       
-    letter-spacing: 0.5px;
-    padding: 12px 16px;
-    margin-bottom: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    font-size: 16px;
+/* Efecto de zoom controlado al pasar por encima de la imagen */
+.card-img-wrap img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.custom-product-card:hover .card-img-wrap img {
+    transform: scale(1.05);
 }
 
-.seccion-gris {
-    background-color: rgb(241, 243, 245);
+.p-unit {
+    font-size: 12px;
 }
 
+/* Botón flotante para agregar a la orden */
+.btn-agregar-orden {
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.15);
+}
+.btn-agregar-orden:hover {
+    background-color: #145a32 !important;
+    border-color: #145a32 !important;
+    transform: scale(1.08);
+}
+
+/* finlol*/
+
+/* ==========================================================================
+   ESTILOS PREMIUM PARA EL CARRITO LATERAL (OFFCANVAS)
+   ========================================================================== */
+
+/* Ajustes de tipografía para los textos del encabezado */
+.canvas-brand-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800 !important;
+}
+
+.canvas-brand-subtext {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+
+/* Efecto hover suave para las tarjetas de productos dentro del carrito */
+.custom-cart-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-cart-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Botón de eliminación (tacho de basura SVG) */
+.btn-eliminar-cart {
+    transition: all 0.2s ease;
+    color: #a0aec0 !important; /* Gris suave por defecto */
+}
+
+/* Cuando el usuario pasa el mouse, cambia a un rojo de advertencia sutil */
+.btn-eliminar-cart:hover {
+    color: #dc3545 !important; 
+    background-color: #f8d7da !important;
+}
+
+/* Estilo para el botón principal de proceder al pago */
+.custom-checkout-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px !important;
+    letter-spacing: 0.03em;
+    transition: all 0.25s ease;
+}
+
+.custom-checkout-btn:hover {
+    background-color: #145a32 !important; /* Verde más oscuro */
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(25, 135, 84, 0.25) !important;
+}
+
+/*final lel*/
 .seccion-blanca-alterna {
     background-color: rgb(255, 255, 255);
     border-top: 1px solid rgb(238, 238, 238);
