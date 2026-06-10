@@ -1075,3 +1075,68 @@ a {
         width: 70%;                
     }
 }
+
+/* ==========================================================================
+   OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
+   ========================================================================== */
+
+/* 1. Base tipográfica y suavizado para los títulos especiales */
+.premium-category-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+}
+
+/* 2. Tarjeta de Producto Global (Para Catálogo y Recomendados) */
+.custom-product-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.custom-product-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* 3. Asegurar el contenedor de imágenes del catálogo */
+.card-img-wrap {
+    background-color: #f8fafc !important; /* Gris ultra suave premium */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+}
+
+/* 4. Corrección de visualización para las insignias (Badges) sobre las fotos */
+.custom-product-card .badge {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px !important;
+    letter-spacing: 0.03em;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+}
+
+/* 5. Estilo para las unidades de medida debajo del precio (S/ 8.90 / kg) */
+.p-unit {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px !important;
+    color: #8a94a6;
+    font-weight: 500;
+}
+
+.form-label, .form-control, .btn, .offcanvas {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+@media (max-width: 576px) {
+    .card-img-wrap {
+        height: 150px !important; /* Altura perfecta para pantallas de smartphone */
+    }
+    
+    .premium-category-title {
+        font-size: 1.35rem !important; /* Encogimiento armónico del título en móviles */
+    }
+    
+    .item-counter {
+        display: none; /* Oculta el contador secundario en pantallas mini para no saturar */
+    }
+}
