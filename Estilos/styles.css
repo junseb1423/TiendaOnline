@@ -291,308 +291,62 @@ a {
 }
 
 /*final lel*/
-.seccion-blanca-alterna {
-    background-color: rgb(255, 255, 255);
-    border-top: 1px solid rgb(238, 238, 238);
+
+/* ==========================================================================
+   ESTILOS PREMIUM PARA LOS BANNERS DE OFERTAS
+   ========================================================================== */
+
+.banner-promo-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
 }
 
-#hogar-cocina {
-    background-color: rgb(252, 252, 252);
-    border-top: 1px solid rgb(238, 238, 238);
+.banner-promo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
 }
 
-.grid-categorias {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+/* Efecto hover general para las tarjetas promocionales */
+.custom-promo-banner {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-.tarjeta-categoria {
-    background-color: rgb(255, 255, 255);
-    padding: 10px;       
-    border: 1px solid rgb(238, 238, 238);
-    border-radius: 12px;  
-    font-weight: bold;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    text-decoration: none; 
-    color: rgb(26, 26, 26);
-    transition: all 0.3s ease;
+.custom-promo-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
 }
 
-.tarjeta-categoria:hover {
-    border-color: rgb(46, 125, 50);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+/* Animación sutil para los botones dentro de los banners */
+.custom-banner-btn, .custom-banner-btn-secondary {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px !important;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
 }
 
-.imagen-categoria {
-    width: 100%;         
-    height: 110px;        
-    object-fit: cover;   
-    border-radius: 8px;   
-    transition: transform 0.3s ease;
+.custom-banner-btn:hover {
+    background-color: #f8fafc !important;
+    transform: scale(1.03);
 }
 
-.tarjeta-categoria:hover .imagen-categoria {
-    transform: scale(1.03); 
+.custom-banner-btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.03);
 }
 
-.grid-ofertas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+.custom-promo-banner .position-absolute {
+    top: auto !important;
+    bottom: -20px !important; 
+    right: -20px !important;    
+    opacity: 0.05 !important; 
+    pointer-events: none;    
 }
 
-.tarjeta-ver-mas {
-    background-color: rgb(255, 255, 255);     
-    border: 2px dashed rgb(46, 125, 50);    
-    text-decoration: none;
-    display: flex;
-    justify-content: center;       
-    align-items: center;
-    transition: all 0.3s ease;
+.banner-promo-title, .banner-promo-text {
+    max-width: 85% !important; 
 }
 
-.tarjeta-ver-mas:hover {
-    background-color: rgb(227, 28, 37);     
-    border-color: rgb(227, 28, 37);         
-    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.1);
-}
-
-.contenido-ver-mas {
-    display: flex;
-    flex-direction: row;           
-    align-items: center;
-    gap: 12px;
-}
-
-.simbolo-mas {
-    font-size: 32px;               
-    font-weight: bold;
-    color: rgb(46, 125, 50);                
-    line-height: 1;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.tarjeta-ver-mas p {
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(26, 26, 26);
-}
-
-.tarjeta-ver-mas:hover .simbolo-mas {
-    color: rgb(227, 28, 37);               
-    transform: scale(1.2);        
-}
-
-.tarjeta-oferta {
-    padding: 24px 16px;
-    border-radius: 8px;
-    color: rgb(255, 255, 255);
-    text-align: left;
-}
-
-.fondo-rojo { background-color: rgb(227, 28, 37); }
-.fondo-verde { background-color: rgb(46, 125, 50); }
-
-.tarjeta-oferta h3 { 
-    margin-bottom: 8px; 
-    font-size: 22px; 
-}
-.tarjeta-oferta p { 
-    margin-bottom: 15px; 
-    font-size: 15px; 
-}
-
-.temporizador-contenedor {
-    margin: 16px 0;
-    background-color: rgba(0, 0, 0, 0.15); 
-    padding: 12px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.tiempo-texto {
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    opacity: 0.9;
-}
-
-.reloj {
-    display: flex;
-    gap: 10px;
-}
-
-.tiempo-bloque {
-    background-color: rgb(255, 255, 255);
-    color: rgb(46, 125, 50);
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 18px;
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.tiempo-bloque small {
-    font-size: 11px;
-    color: rgb(117, 117, 117);
-    text-transform: lowercase;
-}
-
-.etiqueta {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.grid-productos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-}
-
-.tarjeta-producto {
-    background-color: rgb(255, 255, 255);
-    padding: 12px;                 
-    border: 1px solid rgb(238, 238, 238);
-    border-radius: 12px;            
-    display: flex;
-    align-items: center;            
-    gap: 16px;                      
-    text-align: left;
-}
-
-.tarjeta-producto h3 {
-    font-size: 15px;
-    color: rgb(26, 26, 26);
-    margin-bottom: 2px;
-}
-
-.tarjeta-producto-info {
-    flex: 1;                       
-    display: flex;
-    flex-direction: column;
-    gap: 4px;                       
-}
-
-.imagen-producto {
-    width: 100px;                 
-    height: 100px;                  
-    object-fit: cover;   
-    border-radius: 8px;   
-    margin-bottom: 0;               
-    flex-shrink: 0; 
-}
-
-.tarjeta-beneficio:hover .icono-svg {
-    transform: scale(1.1); 
-}
-
-.precio {
-    color: rgb(227, 28, 37);                 
-    font-weight: bold;
-    font-size: 20px;               
-    letter-spacing: -0.5px;
-}
-
-.boton-comprar {
-    background-color: rgb(46, 125, 50);
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 13px;
-    align-self: flex-start;     
-    margin-top: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.boton-comprar:hover {
-    background-color: rgb(27, 94, 32);
-}
-
-.flex-beneficios {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-}
-
-.tarjeta-beneficio {
-    background-color: rgb(255, 255, 255);
-    padding: 25px 15px;
-    border-radius: 8px;
-    border: 1px solid rgb(238, 238, 238);
-}
-
-.icono-svg {
-    width: 45px;         
-    height: 45px;        
-    fill: rgb(46, 125, 50);       
-    margin-bottom: 15px;  
-    transition: transform 0.3s ease; 
-}
-
-.tarjeta-beneficio:hover .icono-svg {
-    transform: scale(1.1);
-}
-
-.tarjeta-beneficio h3 { 
-    margin-bottom: 8px; 
-    font-size: 18px; 
-}
-
-.tarjeta-beneficio p { 
-    color: rgb(96, 96, 96);
-    font-size: 14px; 
-}
-
-.banner-categoria {
-    background-color: rgb(232, 245, 233);
-    background-image: linear-gradient(rgba(46, 125, 50, 0.1), rgba(46, 125, 50, 0.15));
-    padding: 30px 16px;
-    text-align: center;
-}
-
-.banner-contenido h1 {
-    color: rgb(46, 125, 50);
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.banner-contenido p {
-    color: rgb(85, 85, 85);
-    font-size: 13px;
-}
-
-.grid-productos-interna {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-.pie-pagina {
-    background-color: rgb(26, 26, 26);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-}
 
 @media (min-width: 481px) {
 
