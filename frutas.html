@@ -3,159 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutas Frescas — Supermercado RB</title>
-    <link rel="stylesheet" href="/Estilos/styles.css">
+    <title>Frutas Orgánicas — Supermercado RB</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/styles.css">
 </head>
-<body>
+<body class="bg-light">
 
-<header class="barra-navegacion">
-    <div class="fila-superior-nav">
+<header class="barra-navegacion bg-white border-bottom sticky-top py-2">
+    <div class="container px-4 d-flex align-items-center justify-content-between">
         
-        <a href="#menu-lateral" class="boton-hamburguesa-nav" title="Abrir menú">
-            <svg class="icono-hamburguesa-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-            </svg>
+        <a href="#menu-lateral" class="btn btn-light d-flex align-items-center justify-content-center rounded-circle custom-toggle-btn" data-bs-toggle="offcanvas" role="button" aria-controls="menu-lateral" title="Abrir categorías">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </a>
-        <a href="index.html" class="logo-imagen-link" title="Inicio Supermercado RB"></a>
-        <nav class="menu-carrito-solo">
-            <a href="#carrito-lateral" class="boton-carrito-nav">
-                <svg class="icono-carrito-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-                </svg>
-                <span>Bienvenido al footer</span>
-                <span class="contador-carrito">0</span>
-            </a>
-        </nav>
-    </div> <form class="buscador-barra" action="#" method="GET">
-        <input type="text" placeholder="¿Qué estás buscando hoy?...">
-        <button type="submit" class="boton-buscar">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        </button>
-    </form>
 
-    <section id="menu-lateral" class="menu-panel">
-        <div class="menu-cabecera">
-            <h2>>🛒 Categorías RB</h2>
-            <a href="#" class="boton-cerrar-menu">✕</a>
+        <a href="index.html" class="d-flex flex-column brand-wrap text-decoration-none">
+            <span class="brand-main-text text-success">SUPERMERCADO</span>
+            <span class="brand-subtext text-dark">RB — CHACHAPOYAS</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+            <form class="d-none d-md-flex align-items-center position-relative custom-search-form" action="#" method="GET">
+                <input type="text" class="form-control form-control-sm pe-5 rounded-pill border-secondary-subtle" placeholder="¿Qué verdura buscas hoy?..." style="width: 260px; padding-left: 15px;">
+                <button type="submit" class="btn p-0 position-absolute end-0 me-3 d-flex align-items-center justify-content-center text-secondary border-0 bg-transparent">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </form>
+
+            <a href="#carrito-lateral" class="btn btn-success d-flex align-items-center gap-2 rounded-pill px-3 py-2 position-relative btn-carrito-top" data-bs-toggle="offcanvas" role="button" aria-controls="carrito-lateral">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="badge bg-white text-success rounded-circle position-absolute top-0 start-100 translate-middle border border-success fw-bold" style="font-size: 10px; width: 20px; height: 20px; padding: 4px 0 0 0;">0</span>
+            </a>
         </div>
-        <nav class="menu-enlaces-verticales">
-            <a href="index.html">Inicio</a>
-            <a href="frutas.html">Frutas Frescas</a>
-            <a href="verduras.html">Verduras Orgánicas</a>
-            <a href="#ofertas">Ofertas Relámpago</a>
-            <a href="#beneficios">Sobre Nosotros</a>
-        </nav>
-    </section>
+
+    </div>
 </header>
 
-<section class="banner-categoria banner-frutas">
-    <div class="banner-contenido">
-        <h1>Frutas de Estación Dulces y Frescas</h1>
-        <p>Seleccionadas a mano diariamente para llevar el mejor sabor de nuestra región a tu mesa.</p>
+<section class="banner-categoria bg-dark text-white py-5 d-flex align-items-center position-relative" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('Estilos/img_produc/banner-frutas.jpg') center/cover no-repeat; min-height: 220px;">
+    <div class="container px-4 text-center">
+        <h1 class="display-5 fw-black text-uppercase tracking-tight premium-category-title mb-2 text-white">Frutas Orgánicas</h1>
+        <p class="lead small max-w-md mx-auto opacity-90 text-light fw-medium">Cosechadas de parcelas locales con entrega prioritaria en Chachapoyas.</p>
     </div>
 </section>
 
-<section class="seccion-contenedor">
+<main class="container px-4 py-5">
     
-    <h2>Catálogo de Frutas</h2>
-    
-    <div class="grid-productos-interna">
-        
-        <div class="tarjeta-producto">
-            <img src="data:image/jpeg;base64,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" alt="Plátano de Seda" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Plátano de Seda</h3>
-                <p class="precio">S/ 2.50 x kg</p>
-                <button class="boton-comprar">Agregar</button>
-            </div>
-        </div>
-
-        <div class="tarjeta-producto">
-            <img src="data:image/jpeg;base64,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" alt="Manzana Delicia" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Manzana Delicia</h3>
-                <p class="precio">S/ 4.20 x kg</p>
-                <button class="boton-comprar">Agregar</button>
-            </div>
-        </div>
-
-        <div class="tarjeta-producto">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMSFhUWGBYZGBcXGBcaHRUXFRcWGBUVGBcYHSggGBslGxcZITEjJykuLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy8mICM1LS8rLy0yLS4tMC0tLS0vLy8tNS8tLzItLS01LSstLTAtLS0tLy0tLS8vLS0tLS8wLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYCAwQHAf/EADwQAAEDAgQDBQYEBAYDAAAAAAEAAhEDIQQSMUEFIlETYXGBkQYyobHB8EJS0eEjYoLxFCRDcqKyM1PC/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EAC4RAAICAQMDAgQGAwEAAAAAAAABAgMRBBIhBTFBE1FhcYHRIjKhseHwFELBBv/aAAwDAQACEQMRAD8A9xREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREARFi94FyvG0llgyWFWqGiXGAuOrjrw0ef7LjxRzXN/v0WXqeqQhFqrmX6Esam+5M03giRoVkoHAY7mLAHAgTB0Ikj4EfJTGGxIeLWI1B2Uui18dQsS4l5X2PJ1uJuREWgRhERAEREAREQBERAEREAREQBERAEREAREQBEUPjOIhzsjTbcjeNVBqNRGmO6R1GLbJCtjWN1cFoHFGHSb+Hy1UW0Cb26D+2615pm4sSNSCTGmml1kz6lY1lYR36ZNPxh2+S4KmILpmfULldViWGJg27o/23XLTs4gTPflzBthJECBeLXVLUauyxbWyeqtdyTFT7vdYPrib/G3w1WFOkTqY7h92tsZWmrhzEtynugCfCbT5KrnjBJhGnFPvmZZw0MadRGsFdrKkhrwSJ+B0I9bKt43EPNTsy15OpEOy5ZAzB1Qtp2kCwO6m8CQW5JBc3pPgYEBcyTrxOLPJexM4XHu0cJ6EbjrC6G49kxceIVexbi1uYHLBkyTeNRbW+UeqyrVQSDoHAEWmbbg6bdNVrR6nN7VH6557fLBVdeM5LQ1wNwvqrmExxYRrBO4+oVgpVA4Bw0K1dLq43r2a8HDWDNERWzkIiIAiIgCIiAIiIAiIgCIiAIiIDk4rWyUnGYJgA9C4gT8VRK+NgkXJsCxsyC85gTIjQK2+0z/AOFE6X7xYwQOslefYnh7+2a4EUw2s0n3s1RtJuUg9QbdBebrE18ozt2t9kSwXBO/4hwLicgy2aZm4sDbSwJmFtpY4ybk5AJAAgknr4HpsoSjXsywDXOJJeQSWtAuBabZtjotJxHaRPaVGvqmTJa1jWC5kzAh5/LosvEvBNGKLAK+eGmDF3AuLiCcwYIbA7130WZb+Z0Ek3uB92Vd9nMbmaahcwl7nuikLQ2waXWmHNf1FwpynV90BpIN5udT1Cr2vEsMsRjhHeTaLHrHX6LWyqD4Db5eqjDjPemQflMmY8l0NrWAsdLjqdPh1R2Rb5PdjOnEwRzXHT7/ALqIw2MdTrsY8i5ADB+V3K14OwnbWb966ziZPh7p6nQA/FQvGHHNSewA1WuBk/hGZhqC9rtk30m11wmt2Pc8cMosHFgA1xPQk3jSSPC/3so3E4rI2nLg0Cm0kSM0CALADrEwAu7jNQim4iJhwE3uR0OuirXE638fIxgLuxgk3ALZLWgG3vEazcjz60eZY+v9/Ugt/KSFDGCSLyOX3hqZ7tr+it/s/iZaWzv/AHttv6Ki0m1byKYlrDEMnPAzE7yJdrordwRpDS602Ijfc/ElaukzG9NfUr/6ljRYU3yJWa+iTyskYREXoCIiAIiIAiIgCIiAIiIAtGNr5GF0Sdh1K3qM40fd3iTHfsoNTY66pSR6lyRWKrXud7k77u+SrGJqCmQZAbkqvL3HclzbDXUN0kqefTJkmNHQSDHNy+dhPmVH8T4QHtdLc/IG8xt+Emx18/RfK71n8Raiiv1cS2A4XDaRJqVJyg1M2URcEnOLXnoobiWJa4lo7Ss+lQkMpjK09qA0loaCZy1p90Hk6BdHG+AOmu5rn1nmlSaKN2saGGkJaWQQMzQcrQBc6Ks8aLgyuytVysDMK5tKkA91NuRrcrrgFkkCS86NN99PT1QnzGR5J48F29mMVlYaUU6XZsbLQ8Ocwva17gQCXg5nO1jqpj/EtlvM4mCJAmbm1yD9hUH2ZfkxX8PDVTTqUKY7Z5cWuaMO003EABrZHKeY3JVubiSGtcOyEONpYdgQZJPf6KhrKdtvz5LFUsxOsV3Ftn7izrbG15Hx2W+lieb8jsogbHlGnS/W1lGmp7zYpkRmF2i2v4SNibrZSvlEFoLTZ+lmltnfhMAeR1VR1kilgkxUBAGgkkj8pFgPPKR59y5XuL3sadXZS7yLbeYv6I8DLEm4a2TrE3kdWxK+YKrnrgTcc5G4nNTHxaSopRws+x1ksVRocIcJCpmHrvfULqrsn+YMU4vlcf4eYDTQmXXgzuFM1+Kdox9OnmY9zXhryAQwxZ1jJNwY7wNVCHhVenUJpU2lhxDXOqPcM0Eu7QgRAiRlAk3JmYixoIbMqbw32yVLYtrJ2YerT5LPNnN1GgkzGX+b4Kb4Tx+GNa0AQ2eYEmC+Oo7159w3H1KpompihP8AmH5KYqhtmljc2YNkNfTftqbDQq2cIa8NaDU7QhjZtElz80w4wLEbzbqrslOmXD5PIxTXJc8FxSDzCOpFwYPwP6qaY8ESNCqfBGoiSAdwZF/juu7hOPLSAfddvqJ0kdNrFW9L1Bxlss7PycTq4yiyIiLdKwREQBERAEREAREQBERAFBcZxgzFuzd+/wCv7KdKo/EKvO/dxzQNrPJ2OsLM6nY1Woryd198nU6r70QSIme6y+VcQ2CCZ0MDbT9VFvqz7z7OGg0Dh36Nv0mxWhuIcMrnBtMDkdN3Cxg2k6THe0rA29ydTN/EYcC0wA5thEkxFu88tpO6puLw7RkqNyUWvY+ga7yA9mYEscwkgGDBgXhsTEKw4tziHZRmdS5i5+mXWQZiBrcmQSRos+FcCZVLqz5qMqgHK4SyZDgS17ZMEWJiRspqrFT+JnSTlwVHhnBazxSqu7WrVoudTeQHAOhxLZdWDXOBDnMkNIIEdJlWcFxFPPTbRblcJYX1HG7bsB92JEt3gndegsoiBN9ujY8Fk+i2NB6fKfvxXFmrnZzhYJIpRPMXYmqxrX1cOxpYcrx2zBYGzpNQgtIOUz07wu0Y7I0gB7QIe0nnY5uvvNHSDuRlKvNbAtdqAdpyNNtII3EKke0XssKYz4Zpp1GEuZ2dQ0TeC6nLw6nkcRIERJOmZxSqdVklGa2/sSOTxwbqOPDnNa0z7uWLjITnpukHmZlzgEbgtNyF3ez2Gh73OJJDWt03IBPwDT/UVX+ADK8Ah9NpeYY5mQtcJz07cryJs4Xc0uBzGSLzh6QF93XPkA36KPqLjVDZHyRwbbyzUcO1pMavcHGdBYk6C+kx9ApB1OwMdderrCAO5cRpEuzaG9hcx0mbd8RoBPXpzHS4jpbXyNz3nwUdcWoLd3OiI4xw0SajDRaS3I4mm0jKDnc+ckmDO8QSdQsMG+TI7MtdzW5SGM5WW5SSdOmnVTrhIIJN7ES7T8t2/uVBMcTULYzt1LuzYQHNkc5Y6XQLAZYbu5TRUpxfwPG0iSp1SLyQZzOa7bTKJjWfmvlOQRaDGureY2G86gr4KkAaXMiTmae+/NPwXZwrDZ3wAbmXA/8AY3MHoNvmprlKSRxOSRbqZsFkgRfYLsUQiIvQEREAREQBERAEREAVH4/QLXvAOUTM9Z2I3kRbcj0vCiPaHhnaskCXDb8w6eKp62n1K+PB6mUZjjBycrPxOPvMOxA6X2v3haYfbs2io4wHF45ajJuQZLS+1i7fUSIPzFY00zme127WtAMiIkSSOsQ6JnVa69TM67S8X/hNgNDvEAmm/wD4n8yw9jXgnikdFMNqOpjM98HkLQAwAXLKmWQLdAJm5g2stMwIAE7sGg+/sqr4esO1aCQJMFgEySDArGSGPnR+YzpbafebQZgfh3b493f8lUvi00WIY7HS2sJtzH8tvgRr5LU/FjZ0fy2+c/v3Llq1bHNp/LM/1T9VzV6x6j1IqR3Tr8lXwyTglDixpAB6GM3qT8wEqEaO32IyzO2UWPy7lHUC6I5/BwJPkZ5fGy6sPb+7viSb+cfVdKLZy2kc44Bh3Ocf4gJiAzK0QBYQ2zo6uEgWsLLve1tMAPcSBYS0aW337zAF1qpYuahaCAGNBdGpzSGyeljbw6X0UqRzOc9xcXEnuGobA6hsNnuXOptSw5vt2QqhKWcHX24Is0/feVpcT+U/A/G5+CzDwsswVV6+fsTrTpGFM6CI6benXzAFrqGbiA+SCSZPQPBaQcpDhzDmEEiBIgCxM0+CCDcHUfRTPAmUNGsa19z4yZJB8brT6dZXqJbHLbL+9iG+MorKWUQ/DuEVakkjKHRO0m0kiJO/4jurVgcG2i2Ld500+QXUqxxvieZxYDyt+JGvktq909Oq9TGZdl8fsVa4TvltRKYnjLRZozd+gXI7jFTo0eX7qFbiAsxWlfMX9Y1trzu2/Bf3JfjpIR8E1T4y/drT6hSWExzKmhv0Ov7qrmqtTsQQQWmCNFPpOuaiqaVj3R8+/wBP5I7NJGS44Zd0XJwzGCrTD99COhGq6KlZrdXAeJX2sbIygpp8MzGmngzRamYlh0c0+YW1exlGXKeTzGAiIugEREAREQHLjOH06vvsaTsSBI8Cq/jPZFgB7LlB1DbTurUijlVCXdHqZ5fxDgVSmWlrjTDd2tBcYMloJ0YYALPdIOjTdSlN8gEctrTcjrHUeHqRrd61BrhBAKrvE+BlsupgHuPqszWaFyjmvx4Ja7MPkr41kCCPxjbrabfNc7iNZb/uIIPkBF/P0WjiNZzSZkuH5hYf9SddB8VwM49B5g8TaS5gk9Gtz2t97LJWnk+Uif1CdpuGwHfYn1zWnuW51Tx+ZjUxHz/ZRzca2ROvj7o3OpMx0H7bsDhqmKsxri0kA/hbA1km5v4GxXNdEpywkHNYM+HvsSI5j1B7xJGtjPTm8V2OqL5xHC9g7JMwAbCBzXgDYDRRlWusvWVP15Rfjgv6dpVo7nYkLD/EXUU+sse2UaoROmidFfvXw4otIIMdFBtxJLg1slxsB1U2xwowPfqbkizO4BFRhpnjkuxamcVLqGb3ahBHNYT+a+26rJwBdpVol3QPXLXeXuDnHXbpewAWlrBmmLCw89SPJXtTqXqNvqPOOP589yOmj087XjJjj8JWZctJb+ZvMB4xouaji3HvCkaeIey7HHwmx6SF84jQa9hrUwA4CXsHxI+ar4i+xM5tfmPlLFmFsoVC4wP2Hmq83GSQNZsPFT2EOVoA8z1Khtr2LsJcEvhKpY0ta43N/FZB/VcLa8LJtZQTlOUUpSeEV9iT4RIO0WWG4m+noZH5T9DsuE4la3VF7VdZRPdVJo4nUpLkuuBxjarczfMbgroVM4VjezqAzymzvA7+Wqua+86Zrv8ALp3P8y4Zl3V+nLAREWiRBERAEREAREQEbxPgdCuIqUwfn6qHb7A4QEEB4AvAcYv81akUcqoSeWj3LK9R9jcKHFxYXEyTmJMyZNlO0aLWANaAANgtiLqMIx7I8yVD2wokVA7ZzfiLH4EKqVgvTeLcPFamWmx1aeh/ReccQwzqbix4hw+5HUL5Tq+llXd6q7S/c1NJYnHb5RHvXPWqwt71GY4nQa7eao1xy8FpvBYPZullpuxJ955Lafc0Hmd6j4BdREEySROq3V6IY2lTGjGAD69/Rc7tdD4ifrqFFZLMjulcbvcxcRkkmC07d+n33hGVTlB6yfounsqYjOeV4ykDv/cSvuLphjRlaRsN5A38VztTRNvWcHOHEQIud9gP1W/h1WKoA0PKfPT6LmpQZ1G5kW9V18ODe1bF99o01XkcbkeWY2sqjmZMZUp7MJj+qCPQEhT1J1lW8ZWnHVT5eimWVrKe+OVH5Igrllckh2qwdilwOq9VhnUCrO2SrMSPsFZGuogVFvpvK5dSCRJ9povQeG1c1JjurQvNaJXo3BmxQpj+UH1ut/8A8/xKaM3XLsztREX0xnhERAEREAREQBERAEREAXDxThVOu3K8XGjhYt8Cu5FzOEZrbJZR6m08o884l7GYhpmkWVB38rvqD4yFDn2WxedpNIBrXNLiXs90OBMAHoF62vhErPfStP3Sa+pY/wAuzGGedcSpfxHHa0egXMY1sAO75KwcXwMEzq3Tvbsfoq5Vk6kx3CP7r4+2MozcZGzRNTgsG+niuUiAbiJAm191hiMQ5z7kEEAib3008j0+KNgeAgfqsa1OQOrcw26S2POUjLgl2rJnrGWB1nT1/Vby/sKVSs4AGIaOv2V8wuGFQSLCAT/LbZauwOPxTaLf/BSINQ9QNvF2g8zsptPS7bFFeSrqrVGO1fU11/Y9owAxbWuOILW1XEk3abvaG6DkM6TLVA06lgZXtoaIjZeU+1fADhKhc0Th3nlP/rcf9N3d+U+Wovv9S0WIKcF2WH9ynpL+XGXnsR5dIWOVaqEAWW9YD4NLBkwLa1awtoao2eEhw6iXuDRq4gDxK9NpsAAA0AA9FV/ZDhJA7d4i3ID0OrvMaeatS+p6RpXTU5S7y/YyNZYpzwvAREWuVAiIgCIiAIiIAiIgCIiAIiIAiIgObHYMVBexGh6fqO5VTiHCSDzDLfXVp8DsrovhCztb02vU/i7P3+5NTfOrsed08A+TLQZn8Qi4jqsopUWntntJMQ0dbwBudVeKnDKLtaVM/wBIWWF4fSpmadKmw9WtaD6gLNh0JqXMlj5Z+3/S1PXyksFNw/C8RiQGtYcPR3LhDnDo1mvmY81buE8Lp4emKdIQNSTq47ucdyu1Fr6XQ1adfh7+77lKdkp9wtdei17Sx7Q5rhBaRIIOoIOq2IrhwUXi3sDzF2FqBoP+nUmB/teJIHcQVDP9lsa3/Qzd7Xsj/k4H4L1NFn29M09jzjHyLUNZbFY7/M80wvstjHa0ms73vb/8ZirNwf2SZTIfVPaPGgiGNPh+Lz9FZUSnpmnqe5LL+J5Zq7JrHb5BERaBWCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA//2Q==" alt="Naranja para Jugo" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Naranja para Jugo</h3>
-                <p class="precio">S/ 3.00 x docena</p>
-                <button class="boton-comprar">Agregar</button>
-            </div>
-        </div>
-
-        <div class="tarjeta-producto">
-            <img src="data:image/jpeg;base64,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" alt="Mango" class="imagen-producto">
-            <div class="tarjeta-producto-info">
-                <h3>Mango</h3>
-                <p class="precio">S/ 5.00 x kg</p>
-                <button class="boton-comprar">Agregar</button>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="carrito-lateral" class="carrito-panel">
-    <div class="carrito-cabecera">
-        <h2>Tu Carrito</h2>
-        <a href="#" class="boton-cerrar">✕</a>
+    <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom border-light-subtle">
+        <h2 class="fs-4 fw-black text-dark tracking-tight m-0 premium-category-title">Catálogo Completo</h2>
+        <span class="text-muted small fw-medium">6 Variedades Disponibles</span>
     </div>
 
-    <div class="carrito-contenido">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4">
         
-        <div class="producto-carrito">
-            <img src="/Estilos/img_produc/descargar.jpg" alt="Manzana">
-            <div class="producto-carrito-detalle">
-                <h4>Manzana Roja</h4>
-                <p class="precio-carrito">S/ 4.50</p>
-                <div class="carrito-cantidad">
-                    <span>Cant: 1</span>
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/tomate.jpg" class="card-img-top img-fluid p-3" alt="Tomate Italiano Selecto" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-3 text-white">100% Orgánico</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Tomate Italiano Selecto">Tomate Italiano Selecto</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 3.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <button class="eliminar-item">🗑️</button>
         </div>
 
-        <div class="producto-carrito">
-            <img src="/Estilos/img_produc/Leche-gloria.jpg" alt="Leche">
-            <div class="producto-carrito-detalle">
-                <h4>Leche Gloria</h4>
-                <p class="precio-carrito">S/ 3.80</p>
-                <div class="carrito-cantidad">
-                    <span>Cant: 2</span>
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/lechuga.jpg" class="card-img-top img-fluid p-3" alt="Lechuga Crespa Hidropónica" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">Hidropónico</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Hojas verdes</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Lechuga Crespa Verde">Lechuga Crespa Verde</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 2.20 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <button class="eliminar-item">🗑️</button>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/zanahoria.jpg" class="card-img-top img-fluid p-3" alt="Zanahoria Lavada Fina" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-3 text-white">Fresco</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Raíces</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Zanahoria Lavada Extra">Zanahoria Lavada Extra</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/brocoli.jpg" class="card-img-top img-fluid p-3" alt="Brócoli Selecto" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-3 text-white">100% Orgánico</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Brócoli Orgánico Selecto">Brócoli Orgánico Selecto</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 4.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/pimiento.jpg" class="card-img-top img-fluid p-3" alt="Pimiento Rojo Grande" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Fresco</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Verduras</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Pimiento Rojo de Primera">Pimiento Rojo Extra</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 1.50 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                <div class="position-relative overflow-hidden card-img-wrap d-flex align-items-center justify-content-center" style="height: 180px;">
+                    <img src="Estilos/img_produc/espinaca.jpg" class="card-img-top img-fluid p-3" alt="Espinaca de Hoja Ancha" style="max-height: 100%; object-fit: contain;">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-3 text-white">100% Orgánico</span>
+                </div>
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Hojas verdes</span>
+                    <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Espinaca de Hoja Ancha Atado">Espinaca Atado Selecto</h3>
+                    <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                        <span class="fs-6 fw-black text-dark">S/ 3.00 <small class="text-muted fw-normal p-unit">/ und</small></span>
+                        <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" style="width: 34px; height: 34px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
+</main>
 
-    <div class="carrito-pie">
-        <div class="total-linea">
-            <span>Subtotal:</span>
-            <strong>S/ 12.10</strong>
-        </div>
-        <div class="total-linea">
-            <span>Envío (Amazonas):</span>
-            <span class="envío-gratis">Gratis</span>
-        </div>
-        <hr>
-        <div class="total-linea total-final">
-            <span>Total:</span>
-            <strong>S/ 12.10</strong>
-        </div>
-        <button class="boton-pagar">Proceder al Pago</button>
+<div class="offcanvas offcanvas-start border-0 text-bg-dark custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">
+    <div class="offcanvas-header border-bottom border-secondary-subtle py-4">
+        <h5 class="offcanvas-title fw-black tracking-tight" id="menu-lateral-label">Categorías RB</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-</section>
+    <div class="offcanvas-body p-0">
+        <nav class="nav flex-column py-3 custom-vertical-nav">
+            <a class="nav-link px-4 py-3 text-white fw-medium border-start border-4 border-transparent" href="index.html">Inicio</a>
+            <a class="nav-link px-4 py-3 text-white fw-medium border-start border-4 border-transparent" href="frutas.html">Frutas Frescas</a>
+            <a class="nav-link px-4 py-3 text-success fw-bold border-start border-4 border-success bg-dark-subtle" href="verduras.html">Verduras Orgánicas</a>
+            <a class="nav-link px-4 py-3 text-white fw-medium border-start border-4 border-transparent" href="index.html#ofertas">Ofertas Relámpago</a>
+            <a class="nav-link px-4 py-3 text-white fw-medium border-start border-4 border-transparent" href="index.html#beneficios">Sobre Nosotros</a>
+        </nav>
+    </div>
+</div>
 
-<footer class="pie-pagina">
-    <p>© 2026 Supermercado RB. Todos los derechos reservados.</p>
-    <p>Hecho con ❤️ en Amazonas, Perú</p>
+<div class="offcanvas offcanvas-end border-0 custom-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label" style="width: 400px; max-width: 100vw;">
+    <div class="offcanvas-header border-bottom py-4">
+        <h5 class="offcanvas-title fw-black text-dark tracking-tight" id="carrito-lateral-label">Tu Carrito</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-0 bg-light-subtle">
+        
+        <div class="flex-grow-1 overflow-y-auto p-4 d-flex flex-column gap-3">
+            
+            <div class="d-flex align-items-center gap-3 bg-white p-3 rounded-4 border border-light-subtle shadow-sm">
+                <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                    <img src="Estilos/img_produc/tomate.jpg" alt="Tomate Italiano" class="img-fluid" style="max-height: 100%; object-fit: contain;">
+                </div>
+                <div class="flex-grow-1">
+                    <h4 class="fs-6 fw-bold text-dark m-0 mb-1 text-truncate" style="max-width: 180px;">Tomate Italiano</h4>
+                    <span class="small fw-black text-success">S/ 3.50 <small class="text-muted fw-normal">/ kg</small></span>
+                </div>
+                <div class="text-end d-flex flex-column align-items-end gap-2">
+                    <span class="small text-secondary fw-medium">Cant: 1</span>
+                    <button class="btn btn-sm btn-light p-1 rounded-circle border-0 d-flex align-items-center justify-content-center text-danger" title="Eliminar ítem">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-4 bg-white border-top mt-auto">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="small text-secondary fw-medium">Subtotal</span>
+                <span class="fw-bold text-dark">S/ 3.50</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="small text-secondary fw-medium">Envío (Zona Urbana)</span>
+                <span class="text-success small fw-bold">Gratis</span>
+            </div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <span class="fw-black text-dark">Total</span>
+                <span class="fs-5 fw-black text-dark">S/ 3.50</span>
+            </div>
+            <button class="btn btn-success w-100 py-3 rounded-pill fw-bold text-white d-flex align-items-center justify-content-center gap-2 shadow-sm">
+                Proceder al Pago
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-dark text-white border-top border-secondary py-4 mt-5">
+    <div class="container px-4 text-center">
+        <p class="small text-secondary m-0 mb-1">&copy; 2026 Supermercado RB. Todos los derechos reservados.</p>
+        <p class="small text-secondary m-0 opacity-75">Desarrollado en Amazonas, Perú</p>
+    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

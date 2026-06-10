@@ -9,6 +9,13 @@ a {
     text-decoration: none !important;
 }
 
+body {
+    background: linear-gradient(to bottom, #FFF9F3 0%, #FFFFFF 10%, #FFFFFF 90%, #FFF4EB 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .brand-wrap {
     transition: transform 0.25s ease;
 }
@@ -35,12 +42,24 @@ a {
     width: 42px;
     height: 42px;
     transition: all 0.2s ease;
-    border-color: #e3e6e8 !important;
+    border-color: rgba(255, 255, 255, 0.3) !important; /* Borde sutil blanco */
+    color: #58d056 !important; /* Icono blanco */
+    background-color: transparent !important;
 }
 .custom-toggle-btn:hover {
-    background-color: #e8f5e9 !important;
-    border-color: #198754 !important;
-    color: #198754 !important;
+    background-color: #4AB446 !important; /* Cambia al verde de la marca */
+    border-color: #4AB446 !important;
+    color: #ffffff !important;
+}
+
+.barra-navegacion {
+    background-color: #fffcfc !important; /* El rojo exacto de Supermercados RB */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;                  
+    padding: 14px 24px;
+    border-bottom: 4px solid #4AB446 !important; /* El verde brillante del logo como acento inferior */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
 }
 
 .custom-search-group {
@@ -67,16 +86,38 @@ a {
 }
 
 .custom-cart-btn {
+    background-color: #a1e39e !important; /* El verde lechuga de "Super" */
+    color: #ffffff !important;
+    border: 1px solid #4AB446 !important;
+    font-weight: 700 !important;
     transition: all 0.2s ease;
 }
 .custom-cart-btn:hover {
-    background-color: #e8f5e9 !important;
-    color: #198754 !important;
+    background-color: #55ac52 !important; /* Verde un poco más oscuro al pasar el mouse */
+    border-color: #399A35 !important;
+    transform: translateY(-1px);
 }
 .cart-badge-num {
+    background-color: #E31C25 !important; /* Badge rojo para contrastar sobre el botón verde */
+    color: #ffffff !important;
     padding: 4px 6px !important;
     font-size: 10px;
     font-weight: 700;
+}
+
+.custom-search-group {
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #ffffff; /* Totalmente blanco para que sea legible sobre el fondo rojo */
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease;
+}
+.custom-search-group:focus-within {
+    border-color: #4AB446 !important; /* Borde verde al escribir */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.custom-search-group:focus-within .custom-search-submit {
+    color: #4AB446 !important; /* Icono de la lupa verde */
 }
 
 /* DISEÑO DEL MENÚ LATERAL */
@@ -87,12 +128,13 @@ a {
     letter-spacing: -0.04em;
     line-height: 1;
 }
-.canvas-brand-subtext {
+.brand-subtext {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 9px;
     font-weight: 700;
-    letter-spacing: 0.2em;
-    margin-top: 3px;
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.8) !important; /* Blanco semi-transparente sobre el fondo rojo */
+    margin-top: 2px;
 }
 .header-seccion-menu {
     font-size: 11px;
@@ -111,9 +153,9 @@ a {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-menu-list .list-group-item:hover {
-    background-color: #e8f5e9 !important; 
-    color: #198754 !important; 
-    padding-left: 1.75rem !important; 
+    background-color: #fde8e8 !important; /* Fondo rosa/rojo muy sutil */
+    color: #D62333 !important; /* Texto rojo */
+    padding-left: 1.75rem !important;
 }
 
 .style-badge-text {
@@ -127,7 +169,7 @@ a {
 
 .custom-menu-list .list-group-item:hover .arrow-icon {
     transform: translateX(4px);
-    stroke: #198754;
+    stroke: #D62333;
 }
 
 /* ==========================================================================
@@ -163,7 +205,7 @@ a {
 }
 .custom-hero-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.2) !important;
+    box-shadow: 0 8px 20px rgba(215, 18, 18, 0.2) !important;
 }
 
 .custom-hero-btn-secondary {
@@ -227,12 +269,14 @@ a {
 
 /* Botón flotante para agregar a la orden */
 .btn-agregar-orden {
+    background-color: #D62333 !important; /* Rojo RB Market */
+    border-color: #D62333 !important;
     transition: all 0.25s ease;
-    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.15);
+    box-shadow: 0 4px 10px rgba(214, 35, 51, 0.15);
 }
 .btn-agregar-orden:hover {
-    background-color: #145a32 !important;
-    border-color: #145a32 !important;
+    background-color: #B21C2A !important; 
+    border-color: #B21C2A !important;
     transform: scale(1.08);
 }
 
@@ -431,6 +475,39 @@ a {
     transition: all 0.25s ease;
 }
 
+/* ==========================================================================
+   INTEGRACIÓN DEL LOGO DE FONDO EN SECCIÓN RECOMENDADOS
+   ========================================================================== */
+
+.mejores-productos-con-logo {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Creamos una marca de agua gigante detrás de los productos */
+.mejores-productos-con-logo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; 
+    height: 100%;
+    /* Asegúrate de colocar aquí la ruta correcta de tu imagen del logo */
+    background-image: url('Estilos/img_produc/rb-market-logo-sin-fondo.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.03; /* Muy sutil (3%) para que no compita con los productos */
+    transform: translate(-50%, -50%) rotate(-10deg); /* Centrado y ligeramente rotado */
+    pointer-events: none; /* Evita que interfiera con los clics en las tarjetas */
+}
+
+/* Asegura que las tarjetas queden por encima del logo */
+.grid-productos-con-logo {
+    position: relative;
+    z-index: 2; 
+}
+
 
 @media (min-width: 481px) {
 
@@ -554,7 +631,8 @@ a {
     }
 
     .precio {
-        font-size: 22px;           
+        font-size: 22px;         
+        color: #D62333 !important; /* Rojo RB Market */          
     }
 
     .flex-beneficios {
@@ -833,7 +911,8 @@ a {
     }
 
     .precio {
-        font-size: 24px;
+        font-size: 24px;          
+        color: #D62333 !important; /* Rojo RB Market */
     }
 
     .flex-beneficios {
@@ -962,7 +1041,8 @@ a {
     }
 
     .precio {
-        font-size: 22px;
+        font-size: 22px;                 
+        color: #D62333 !important; /* Rojo RB Market */
     }
 
     .boton-comprar {
@@ -1068,7 +1148,8 @@ a {
     }
     
     .precio {
-        font-size: 18px;
+        font-size: 22px;           
+        color: #D62333 !important; /* Rojo RB Market */
     }
 
     .carrito-panel {
