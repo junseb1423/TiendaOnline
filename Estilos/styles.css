@@ -113,7 +113,7 @@ body {
     transition: all 0.3s ease;
 }
 .custom-search-group:focus-within {
-    border-color: #4AB446 !important; /* Borde verde al escribir */
+    border-color: #d20000 !important; /* Borde verde al escribir */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .custom-search-group:focus-within .custom-search-submit {
@@ -228,7 +228,7 @@ body {
 }
 
 /* ==========================================================================
-   SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
+SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
    ========================================================================== */
 
 .title-categoria {
@@ -242,7 +242,7 @@ body {
     transition: color 0.2s ease;
 }
 .link-ver-todo:hover {
-    color: #145a32 !important; /* Verde más oscuro al pasar cursor */
+    color: #c30000 !important; /* Verde más oscuro al pasar cursor */
 }
 
 /* Tarjeta contenedora de producto */
@@ -428,7 +428,7 @@ body {
 /* Cambia sutilmente el fondo al hacer clic para dar feedback visual */
 .custom-input:focus {
     background-color: #ffffff !important;
-    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.15) !important;
+    box-shadow: 0 0 0 3px rgba(184, 20, 8, 0.15) !important;
     border: 1px solid #198754 !important;
 }
 
@@ -466,7 +466,7 @@ body {
 
 /* El truco del hover: cambia la intensidad del verde del fondo del icono al pasar por la tarjeta */
 .custom-benefit-card:hover .benefit-icon-wrap {
-    background-color: #198754 !important;
+    background-color: #a92a2a !important;
     color: #ffffff !important;
     transform: scale(1.05);
 }
