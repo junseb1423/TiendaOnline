@@ -43,7 +43,7 @@ body {
     height: 42px;
     transition: all 0.2s ease;
     border-color: rgba(255, 255, 255, 0.3) !important; /* Borde sutil blanco */
-    color: #58d056 !important; /* Icono blanco */
+    color: #d05656 !important; /* Icono blanco */
     background-color: transparent !important;
 }
 .custom-toggle-btn:hover {
@@ -58,7 +58,7 @@ body {
     justify-content: space-between;
     gap: 12px;                  
     padding: 14px 24px;
-    border-bottom: 4px solid #4AB446 !important; /* El verde brillante del logo como acento inferior */
+    border-bottom: 4px solid #b44646 !important; /* El verde brillante del logo como acento inferior */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -86,15 +86,15 @@ body {
 }
 
 .custom-cart-btn {
-    background-color: #a1e39e !important; /* El verde lechuga de "Super" */
+    background-color: #e39e9e !important; /* El verde lechuga de "Super" */
     color: #ffffff !important;
-    border: 1px solid #4AB446 !important;
+    border: 1px solid #b44646 !important;
     font-weight: 700 !important;
     transition: all 0.2s ease;
 }
 .custom-cart-btn:hover {
     background-color: #c70000 !important; /* Verde un poco más oscuro al pasar el mouse */
-    border-color: #399A35 !important;
+    border-color: #9a3535 !important;
     transform: translateY(-1px);
 }
 .cart-badge-num {
@@ -117,7 +117,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .custom-search-group:focus-within .custom-search-submit {
-    color: #4AB446 !important; /* Icono de la lupa verde */
+    color: #b44646 !important; /* Icono de la lupa verde */
 }
 
 /* DISEÑO DEL MENÚ LATERAL */
@@ -429,7 +429,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 .custom-input:focus {
     background-color: #ffffff !important;
     box-shadow: 0 0 0 3px rgba(184, 20, 8, 0.15) !important;
-    border: 1px solid #198754 !important;
+    border: 1px solid #871919 !important;
 }
 
 .custom-submit-btn {
@@ -440,9 +440,9 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 }
 
 .custom-submit-btn:hover {
-    background-color: #145a32 !important;
+    background-color: #5a1414 !important;
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.2) !important;
+    box-shadow: 0 8px 20px rgba(135, 25, 25, 0.2) !important;
 }
 
 /* ==========================================================================
@@ -712,7 +712,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 
     .menu-enlaces-verticales a:hover {
         background: none;     
-        color: rgb(46, 125, 50);       
+        color: rgb(125, 46, 46);       
         padding-left: 12px;   
     }
 
