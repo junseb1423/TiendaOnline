@@ -38,18 +38,39 @@ body {
     margin-top: 2px;
 }
 
-.custom-toggle-btn {
-    width: 42px;
-    height: 42px;
-    transition: all 0.2s ease;
-    border-color: rgba(255, 255, 255, 0.3) !important; /* Borde sutil blanco */
-    color: #58d056 !important; /* Icono blanco */
-    background-color: transparent !important;
+button.custom-toggle-btn {
+    width: 44px ;
+    height: 44px ;
+    padding: 0 ; 
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap: 8px ;
+    background-color: #ffffff ;
+    border: 1px solid #e2e8f0 ; 
+    border-radius: 50% ; 
+    transition: all 0.2s ease-in-out ;
 }
-.custom-toggle-btn:hover {
-    background-color: #4AB446 !important; /* Cambia al verde de la marca */
-    border-color: #4AB446 !important;
-    color: #ffffff !important;
+
+@media (min-width: 992px) {
+    button.custom-toggle-btn {
+        width: auto !important;
+        height: 44px !important;
+        padding: 0 16px !important; 
+        border-radius: 30px !important; 
+    }
+}
+
+/* Efecto hover interactivo */
+button.custom-toggle-btn:hover {
+    background-color: #f8fafc ;
+    border-color: #cbd5e1;
+}
+
+button.custom-toggle-btn svg {
+    display: block !important;
+    min-width: 22px;
+    min-height: 22px;
 }
 
 .barra-navegacion {
@@ -60,6 +81,36 @@ body {
     padding: 14px 24px;
     border-bottom: 4px solid #4AB446 !important; /* El verde brillante del logo como acento inferior */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos del Buscador Redondeado */
+.custom-search-group {
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.custom-search-group:focus-within {
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.15); /* Efecto sutil verde al enfocar */
+}
+
+.custom-search-input:focus {
+    box-shadow: none !important;
+}
+
+/* Manejo de bordes adaptables para escritorio */
+@media (min-width: 992px) {
+    .border-start-lg {
+        border-left: 1px solid #dee2e6 !important;
+    }
+}
+
+.header-action-item {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header-action-item:hover {
+    opacity: 0.8;
 }
 
 .custom-search-group {
@@ -136,6 +187,7 @@ body {
     color: rgba(255, 255, 255, 0.8) !important; /* Blanco semi-transparente sobre el fondo rojo */
     margin-top: 2px;
 }
+
 .header-seccion-menu {
     font-size: 11px;
     letter-spacing: 0.15em;
@@ -143,8 +195,9 @@ body {
 
 .custom-offcanvas {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05) !important;
-    width: 30% !important; 
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05) !important;   
+    width: 100% !important; 
+    max-width: 400px !important;
 }
 
 .custom-menu-list .list-group-item {
