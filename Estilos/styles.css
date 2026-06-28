@@ -220,7 +220,7 @@ body {
 
 /* Caja de diseño interactiva de la derecha */
 .hero-image-overlay {
-    border: 1px solid rgba(25, 135, 84, 0.1);
+    border: 1px solid rgba(135, 25, 25, 0.1);
     transition: transform 0.5s ease;
 }
 .hero-image-overlay:hover {
@@ -329,9 +329,9 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 }
 
 .custom-checkout-btn:hover {
-    background-color: #145a32 !important; /* Verde más oscuro */
+    background-color: #5a1414 !important; /* Verde más oscuro */
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(25, 135, 84, 0.25) !important;
+    box-shadow: 0 6px 18px rgba(135, 25, 25, 0.25) !important;
 }
 
 /*final lel*/
@@ -406,8 +406,8 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 /* Al pasar el mouse por encima de la tarjeta, el signo '+' rota levemente y la tarjeta sube */
 .custom-view-more-card:hover {
     transform: translateY(-4px);
-    background-color: #d1e7dd !important; /* Un verde sutilmente más intenso */
-    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.1) !important;
+    background-color: #e7d1d1 !important; /* Un verde sutilmente más intenso */
+    box-shadow: 0 8px 20px rgba(135, 25, 25, 0.1) !important;
 }
 
 .custom-view-more-card:hover .btn-mas-wrap {
