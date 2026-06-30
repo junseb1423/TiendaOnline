@@ -76,7 +76,7 @@ body {
     align-items:center;
     width:36px;
     height:36px;
-    background:#212529;
+    background:#dd1818;
     color:white;
     border:none;
     border-radius:50%;
@@ -411,7 +411,7 @@ button.custom-toggle-btn svg {
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.25em;
-    color: rgba(255, 255, 255, 0.8) !important; /* Blanco semi-transparente sobre el fondo rojo */
+    color: rgba(255, 0, 0, 0.8) !important; /* Blanco semi-transparente sobre el fondo rojo */
     margin-top: 2px;
 }
 
@@ -457,8 +457,9 @@ button.custom-toggle-btn svg {
    ========================================================================== */
 
 .custom-hero {
-    /* Un degradado radial muy sutil que aporta frescura sin saturar */
-    background: radial-gradient(circle at 90% 10%, #e8f5e9 0%, #ffffff 60%);
+   
+
+    background: radial-gradient(circle at 90% 10%, #ff0000 0%, #ffffff 60%);
     min-height: 480px;
     overflow: hidden;
 }
@@ -478,6 +479,7 @@ button.custom-toggle-btn svg {
     line-height: 1.6;
 }
 
+
 /* Efectos interactivos y fluidos para los botones */
 .custom-hero-btn {
     font-size: 13px !important;
@@ -493,7 +495,7 @@ button.custom-toggle-btn svg {
     transition: all 0.3s ease;
 }
 .custom-hero-btn-secondary:hover {
-    background-color: #1a1a1a !important;
+    background-color: #ff0000 !important;
     color: #ffffff !important;
     transform: translateY(-2px);
 }
@@ -508,7 +510,7 @@ button.custom-toggle-btn svg {
 }
 
 /* ==========================================================================
-   SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
+SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
    ========================================================================== */
 
 .title-categoria {
@@ -686,8 +688,8 @@ button.custom-toggle-btn svg {
 /* Al pasar el mouse por encima de la tarjeta, el signo '+' rota levemente y la tarjeta sube */
 .custom-view-more-card:hover {
     transform: translateY(-4px);
-    background-color: #d1e7dd !important; /* Un verde sutilmente más intenso */
-    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.1) !important;
+    background-color: #e7d1d1 !important; /* Un verde sutilmente más intenso */
+    box-shadow: 0 8px 20px rgba(135, 25, 25, 0.1) !important;
 }
 
 .custom-view-more-card:hover .btn-mas-wrap {
@@ -1467,7 +1469,7 @@ button.custom-toggle-btn svg {
 }
 
 /* ==========================================================================
-   OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
+OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
    ========================================================================== */
 
 /* 1. Base tipográfica y suavizado para los títulos especiales */
