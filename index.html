@@ -12,39 +12,31 @@
 </head>
 <body>
 
-<header class="navbar navbar-expand-lg bg-white border-bottom p-0 shadow-sm custom-header">
-    <div class="container-fluid px-3 px-md-4 d-flex flex-column">
-        
-        <!-- FILA PRINCIPAL -->
-        <div class="row align-items-center w-100 g-0 py-2 py-lg-3">
-            
-            <!-- 1. LOGO: Izquierda en escritorio, Centro en móvil -->
-            <div class="col-6 col-lg-2 order-1 order-lg-1 text-start text-lg-start d-flex align-items-center">
-                <a href="index.html" class="navbar-brand m-0 p-0 brand-wrap" title="RB MARKET">
+<header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid header-container">
+        <div class="row align-items-center header-row">
+            <div class="col-6 col-lg-2 d-flex align-items-center">
+                <a href="index.html" class="navbar-brand brand-wrap" title="RB MARKET">
                     <img src="Estilos/img_categorias/LogoRB.png" alt="RB Market Logo" class="custom-logo-img img-fluid">
-                        <span class="brand-subtext text-uppercase tracking-wider fw-bold">
+                        <span class="brand-subtext">
                             Supermercado
                         </span>
                 </a>
             </div>
-
-            <!-- 2. BOTÓN MENÚ: Al lado del logo en escritorio, extremo izquierdo en móvil -->
-            <div class="col-3 col-lg-2 order-2 order-lg-2 d-flex align-items-center justify-content-start">
+            <div class="col-3 col-lg-2 order-2 d-flex align-items-center justify-content-start">
                 <button class="custom-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 6H20M4 12H20M4 18H20" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span class="d-none d-lg-inline fw-semibold text-dark">Menú</span>
+                    <span class="d-none d-lg-inline menu-text">Menú</span>
                 </button>
             </div>
-
-            <!-- 3. BUSCADOR: Ocupa toda la fila abajo en móvil, va al centro en escritorio -->
             <div class="col-12 col-lg-4 order-4 order-lg-3 mt-2 mt-lg-0">
-                <form class="w-100 search-form-wrap" action="#" method="GET">
-                    <div class="input-group custom-search-group rounded-pill border">
-                        <input type="text" class="form-control border-0 ps-4 py-2 bg-transparent text-dark custom-search-input" placeholder="Buscar en RB Market...">
-                        <button type="submit" class="btn btn-dark rounded-circle m-1 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                <form class="search-form-wrap" action="#" method="GET">
+                    <div class="input-group custom-search-group">
+                        <input type="text" class="form-control custom-search-input" placeholder="Buscar en RB Market...">
+                        <button type="submit" class="search-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
@@ -52,71 +44,57 @@
                     </div>
                 </form>
             </div>
-
-            <!-- 4, 5, 6 y 7. SECCIÓN ACCIONES: Extremo derecho -->
             <div class="col-3 col-lg-4 order-3 order-lg-4 d-flex align-items-center justify-content-end gap-2 gap-xl-4">
-                
-                <!-- Login (Solo Escritorio) -->
-                <div class="d-none d-lg-flex align-items-center gap-1 text-dark cursor-pointer header-action-item">
+                <div class="d-none d-lg-flex align-items-center gap-1 header-action-item">
                     <div class="d-flex flex-column lh-sm">
-                        <span class="small text-muted">Hola,</span>
-                        <span class="fw-bold small">Inicia sesión</span>
+                        <span class="login-greeting">Hola,</span>
+                        <span class="login-text">Inicia sesión</span>
                     </div>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
                 </div>
-
-                <!-- Mis Compras (Solo Escritorio) -->
-                <div class="d-none d-lg-block border-start ps-3 header-action-item">
-                    <a href="#" class="text-decoration-none text-dark d-flex flex-column lh-sm">
+                <div class="d-none d-lg-block header-divider header-action-item">
+                    <a href="#" class="header-link">
                         <span class="fw-bold small">Mis</span>
                         <span class="fw-bold small">compras</span>
                     </a>
                 </div>
-
-                <!-- Favoritos / Corazón (Solo Escritorio) -->
                 <div class="d-none d-lg-block border-start ps-3 text-muted header-action-item">
-                    <button class="btn p-1 border-0 text-dark">
+                    <button class="btn favorite-btn">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                         </svg>
                     </button>
                 </div>
-
-                <!-- Carrito de Compras (Móvil y Escritorio) -->
                 <div class="border-start-lg ps-lg-3">
-                    <button class="btn btn-white border-0 p-2 position-relative custom-cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito-lateral" aria-controls="carrito-lateral">
+                    <button class="btn custom-cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito-lateral" aria-controls="carrito-lateral">
                         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-dark">
                             <circle cx="9" cy="21" r="1"></circle>
                             <circle cx="20" cy="21" r="1"></circle>
                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                         </svg>
-                        <span class="badge bg-dark rounded-circle position-absolute top-0 start-100 translate-middle" style="font-size: 11px; padding: 4px 7px;">0</span>
+                        <span class="badge cart-badge position-absolute top-0 start-100 translate-middle">0</span>
                     </button>
                 </div>
-
             </div>
         </div>
-
-        <!-- SUB-BARRA: Ubicación y Ayuda (Estilo Tottus) -->
-        <div class="w-100 d-flex justify-content-between align-items-center py-2 border-top default-layout-subbar" style="font-size: 13px;">
-            <div class="d-flex align-items-center text-secondary gap-1">
+        <div class="w-100 d-flex justify-content-between align-items-center default-layout-subbar">
+            <div class="subbar-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span class="fw-medium">Ingresa tu ubicación</span>
             </div>
-            <div class="d-flex align-items-center text-secondary gap-1 cursor-pointer">
+            <div class="subbar-item subbar-clickable">
                 <span>Ayuda</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
             </div>
         </div>
-
     </div>
 </header>
 
 <section id="banner-principal" class="my-3 my-md-4">
-    <div class="container-fluid px-3 px-md-4">
+    <div class="container-fluid px-0"> 
         
         <div id="carruselPromociones" class="carousel slide shadow-sm custom-carousel" data-bs-ride="carousel">
             
@@ -125,41 +103,33 @@
                 <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-
-            <div class="carousel-inner rounded-4">
+            <div class="carousel-inner">
                 
                 <div class="carousel-item active" data-bs-interval="5000">
                     <a href="#">
-                        <img src="Imagenes/banner-cyber.jpg" class="d-block w-100 custom-carousel-img" alt="Promoción Cyber RB">
+                        <img src="Estilos/img_categorias/imgCyberBanner.png" class="d-block w-100 custom-carousel-img" alt="Promoción Cyber RB">
                     </a>
                 </div>
-
                 <div class="carousel-item" data-bs-interval="5000">
                     <a href="#">
-                        <img src="Imagenes/banner-frescos.jpg" class="d-block w-100 custom-carousel-img" alt="Descuento en Frutas y Verduras">
+                        <img src="Estilos/img_categorias/imgVerdurasBanner.png" class="d-block w-100 custom-carousel-img" alt="Descuento en Frutas y Verduras">
                     </a>
                 </div>
-
                 <div class="carousel-item" data-bs-interval="5000">
                     <a href="#">
-                        <img src="Imagenes/banner-carnes.jpg" class="d-block w-100 custom-carousel-img" alt="Especial de Carnes Seleccionadas">
+                        <img src="Estilos/img_categorias/imgCarneBanner.png" class="d-block w-100 custom-carousel-img" alt="Especial de Carnes Seleccionadas">
                     </a>
                 </div>
-
             </div>
-
             <button class="carousel-control-prev custom-control-btn" type="button" data-bs-target="#carruselPromociones" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-
             <button class="carousel-control-next custom-control-btn" type="button" data-bs-target="#carruselPromociones" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
-
         </div>
-
     </div>
 </section>
 

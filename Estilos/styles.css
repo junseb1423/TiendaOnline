@@ -16,6 +16,168 @@ body {
     padding: 0;
 }
 
+/*cositos movidos al css para optimizar*/
+
+.custom-header{
+    background:#fff;
+    border-bottom:1px solid #dee2e6;
+    padding:0;
+    box-shadow:0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.header-container{
+    display:flex;
+    flex-direction:column;
+    padding-inline:1rem;
+}
+
+.header-row{
+    width:100%;
+    padding:.5rem 0;
+    gap:0;
+}
+
+.brand-wrap{
+    margin:0;
+    padding:0;
+}
+
+.brand-subtext{
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:.12em;
+}
+
+.menu-text{
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-left: .5rem;
+}
+
+.search-form-wrap{
+    width: 100%;
+}
+
+.custom-search-input{
+    border:none;
+    padding: .5rem 0 .5rem 1.5rem;
+    background:transparent;
+    color:#212529;
+}
+
+.custom-search-group{
+    border:1px solid #dee2e6;
+    border-radius:50rem;
+}
+
+.search-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:36px;
+    height:36px;
+    background:#212529;
+    color:white;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.cart-badge{
+    font-size:11px;
+    padding:4px 7px;
+}
+
+.default-layout-subbar{
+    font-size:13px;
+}
+
+.header-action-item{
+    color:#212529;
+    cursor:pointer;
+}
+
+.login-greeting{
+    font-size:.875rem;
+    color:#6c757d;
+}
+
+.login-text{
+    font-size:.875rem;
+    font-weight:700;
+}
+
+.header-divider{
+    border-left:1px solid #dee2e6;
+    padding-left:1rem;
+}
+
+.header-link{
+    text-decoration:none;
+    color:#212529;
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.favorite-btn{
+    padding:.25rem;
+    border:none;
+    color:#212529;
+    background:transparent;
+}
+
+.custom-cart-btn{
+    background:#fff;
+    border:none;
+    padding:.5rem;
+    position:relative;
+}
+
+.cart-badge{
+    background:#212529;
+    border-radius:50%;
+    font-size:11px;
+    padding:4px 7px;
+}
+
+.default-layout-subbar{
+    padding:.5rem 0;
+    border-top:1px solid #dee2e6;
+    font-size:13px;
+}
+
+.subbar-item{
+    display:flex;
+    align-items:center;
+    gap:.25rem;
+    color:#6c757d;
+}
+
+.subbar-clickable{
+    cursor:pointer;
+}
+
+@media (min-width:768px){
+
+    .header-container{
+    padding-inline:1.5rem;
+    }
+}
+
+
+@media(min-width:992px){
+
+.header-row{
+
+padding:1rem 0;
+
+}
+
+}
+
+
+/*======= fin =======*/
 .brand-wrap {
     transition: transform 0.25s ease;
 }
@@ -40,7 +202,7 @@ body {
 
 /* --- CONTROL DE LOGO E IMAGEN CON TEXTO LATERAL --- */
 
-/* Base de la imagen del logo */
+
 .custom-logo-img {
     height: 36px !important; /* Altura cómoda para móvil */
     width: auto !important;  /* Mantiene la proporción para no deformar la imagen */
@@ -49,22 +211,20 @@ body {
 }
 
 
-/* Alineación fina para el texto de la marca al lado de la imagen */
+
 .brand-text-side {
-    border-left: 2px solid #e2e8f0; /* Agrega una pequeña línea divisoria gris muy elegante */
-    padding-left: 8px;              /* Espaciado interno después de la línea */
+    border-left: 2px solid #e2e8f0; 
+    padding-left: 8px;              
 }
 
-/* Estilo para la frase "Supermercado" */
 .brand-subtext {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px !important;
     letter-spacing: 0.12em !important;
-    color: #4a5568 !important; /* Color gris oscuro profesional */
+    color: #4a5568 !important; 
     font-weight: 700 !important;
 }
 
-/* Animación sutil al pasar el mouse por encima */
 .brand-wrap:hover .custom-logo-img {
     transform: scale(1.02);
 }
@@ -188,6 +348,27 @@ button.custom-toggle-btn svg {
 .custom-search-group:focus-within .custom-search-submit {
     color: #b44646 !important; /* Icono de la lupa verde */
 }
+
+/* ESTILOS PARA EL CARRUSEL*/
+
+.custom-carousel {
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.custom-carousel-img {
+    height: 180px !important;    
+    object-fit: cover !important; 
+    object-position: center;
+}
+
+
+@media (min-width: 769px) {
+    
+}
+
+/*FIN DE E. CARRUSEL*/
+
 
 /* DISEÑO DEL MENÚ LATERAL */
 
@@ -906,6 +1087,12 @@ button.custom-toggle-btn svg {
         font-size: 20px;
         padding: 8px 12px;
     }
+
+    .custom-carousel-img {
+        height: 280px !important;  
+        object-fit: cover !important; 
+        object-position: center;
+    }
 }
 
 @media (min-width: 992px) {
@@ -920,8 +1107,14 @@ button.custom-toggle-btn svg {
         border-radius: 30px !important; 
     }
 
+    .custom-carousel-img {
+        height: 380px !important;      
+        object-fit: cover !important;    
+        object-position: center;         
+    }
+
     .custom-logo-img {
-        height: 42px !important; /* Crece ligeramente en pantallas grandes */
+        height: 42px !important; 
     }
 }
 
