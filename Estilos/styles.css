@@ -5,6 +5,57 @@
     font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
+:root{
+    /* Colores principales */
+    --color-primary: #2E7D32;
+    --color-primary-dark: #1B5E20;
+    --color-secondary: #212529;
+    --color-accent: #FF9800;
+
+    /* Colores neutros */
+    --color-white: #FFFFFF;
+    --color-light: #F8F9FA;
+    --color-gray-100: #F1F3F5;
+    --color-gray-300: #DEE2E6;
+    --color-gray-500: #6C757D;
+    --color-dark: #212529;
+
+    /* Texto */
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+
+    /* Bordes */
+    --border-color: #DEE2E6;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-pill: 50rem;
+
+    /* Sombras */
+    --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+    --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+
+    /* Espaciados */
+    --space-xs: .25rem;
+    --space-sm: .5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Tipografía */
+    --fw-light:300;
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+
+    /* Transiciones */
+    --transition-fast:.2s ease;
+    --transition-normal:.3s ease;
+
+}
+
 a {
     text-decoration: none !important;
 }
@@ -157,6 +208,34 @@ body {
 .subbar-clickable{
     cursor:pointer;
 }
+
+/* AQUI VAN LOS COSOS DEL MENU LATERAL*/
+.custom-offcanvas{
+    border:none;
+}
+
+.custom-offcanvas-header{
+    padding:2rem;
+    border-bottom:1px solid #dee2e6;
+}
+
+.canvas-brand{
+    display:flex;
+    flex-direction:column;
+}
+
+.canvas-brand-text{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--primary-color);
+    letter-spacing:-.02em;
+}
+
+.canvas-brand-subtext{
+    color:#6c757d;
+}
+
+/*FIN MENU LATERAL*/
 
 @media (min-width:768px){
 

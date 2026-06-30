@@ -133,49 +133,56 @@
     </div>
 </section>
 
-<div class="offcanvas offcanvas-start border-0 custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">   
-    <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
-        <div class="d-flex flex-column" id="menu-lateral-label">
-            <span class="fs-4 fw-black text-success tracking-tight canvas-brand-text">RB<span class="text-dark fw-light">MARKET</span></span>
-            <small class="text-muted canvas-brand-subtext">EXPERIENCIA SELECTA</small>
+<div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">   
+    <div class="offcanvas-header custom-offcanvas-header">
+        <div class="canvas-brand" id="menu-lateral-label">
+            <span class="canvas-brand-text">RB<span class="canvas-brand-highlight">MARKET</span></span>
+            <small class="canvas-brand-subtext">EXPERIENCIA SELECTA</small>
         </div>
-        <button type="button" class="btn-close text-reset p-2" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
     </div>
-
-    <div class="offcanvas-body p-0">
+    <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
         <div class="p-4">
             <p class="text-uppercase text-muted fw-bold tracking-wider mb-3 header-seccion-menu">Explorar Categorías</p>
-            
             <div class="list-group list-group-flush rounded-3 overflow-hidden custom-menu-list">
-                <a href="frutas.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
-                    <span>Frutas Orgánicas</span>
+                <a href="frutas.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>Frutas Orgánicas</span>
+                    </div>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
                 </a>
-                <a href="lacteos-huevos.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
-                    <span>Lácteos y Derivados Frescos</span>
+                <a href="lacteos.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>Lácteos y Derivados Frescos</span>
+                    </div>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
                 </a>
-                <a href="#carnes-pescados" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
-                    <span>Carnes y Cortes Selectos</span>
+                <a href="carnes.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>Carnes y Cortes Selectos</span>
+                    </div>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
                 </a>
-                <a href="#despensa" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
-                    <span>Despensa y Especialidades Gourmet</span>
+                <a href="despensa.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>Despensa y Especialidades Gourmet</span>
+                    </div>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
                 </a>
-                <a href="#bebidas" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium" data-bs-dismiss="offcanvas">
-                    <span>Bebidas y Cavas Selectas</span>
+                <a href="bebidas.html" class="list-group-item list-group-item-action py-3 px-4 d-flex align-items-center justify-content-between text-dark fw-medium">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>Bebidas y Cavas Selectas</span>
+                    </div>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted arrow-icon"><path d="M9 18l6-6-6-6"/></svg>
                 </a>
             </div>
-        </div>
-
-        <div class="p-4 bg-light border-top mt-auto position-absolute bottom-0 w-100">
+        </div>      
+        <div class="p-4 bg-light border-top w-100">
             <p class="text-uppercase text-muted fw-bold tracking-wider mb-2 header-seccion-menu">Atención Personalizada</p>
-            <div class="d-flex align-items-center gap-2">
+            <a href="https://wa.me/tuNumeroDeSoporte" target="_blank" class="d-flex align-items-center gap-2 text-decoration-none hover-soporte">
                 <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded fw-bold style-badge-text">LÍNEA DIRECTA</span>
                 <small class="text-secondary fw-semibold">Soporte Premium</small>
-            </div>
+            </a>
         </div>
     </div>
 </div>
