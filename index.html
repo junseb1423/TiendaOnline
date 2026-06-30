@@ -19,22 +19,24 @@
         <div class="row align-items-center w-100 g-0 py-2 py-lg-3">
             
             <!-- 1. LOGO: Izquierda en escritorio, Centro en móvil -->
-            <div class="col-6 col-lg-2 order-1 order-lg-1 text-start text-lg-start">
-                <a href="index.html" class="navbar-brand m-0 p-0 d-inline-flex flex-column" title="RB MARKET">
-                    <span class="brand-main-text text-success fs-4 fw-bold">RB<span class="text-dark fw-light">MARKET</span></span>
-                    <small class="brand-subtext d-none d-sm-block text-muted" style="font-size: 10px; letter-spacing: 1px;">CULTURA DE FRESCURA</small>
+            <div class="col-6 col-lg-2 order-1 order-lg-1 text-start text-lg-start d-flex align-items-center">
+                <a href="index.html" class="navbar-brand m-0 p-0 brand-wrap" title="RB MARKET">
+                    <img src="Estilos/img_categorias/LogoRB.png" alt="RB Market Logo" class="custom-logo-img img-fluid">
+                        <span class="brand-subtext text-uppercase tracking-wider fw-bold">
+                            Supermercado
+                        </span>
                 </a>
             </div>
 
             <!-- 2. BOTÓN MENÚ: Al lado del logo en escritorio, extremo izquierdo en móvil -->
-        <div class="col-3 col-lg-2 order-2 order-lg-2 d-flex align-items-center justify-content-start">
-            <button class="custom-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6H20M4 12H20M4 18H20" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="d-none d-lg-inline fw-semibold text-dark">Menú</span>
-            </button>
-        </div>
+            <div class="col-3 col-lg-2 order-2 order-lg-2 d-flex align-items-center justify-content-start">
+                <button class="custom-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="d-none d-lg-inline fw-semibold text-dark">Menú</span>
+                </button>
+            </div>
 
             <!-- 3. BUSCADOR: Ocupa toda la fila abajo en móvil, va al centro en escritorio -->
             <div class="col-12 col-lg-4 order-4 order-lg-3 mt-2 mt-lg-0">
@@ -112,6 +114,54 @@
 
     </div>
 </header>
+
+<section id="banner-principal" class="my-3 my-md-4">
+    <div class="container-fluid px-3 px-md-4">
+        
+        <div id="carruselPromociones" class="carousel slide shadow-sm custom-carousel" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators custom-indicators">
+                <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner rounded-4">
+                
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <a href="#">
+                        <img src="Imagenes/banner-cyber.jpg" class="d-block w-100 custom-carousel-img" alt="Promoción Cyber RB">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <a href="#">
+                        <img src="Imagenes/banner-frescos.jpg" class="d-block w-100 custom-carousel-img" alt="Descuento en Frutas y Verduras">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <a href="#">
+                        <img src="Imagenes/banner-carnes.jpg" class="d-block w-100 custom-carousel-img" alt="Especial de Carnes Seleccionadas">
+                    </a>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev custom-control-btn" type="button" data-bs-target="#carruselPromociones" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next custom-control-btn" type="button" data-bs-target="#carruselPromociones" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
 
 <div class="offcanvas offcanvas-start border-0 custom-offcanvas" tabindex="-1" id="menu-lateral" aria-labelledby="menu-lateral-label">   
     <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
