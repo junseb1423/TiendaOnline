@@ -158,6 +158,34 @@ body {
     cursor:pointer;
 }
 
+/* AQUI VAN LOS COSOS DEL MENU LATERAL*/
+.custom-offcanvas{
+    border:none;
+}
+
+.custom-offcanvas-header{
+    padding:2rem;
+    border-bottom:1px solid #dee2e6;
+}
+
+.canvas-brand{
+    display:flex;
+    flex-direction:column;
+}
+
+.canvas-brand-text{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--primary-color);
+    letter-spacing:-.02em;
+}
+
+.canvas-brand-subtext{
+    color:#6c757d;
+}
+
+/*FIN MENU LATERAL*/
+
 @media (min-width:768px){
 
     .header-container{
