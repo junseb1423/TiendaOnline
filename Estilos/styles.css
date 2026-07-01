@@ -57,7 +57,7 @@
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 body {
@@ -208,6 +208,22 @@ body {
 .subbar-clickable{
     cursor:pointer;
 }
+/* AQUI VAN ESTILOS DEL BANNER PRINCIPAL*/
+
+#banner-principal{
+    margin: var(--space-md) 0;
+}
+
+.custom-carousel{
+    box-shadow:var(--shadow-sm);
+}
+
+.custom-carousel-img{
+    display:block;
+    width:100%;
+}
+
+/* FIN */
 
 /* AQUI VAN LOS COSOS DEL MENU LATERAL*/
 .custom-offcanvas{
@@ -241,6 +257,10 @@ body {
 
     .header-container{
     padding-inline:1.5rem;
+    }
+
+    #banner-principal{
+        margin: var(--space-lg) 0;
     }
 }
 
@@ -436,8 +456,8 @@ button.custom-toggle-btn svg {
 }
 
 .custom-carousel-img {
-    height: 180px !important;    
-    object-fit: cover !important; 
+    height: 180px;    
+    object-fit: cover ; 
     object-position: center;
 }
 
@@ -1189,9 +1209,10 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
     }
 
     .custom-carousel-img {
-        height: 380px !important;      
-        object-fit: cover !important;    
-        object-position: center;         
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1200 / 400 !important; 
+        object-fit: fill !important;         
     }
 
     .custom-logo-img {
