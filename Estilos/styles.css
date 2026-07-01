@@ -9,7 +9,6 @@
     /* Colores principales */
     --color-primary: #2E7D32;
     --color-primary-dark: #1B5E20;
-    --color-secondary: #212529;
     --color-accent: #FF9800;
 
     /* Colores neutros */
@@ -19,9 +18,10 @@
     --color-gray-300: #DEE2E6;
     --color-gray-500: #6C757D;
     --color-dark: #212529;
+    --color-hover-light:#F8FAFC;
+    --color-search-focus:#871919;
 
     /* Texto */
-    --text-primary: #212529;
     --text-secondary: #6C757D;
 
     /* Bordes */
@@ -35,6 +35,9 @@
     --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
     --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
     --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+    --shadow-focus:0 0 0 3px rgba(135,25,25,.15);
+    --shadow-search-focus:0 4px 12px rgba(135,25,25,.08);
+    --shadow-btn-hover:0 8px 20px rgba(215,18,18,.2);
 
     /* Espaciados */
     --space-xs: .25rem;
@@ -54,71 +57,92 @@
     --transition-fast:.2s ease;
     --transition-normal:.3s ease;
 
+    /* Header */
+    --header-height:80px;
+
+    /* Z-index */
+    --z-dropdown:1000;
+    --z-fixed:1020;
+    --z-modal:1055;
+
+    /* Container */
+    --container-max:1400px;
+
+    /* Offcanvas */
+    --logo-height:36px;
+
+    /* Carrusel */
+    --carousel-height-mobile:180px;
+
+    /*HERO*/
+    --hero-bg-start: #FF0000;
+    --hero-bg-end: #FFFFFF;
+    --hero-min-height: 480px;
 }
 
-a {
-    text-decoration: none;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-body {
-    background: linear-gradient(to bottom, #FFF9F3 0%, #FFFFFF 10%, #FFFFFF 90%, #FFF4EB 100%);
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:
+    linear-gradient(
+        to bottom,
+        var(--background-start) 0%,
+        var(--color-white) 10%,
+        var(--color-white) 90%,
+        var(--background-end) 100%
+    );
+    min-height:100vh;
 }
 
-/*cositos movidos al css para optimizar*/
+/*==================================
+    HEADER
+==================================*/
 
 .custom-header{
-    background:#fff;
-    border-bottom:1px solid #dee2e6;
-    padding:0;
-    box-shadow:0 .125rem .25rem rgba(0,0,0,.075);
+    background:var(--color-white);
+    border-bottom:1px solid var(--border-color);
+    box-shadow:var(--shadow-sm);
 }
 
 .header-container{
     display:flex;
     flex-direction:column;
-    padding-inline:1rem;
+    padding-inline:var(--space-md);
 }
 
 .header-row{
     width:100%;
-    padding:.5rem 0;
-    gap:0;
-}
-
-.brand-wrap{
-    margin:0;
-    padding:0;
+    padding:var(--space-sm) 0;
 }
 
 .brand-subtext{
     text-transform:uppercase;
-    font-weight:700;
+    font-weight:var(--fw-bold);
     letter-spacing:.12em;
 }
 
 .menu-text{
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-left: .5rem;
-}
-
-.search-form-wrap{
-    width: 100%;
+    font-weight:var(--fw-semibold);
+    color:var(--color-dark);
+    margin-left:var(--space-sm);
 }
 
 .custom-search-input{
     border:none;
-    padding: .5rem 0 .5rem 1.5rem;
+    padding:var(--space-sm) 0 var(--space-sm) var(--space-lg);
     background:transparent;
-    color:#212529;
+    color:var(--color-dark);
 }
 
 .custom-search-group{
-    border:1px solid #dee2e6;
-    border-radius:50rem;
+    background:var(--color-white);
+    border:1px solid var(--border-color);
+    border-radius:var(--border-radius-pill);
+    transition:box-shadow var(--transition-fast);
 }
 
 .search-btn{
@@ -128,87 +152,149 @@ body {
     width:36px;
     height:36px;
     background:#dd1818;
-    color:white;
+    color:var(--color-white);
     border:none;
     border-radius:50%;
     cursor:pointer;
 }
 
-.cart-badge{
-    font-size:11px;
-    padding:4px 7px;
-}
-
-.default-layout-subbar{
-    font-size:13px;
-}
-
 .header-action-item{
-    color:#212529;
+    color:var(--color-dark);
     cursor:pointer;
 }
 
 .login-greeting{
     font-size:.875rem;
-    color:#6c757d;
+    color:var(--text-secondary);
 }
 
 .login-text{
     font-size:.875rem;
-    font-weight:700;
+    font-weight:var(--fw-bold);
 }
 
 .header-divider{
-    border-left:1px solid #dee2e6;
-    padding-left:1rem;
+    border-left:1px solid var(--border-color);
+    padding-left:var(--space-md);
 }
 
 .header-link{
     text-decoration:none;
-    color:#212529;
+    color:var(--color-dark);
     display:flex;
     flex-direction:column;
     line-height:1;
 }
 
 .favorite-btn{
-    padding:.25rem;
+    padding:var(--space-xs);
     border:none;
-    color:#212529;
+    color:var(--color-dark);
     background:transparent;
 }
 
 .custom-cart-btn{
-    background:#fff;
+    background:var(--color-white);
     border:none;
-    padding:.5rem;
+    padding:var(--space-sm);
     position:relative;
 }
 
 .cart-badge{
-    background:#212529;
+    background:var(--color-dark);
     border-radius:50%;
-    font-size:11px;
-    padding:4px 7px;
+    font-size:.6875rem;
+    padding:.25rem .4375rem;
 }
 
 .default-layout-subbar{
-    padding:.5rem 0;
-    border-top:1px solid #dee2e6;
-    font-size:13px;
+    padding:var(--space-sm) 0;
+    border-top:1px solid var(--border-color);
+    font-size:.8125rem;
 }
 
 .subbar-item{
     display:flex;
     align-items:center;
-    gap:.25rem;
-    color:#6c757d;
+    gap:var(--space-xs);
+    color:var(--color-gray-500);
 }
 
 .subbar-clickable{
     cursor:pointer;
 }
-/* AQUI VAN ESTILOS DEL BANNER PRINCIPAL*/
+
+.custom-logo-img{
+    height:var(--logo-height);
+    width:auto;
+    display:block;
+    transition:transform var(--transition-fast);
+}
+
+.custom-toggle-btn {
+    width: 44px ;
+    height: 44px ;
+    padding: 0 ; 
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap:var(--space-sm);
+    background:var(--color-white);
+    border:1px solid var(--border-color);
+    border-radius: 50% ; 
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.custom-toggle-btn:hover {
+    background-color: var(--color-hover-light);
+    border-color: var(--border-color);
+}
+
+.custom-toggle-btn svg {
+    display: block;
+    min-width: 22px;
+    min-height: 22px;
+}
+
+.custom-search-group:focus-within {
+    box-shadow:var(--shadow-focus);
+}
+
+.custom-search-input:focus {
+    box-shadow: none ;
+}
+
+.header-action-item {
+    cursor: pointer;
+    transition:opacity var(--transition-fast);
+}
+
+.header-action-item:hover {
+    opacity: 0.8;
+}
+
+.custom-search-group:focus-within {
+    border-color: #871919;
+    background-color:var(--color-white);
+    box-shadow: var(--shadow-search-focus);
+}
+
+.custom-search-input {
+    font-size: 14px;
+}
+
+.custom-search-input:focus {
+    box-shadow: none ;
+    background-color: transparent;
+}
+
+
+/*==================================
+    BANNER PRINCIPAL
+==================================*/
 
 #banner-principal{
     margin: var(--space-md) 0;
@@ -218,21 +304,24 @@ body {
     box-shadow:var(--shadow-sm);
 }
 
-.custom-carousel-img{
-    display:block;
-    width:100%;
-}
+/*==================================
+    FIN BANNER PRINCIPAL
+==================================*/
 
-/* FIN */
+/*==================================
+    MENÚ LATERAL (OFFCANVAS)
+==================================*/
 
-/* AQUI VAN LOS COSOS DEL MENU LATERAL*/
 .custom-offcanvas{
     border:none;
+    width:100%;
+    max-width:var(--offcanvas-width);
+    box-shadow:var(--shadow-offcanvas);
 }
 
 .custom-offcanvas-header{
-    padding:2rem;
-    border-bottom:1px solid #dee2e6;
+    padding:var(--space-xl);
+    border-bottom:1px solid var(--border-color);
 }
 
 .canvas-brand{
@@ -241,272 +330,41 @@ body {
 }
 
 .canvas-brand-text{
+    font-family:'Syne',sans-serif;
     font-size:1.5rem;
-    font-weight:700;
-    color:var(--primary-color);
+    font-weight:var(--fw-bold);
+    color:var(--color-primary);
     letter-spacing:-.02em;
+    line-height:1;
 }
 
 .canvas-brand-subtext{
-    color:#6c757d;
+    color:var(--color-gray-500);
 }
 
-/*FIN MENU LATERAL*/
-
-@media (min-width:768px){
-
-    .header-container{
-    padding-inline:1.5rem;
-    }
-
-    #banner-principal{
-        margin: var(--space-lg) 0;
-    }
-}
-
-
-@media(min-width:992px){
-
-.header-row{
-
-padding:1rem 0;
-
-}
-
-}
-
-
-/*======= fin =======*/
-.brand-wrap {
-    transition: transform 0.25s ease;
-}
-.brand-wrap:hover {
-    transform: translateY(-1px);
-}
-.brand-main-text {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.85rem !important;
-    line-height: 1;
-    font-weight: 800 !important;
-    letter-spacing: -0.04em;
-}
-.brand-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    color: #6c757d;
-    margin-top: 2px;
-}
-
-/* --- CONTROL DE LOGO E IMAGEN CON TEXTO LATERAL --- */
-
-
-.custom-logo-img {
-    height: 36px !important; /* Altura cómoda para móvil */
-    width: auto !important;  /* Mantiene la proporción para no deformar la imagen */
-    display: block;
-    transition: transform 0.2s ease-in-out;
-}
-
-
-
-.brand-text-side {
-    border-left: 2px solid #e2e8f0; 
-    padding-left: 8px;              
-}
-
-.brand-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11px !important;
-    letter-spacing: 0.12em !important;
-    color: #4a5568 !important; 
-    font-weight: 700 !important;
-}
-
-.brand-wrap:hover .custom-logo-img {
-    transform: scale(1.02);
-}
-
-button.custom-toggle-btn {
-    width: 44px ;
-    height: 44px ;
-    padding: 0 ; 
-    display: flex ;
-    align-items: center ;
-    justify-content: center ;
-    gap: 8px ;
-    background-color: #ffffff ;
-    border: 1px solid #e2e8f0 ; 
-    border-radius: 50% ; 
-    transition: all 0.2s ease-in-out ;
-}
-
-
-/* Efecto hover interactivo */
-button.custom-toggle-btn:hover {
-    background-color: #f8fafc ;
-    border-color: #cbd5e1;
-}
-
-button.custom-toggle-btn svg {
-    display: block !important;
-    min-width: 22px;
-    min-height: 22px;
-}
-
-.barra-navegacion {
-    background-color: #fffcfc !important; /* El rojo exacto de Supermercados RB */
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 12px;                  
-    padding: 14px 24px;
-    border-bottom: 4px solid #b44646 !important; /* El verde brillante del logo como acento inferior */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Estilos del Buscador Redondeado */
-.custom-search-group {
-    background-color: #ffffff;
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.custom-search-group:focus-within {
-    box-shadow: 0 0 0 3px rgba(135, 25, 25, 0.15); /* Efecto sutil verde al enfocar */
-}
-
-.custom-search-input:focus {
-    box-shadow: none !important;
-}
-
-/* Manejo de bordes adaptables para escritorio */
-
-.header-action-item {
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.header-action-item:hover {
-    opacity: 0.8;
-}
-
-.custom-search-group {
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: #f8f9fa;
-    border: 1px solid #e3e6e8;
-    transition: all 0.3s ease;
-}
-.custom-search-group:focus-within {
-    border-color: #871919;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(135, 25, 25, 0.08);
-}
-.custom-search-input {
-    font-size: 14px;
-}
-.custom-search-input:focus {
-    box-shadow: none !important;
-    background-color: transparent !important;
-}
-.custom-search-group:focus-within .custom-search-submit {
-    color: #871919 !important;
-}
-
-.custom-cart-btn {
-    background-color: #e39e9e !important; /* El verde lechuga de "Super" */
-    color: #ffffff !important;
-    border: 1px solid #b44646 !important;
-    font-weight: 700 !important;
-    transition: all 0.2s ease;
-}
-.custom-cart-btn:hover {
-    background-color: #ac5252 !important; /* Verde un poco más oscuro al pasar el mouse */
-    border-color: #e70707 !important;
-    transform: translateY(-1px);
-}
-.cart-badge-num {
-    background-color: #E31C25 !important; /* Badge rojo para contrastar sobre el botón verde */
-    color: #ffffff !important;
-    padding: 4px 6px !important;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.custom-search-group {
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: #ffffff; /* Totalmente blanco para que sea legible sobre el fondo rojo */
-    border: 1px solid #ffffff;
-    transition: all 0.3s ease;
-}
-.custom-search-group:focus-within {
-    border-color: #b44646 !important; /* Borde verde al escribir */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.custom-search-group:focus-within .custom-search-submit {
-    color: #b44646 !important; /* Icono de la lupa verde */
-}
-
-/* ESTILOS PARA EL CARRUSEL*/
-
-.custom-carousel {
-    overflow: hidden;
-    background-color: #f8fafc;
-}
-
-.custom-carousel-img {
-    height: 180px;    
-    object-fit: cover ; 
-    object-position: center;
-}
-
-
-@media (min-width: 769px) {
-    
-}
-
-/*FIN DE E. CARRUSEL*/
-
-
-/* DISEÑO DEL MENÚ LATERAL */
-
-.canvas-brand-text {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800 !important;
-    letter-spacing: -0.04em;
-    line-height: 1;
-}
-.brand-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    color: rgba(255, 0, 0, 0.8) !important; /* Blanco semi-transparente sobre el fondo rojo */
-    margin-top: 2px;
+.canvas-brand-highlight{
+    color:var(--color-dark);
+    font-weight:var(--fw-light);
 }
 
 .header-seccion-menu {
-    font-size: 11px;
+    font-size:.6875rem;
     letter-spacing: 0.15em;
 }
 
-.custom-offcanvas {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05) !important;   
-    width: 100% !important; 
-    max-width: 400px !important;
+.custom-menu-list .list-group-item {
+    border-color:var(--color-gray-100);
+    font-size: 14px;
+    transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    padding-left var(--transition-normal);
 }
 
-.custom-menu-list .list-group-item {
-    border-color: #f1f3f5 !important;
-    font-size: 14px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
 .custom-menu-list .list-group-item:hover {
-    background-color: #fde8e8 !important; /* Fondo rosa/rojo muy sutil */
-    color: #D62333 !important; /* Texto rojo */
-    padding-left: 1.75rem !important;
+    background-color: #fde8e8;
+    color: #D62333; 
+    padding-left: 1.75rem;
 }
 
 .style-badge-text {
@@ -515,7 +373,9 @@ button.custom-toggle-btn svg {
 }
 
 .custom-menu-list .list-group-item .arrow-icon {
-    transition: transform 0.25s ease, stroke 0.25s ease;
+    transition:
+    transform var(--transition-normal),
+    stroke var(--transition-normal);
 }
 
 .custom-menu-list .list-group-item:hover .arrow-icon {
@@ -523,62 +383,116 @@ button.custom-toggle-btn svg {
     stroke: #D62333;
 }
 
+/*==================================
+    FIN MENÚ LATERAL
+==================================*/
+
+/*==================================
+    CARRUSEL
+==================================*/
+
+.custom-carousel {
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.custom-carousel-img {
+    height: var(--carousel-height-mobile);    
+    object-fit: cover ; 
+    object-position: center;
+}
+
+/*==================================
+    FIN CARRUSEL
+==================================*/
+
 /* ==========================================================================
-   DISEÑO HERO PRINCIPAL (BANNER PREMIUM)
+    DISEÑO HERO PRINCIPAL (BANNER PREMIUM)
    ========================================================================== */
 
-.custom-hero {
-   
-
-    background: radial-gradient(circle at 90% 10%, #ff0000 0%, #ffffff 60%);
-    min-height: 480px;
-    overflow: hidden;
+.custom-hero{
+    background: radial-gradient(
+        circle at 90% 10%,
+        var(--hero-bg-start) 0%,
+        var(--hero-bg-end) 60%
+    );
+    min-height:var(--hero-min-height);
+    overflow:hidden;
 }
 
-.hero-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.85rem !important;
-    line-height: 1.15;
-    color: #1a1a1a !important;
-    font-weight: 800 !important;
+.hero-title{
+    font-family:'Syne',sans-serif;
+    font-size:2.85rem;
+    font-weight:800;
+    line-height:1.15;
+    color:var(--text-primary);
 }
 
-.hero-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.05rem !important;
-    max-width: 540px;
-    line-height: 1.6;
+.hero-text{
+    font-size:1.05rem;
+    max-width:540px;
+    line-height:1.6;
 }
 
-
-/* Efectos interactivos y fluidos para los botones */
 .custom-hero-btn {
-    font-size: 13px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 13px;
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
+
 .custom-hero-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(215, 18, 18, 0.2) !important;
+    box-shadow:var(--shadow-btn-hover);
 }
 
 .custom-hero-btn-secondary {
-    font-size: 13px !important;
-    transition: all 0.3s ease;
+    font-size: 13px;
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
 }
+
 .custom-hero-btn-secondary:hover {
-    background-color: #ff0000 !important;
-    color: #ffffff !important;
+    background:var(--color-primary);
+    color:var(--color-white);
     transform: translateY(-2px);
 }
 
-/* Caja de diseño interactiva de la derecha */
 .hero-image-overlay {
-    border: 1px solid rgba(135, 25, 25, 0.1);
-    transition: transform 0.5s ease;
+    border:1px solid var(--border-color);
+    transition:transform var(--transition-slow);
 }
+
 .hero-image-overlay:hover {
     transform: scale(1.02);
 }
+
+/*==================================
+    FIN HERO PRINCIPAL
+==================================*/
+
+@media (min-width:768px){
+    .header-container{
+        padding-inline:var(--space-lg);
+    }
+
+    #banner-principal{
+        margin: var(--space-lg) 0;
+    }
+}
+
+
+@media (min-width: 992px){
+    .header-row{
+        padding:var(--space-md) 0;
+    }
+
+}
+
+/*======= fin =======*/
+
 
 /* ==========================================================================
 SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
