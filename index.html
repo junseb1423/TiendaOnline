@@ -910,20 +910,20 @@
     </div>
 </section>
 
-<div class="offcanvas offcanvas-end border-0 custom-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label">
+<div< class="offcanvas offcanvas-end border-0 custom-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label">
         
-        <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
-            <div class="d-flex flex-column" id="carrito-lateral-label">
-                <span class="fs-4 fw-black text-dark tracking-tight canvas-brand-text">Mi<span class="text-success fw-light">Orden</span></span>
-                <small class="text-muted canvas-brand-subtext">RESUMEN DE COMPRA</small>
-            </div>
-            <button type="button" class="btn-close text-reset p-2" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
+    <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column" id="carrito-lateral-label">
+            <span class="fs-4 fw-black text-dark tracking-tight canvas-brand-text">Mi<span class="text-success fw-light">Orden</span></span>
+            <small class="text-muted canvas-brand-subtext">RESUMEN DE COMPRA</small>
         </div>
+        <button type="button" class="btn-close text-reset p-2" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
+    </div>
 
-        <div class="offcanvas-body p-4 d-flex flex-column">
-            <div class="carrito-items-wrap flex-grow-1 overflow-y-auto mb-4">
-                
-                <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border custom-cart-item">
+    <div class="offcanvas-body p-4 d-flex flex-column">
+        <div id="carrito-items" class="d-flex flex-column gap-3"></div>
+    </div>
+<div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-light rounded-4 border custom-cart-item">
                     <div class="d-flex align-items-center gap-3">
                         <img src="Estilos/img_produc/descargar.jpg" alt="Manzana Roja" class="img-fluid rounded-3 bg-white border p-1" style="width: 55px; height: 55px; object-fit: contain;">
                         <div>
@@ -931,20 +931,22 @@
                             <span class="text-success fw-black small">S/ 4.50</span>
                         </div>
                     </div>
-                </div>
 
-            </div>
-
-            <div class="border-top pt-4 mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <span class="text-dark fw-black fs-5">Total Estimado</span>
-                    <span class="text-success fw-black fs-4">S/ 4.50</span>
-                </div>
-                <button class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm custom-checkout-btn">
-                    Proceder al Pago
-                </button>
-            </div>
+        <div class="border-top p-4 bg-white">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="text-muted fw-medium">Subtotal</span>
+            <strong id="carrito-subtotal">S/ 0.00</strong>
         </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="text-dark fw-black fs-5">Total Estimado</span>
+            <strong id="carrito-total" class="text-success fw-black fs-4">S/ 0.00</strong>
+        </div>
+<div class="border-top pt-4 mt-auto"></div>
+        <button class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm custom-checkout-btn" id="btn-pagar">
+            Proceder al Pago
+        </button>
+    </div>
 </div>
 
 <section id="contacto" class="py-5 bg-light-subtle">
