@@ -1,7 +1,7 @@
 # Supermercado RB
 
 ## Objetivo
-Crear una tienda online para mostrar productos de supermercado y simular un carrito de compras.
+Creación de una tienda online para la venta de productos de primera necesidad para la empresa de Supermercados RB
 
 ## Herramientas usadas
 - HTML5
