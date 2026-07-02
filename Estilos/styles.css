@@ -119,10 +119,18 @@ body{
     padding:var(--space-sm) 0;
 }
 
+.brand-wrap{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
 .brand-subtext{
-    text-transform:uppercase;
-    font-weight:var(--fw-bold);
-    letter-spacing:.12em;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: .12em;
+    font-size: small;
+    color:#D62333;
 }
 
 .menu-text{
@@ -601,10 +609,47 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
     box-shadow: 0 6px 18px rgba(135, 25, 25, 0.25) !important;
 }
 
-/*final lel*/
+.cart-offcanvas {
+    width: 420px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Botón cerrar minimalista */
+.btn-close-custom {
+    background: transparent;
+    border: none;
+    color: var(--color-gray-500);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast, 0.2s), 
+                color var(--transition-fast, 0.2s), 
+                transform var(--transition-fast, 0.2s);
+}
+
+.btn-close-custom:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-dark);
+    transform: rotate(90deg);
+}
+
+.cart-offcanvas-body {
+    background-color: var(--color-hover-light); 
+}
+
+/* Base fija inferior */
+.cart-offcanvas-footer {
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.02);
+}
+
+/*==================================================
+    FIN CARRITO LATERAL 
+==================================================*/
 
 /* ==========================================================================
-   ESTILOS PREMIUM PARA LOS BANNERS DE OFERTAS
+    ESTILOS PREMIUM PARA LOS BANNERS DE OFERTAS
    ========================================================================== */
 
 .banner-promo-title {
@@ -918,6 +963,9 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
         text-align: center;
         background-color: rgb(26, 26, 26);  
         color: rgb(255, 255, 255); 
+    }
+    .cart-offcanvas {
+        width: 100%;
     }
 }
 
