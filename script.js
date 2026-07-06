@@ -53,17 +53,9 @@ function actualizarCarrito() {
     });
 
     // Actualizamos los contadores del Header y totales
-    if (badgeCarrito) {
-        badgeCarrito.textContent = cantidadTotal;
-    }
-
-    if (subtotalCarrito) {
-        subtotalCarrito.textContent = formatoSoles(total);
-    }
-
-    if (totalCarrito) {
-        totalCarrito.textContent = formatoSoles(total);
-    }
+    if (badgeCarrito) badgeCarrito.textContent = cantidadTotal;
+    if (subtotalCarrito) subtotalCarrito.textContent = formatoSoles(total);
+    if (totalCarrito) totalCarrito.textContent = formatoSoles(total);
 
     // Estado vacío amigable
     if (carrito.length === 0) {
@@ -82,7 +74,7 @@ document.addEventListener('click', function (e) {
     const botonSumar = e.target.closest('.btn-sumar');
     const botonRestar = e.target.closest('.btn-restar');
 
-    // ACCIÓN: AGREGAR PRODUCTO
+    // ACCIÓN: AGREGAR PRODUCTO (Código unificado con Toast)
     if (botonAgregar) {
         e.preventDefault();
         
@@ -94,7 +86,6 @@ document.addEventListener('click', function (e) {
             cantidad: 1
         };
 
-        // Validamos que los datos obligatorios existan para evitar errores
         if (!producto.id || !producto.nombre) {
             console.error("Faltan atributos 'data-' en el botón presionado.");
             return;
@@ -109,6 +100,15 @@ document.addEventListener('click', function (e) {
         }
 
         actualizarCarrito();
+
+        // Mostrar Toast de Bootstrap
+        if (contenedorMensajeToast && toastBootstrap) {
+            contenedorMensajeToast.innerHTML = `
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                ¡${producto.nombre} agregado con éxito!
+            `;
+            toastBootstrap.show();
+        }
     }
 
     // ACCIÓN: ELIMINAR COMPLETAMENTE
@@ -121,17 +121,15 @@ document.addEventListener('click', function (e) {
         actualizarCarrito();
     }
 
-    // ACCIÓN: SUMAR CANTIDAD EN EL CARRITO
+    // ACCIÓN: SUMAR CANTIDAD
     if (botonSumar) {
         const id = botonSumar.dataset.id;
         const producto = carrito.find(item => item.id === id);
-        if (producto) {
-            producto.cantidad++;
-        }
+        if (producto) producto.cantidad++;
         actualizarCarrito();
     }
 
-    // ACCIÓN: RESTAR CANTIDAD EN EL CARRITO
+    // ACCIÓN: RESTAR CANTIDAD
     if (botonRestar) {
         const id = botonRestar.dataset.id;
         const producto = carrito.find(item => item.id === id);
@@ -144,48 +142,70 @@ document.addEventListener('click', function (e) {
         }
         actualizarCarrito();
     }
-
-    // ACCIÓN: AGREGAR PRODUCTO
-    if (botonAgregar) {
-        e.preventDefault();
-        
-        const producto = {
-            id: botonAgregar.dataset.id,
-            nombre: botonAgregar.dataset.nombre,
-            precio: Number(botonAgregar.dataset.precio),
-            img: botonAgregar.dataset.img,
-            cantidad: 1
-        };
-
-        if (!producto.id || !producto.nombre) {
-            console.error("Faltan atributos 'data-' en el botón presionado.");
-            return;
-        }
-
-        const existe = carrito.find(item => item.id === producto.id);
-
-        if (existe) {
-            existe.cantidad++;
-        } else {
-            carrito.push(producto);
-        }
-
-        actualizarCarrito();
-
-        // --- AQUÍ CONECTAMOS EL TOAST ---
-        // 1. Personalizamos el mensaje con el nombre del producto seleccionado
-        contenedorMensajeToast.innerHTML = `
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            ¡${producto.nombre} agregado con éxito!
-        `;
-        
-        // 2. Ordenamos a Bootstrap que muestre la animación en pantalla
-        toastBootstrap.show();
-    }
 });
 
 // Inicializamos el carrito al cargar la página
 actualizarCarrito();
-
-// Log informativo de bienvenida
 console.log("Supermercados RB - Sistema de órdenes activo.");
+
+
+/* ==========================================================================
+    5. CONTENEDOR DE CATALOGO PARA LOS PRODUCTOS (FRUTAS)
+   ========================================================================== */
+
+const contenedorFrutas = document.getElementById('catalogo-frutas');
+const contenedorLacteos = document.getElementById('catalogo-lacteos');
+
+// UNA SOLA FUNCIÓN INTELIGENTE PARA TODO EL SUPERMERCADO
+function renderizarCategoria(nombreCategoria, idContenedor) {
+    const contenedor = document.getElementById(idContenedor);
+    if (!contenedor) return; // Si no existe el bloque en esta página, se salta
+
+    contenedor.innerHTML = '';
+
+    // Filtramos dinámicamente según la categoría que le pasemos y cortamos a 3
+    const productosFiltrados = productosDB.filter(producto => 
+        producto.categoria && producto.categoria.toLowerCase() === nombreCategoria.toLowerCase()
+    ).slice(0, 4);
+
+    if (productosFiltrados.length === 0) {
+        contenedor.innerHTML = `<div class="col-12 text-center text-muted"><p>No hay productos disponibles en esta categoría.</p></div>`;
+        return;
+    }
+
+    // Dibujamos las tarjetas (El mismo HTML premium que ya tienes)
+    productosFiltrados.forEach(producto => {
+        contenedor.innerHTML += `
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
+                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <img src="${producto.img}" class="card-img-top img-fluid p-3" alt="${producto.nombre}" style="max-height: 100%; object-fit: contain;">
+                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">${producto.origen || 'Nacional'}</span>
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">${producto.categoria}</span>
+                        <h3 class="card-title fs-6 fw-bold text-dark mb-1 text-truncate" title="${producto.nombre}">${producto.nombre}</h3>
+                        <p class="text-muted small text-truncate mb-3" style="font-size: 13px;">${producto.descripcion || ''}</p>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                            <span class="fs-5 fw-black text-dark">S/ ${producto.precio.toFixed(2)} <small class="text-muted fw-normal p-unit">/ und</small></span>
+                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" 
+                                    style="width: 36px; height: 36px;"
+                                    data-id="${producto.id}" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-img="${producto.img}">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    console.log("Comprobando base de datos antes de renderizar...", typeof productosDB !== 'undefined' ? productosDB : "No encontrada");
+    renderizarCategoria("Frutas", "catalogo-frutas");
+    renderizarCategoria("Lácteos", "catalogo-lacteos");
+    renderizarCategoria("Carnes", "catalogo-carnes");
+    renderizarCategoria("Despensa", "catalogo-despensa");
+    renderizarCategoria("Bebidas", "catalogo-bebidas");
+});

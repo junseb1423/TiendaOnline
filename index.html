@@ -6,7 +6,7 @@
     <title>Supermercado RB — Frescura que se siente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Estilos/styles.css">
 </head>
@@ -182,8 +182,6 @@
     </div>
 </div>
 
-
-
 <section class="custom-hero py-5 mb-5 d-flex align-items-center">
     <div class="container px-4">
         <div class="row align-items-center g-4">
@@ -222,462 +220,90 @@
     </div>
 </section>
 
-    <section id="categorias" class="seccion-contenedor">
-        <div class="container px-4">
+<section id="categorias" class="seccion-contenedor">
+    <div class="container px-4">
+        
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                <div class="d-flex align-items-baseline gap-2">
+                    <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Frutas Frescas</h2>
+                    <span class="text-muted small fw-medium item-counter">12 variedades</span>
+                </div>
+                <a href="frutas.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                    <span>Ver Todo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
             
-            <div class="mb-5">
-                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-                    <div class="d-flex align-items-baseline gap-2">
-                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Frutas Frescas</h2>
-                        <span class="text-muted small fw-medium item-counter">12 variedades</span>
-                    </div>
-                    <a href="frutas.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
-                        <span>Ver Todo</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-frutas">
                 </div>
-                
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/descargar.jpg" class="card-img-top img-fluid p-3" alt="Manzana Roja Selecta" style="max-height: 100%; object-fit: contain;">
-                                <span class="badge bg-success-subtle text-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Fresco</span>
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Manzana Roja Selecta">Manzana Roja Selecta</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 4.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/palta.jpg" class="card-img-top img-fluid p-3" alt="Plátano de Seda de Origen" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Plátano de Seda de Origen">Plátano de Seda de Origen</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/Fresa.jpg" class="card-img-top img-fluid p-3" alt="Fresa" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Fresa">Fresa</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/Naranja.jpg" class="card-img-top img-fluid p-3" alt="Naranja" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Huerto Local</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Naranja">Naranja</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 2.80 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                </div>
-            </div>
-                </div>
-            </div>
-
-            
-
-            <div>
-                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-                    <div class="d-flex align-items-baseline gap-2">
-                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Lácteos y Derivados Frescos</h2>
-                        <span class="text-muted small fw-medium item-counter">8 productos</span>
-                    </div>
-                    <a href="lacteos-huevos.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
-                        <span>Ver Todo</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-                
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/Leche-gloria.jpg" class="card-img-top img-fluid p-3" alt="Leche Evaporada Clásica" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Leche Evaporada Clásica">Leche Evaporada Clásica</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/queso.jpg" class="card-img-top img-fluid p-3" alt="Queso" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Queso">Queso</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/LecheNestle.jpg" class="card-img-top img-fluid p-3" alt="Leche Nestle" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Leche Nestle">Leche Nestle</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/MantequillaGloria.jpg" class="card-img-top img-fluid p-3" alt="Mantequilla Gloria 390gr" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Mantequilla Gloria 390gr">Mantequilla Gloria 390gr</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="mb-5">
-                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-                    <div class="d-flex align-items-baseline gap-2">
-                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Carnes y Cortes Selectos</h2>
-                        <span class="text-muted small fw-medium item-counter">6 productos</span>
-                    </div>
-                    <a href="#carnes-pescados" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
-                        <span>Ver Todo</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-                
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                    
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="data:image/jpeg;base64,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N7HR/ScI1DXfIhaaGwcUBlAa0ccw013TfVZeXLho1K6o58ynPDfOTHYzY+SpX7n5VVjMzXXGZpIvOtifIKfiux1Ig+zc5msA3HLmIV1sjCOpUw1xkjUqct8aUdOGjk1r2p5znCWP1wfNj2bxVN12F4knuwbcjqF7/wBLqtNsPV8RPpC+jIsfIib/AOrVXykfP2bFxDz/AEXeMNHWCrHDdlKhM1Kobybf+F16KVRia5+JVmsLCOXrdk7HJVM8HAZT5XCgVOzVYWAaebXX/wDaF26KXSizCHiFePXJwVPs3iGyAwX4OHrKsKPZioYzvY3oC4/ILrURUYoyn4lXl2Rz7OzDJBNWoSP2/RSxsChva48SXO+RVqizUI9ivK5qy5kyuGxKH/iHmT81Iw+ApM92mwdAPipKKcI1upN8tmIWURSYBERAEREAREQBERAEREAREQBYhZRAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREB//2Q==" class="card-img-top img-fluid p-3" alt="Bife Ancho de Res" style="max-height: 100%; object-fit: contain;">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide text-white">Premium</span>
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cortes Selectos</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Bife Ancho de Res Premium">Bife Ancho de Res Premium</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 32.90 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="https://metroio.vtexassets.com/arquivos/ids/504829-800-auto?v=638386150356400000&width=800&height=auto&aspect=true" class="card-img-top img-fluid p-3" alt="Pechuga de Pollo Fresca" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Aves</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Pechuga de Pollo Deshuesada">Pechuga de Pollo Deshuesada</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 14.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/CarneVenado.jpg" class="card-img-top img-fluid p-3" alt="Carne de Venado" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Carne de Venado">Carne de Venado selecto</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/CarnePavo.jpg" class="card-img-top img-fluid p-3" alt="Carne de Pavo" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Despensa</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Carne de Pavo">Carne de Pavo</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="mb-5">
-                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-                    <div class="d-flex align-items-baseline gap-2">
-                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Despensa y Especialidades Gourmet</h2>
-                        <span class="text-muted small fw-medium item-counter">15 productos</span>
-                    </div>
-                    <a href="#despensa" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
-                        <span>Ver Todo</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-                
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                    
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMRBhUSEg4TFRITFhsWGBITFREYFxcXFhYZFxUSFxcZHigjGBolHhMXITEhJSsvMS4uFx8zODs4NygwLisBCgoKDg0OGhAQGy8gICYtKy8tLS0tLS4tLS8vLy0tKy0rLS0tLS0tLS0rKy0tKy0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEBAQEBAQEBAAAAAAAAAAAABwYFBAMIAf/EAEgQAAIBAgMEBQcGCwcFAAAAAAABAgMRBBIhBQYHMRNBUXFzIjJhgaGywiMlNTaRwRQmQlJiY4Kxs8PRCCQzQ1NykhUWouHw/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAECBAMFBv/EADURAQACAgECBAIHBwUBAAAAAAABAgMRBBIhMUFRYQUTIiMycYGx8BVSkaHB0fEkMzRC4RT/2gAMAwEAAhEDEQA/ALiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHzr1VCi5SekVd+oImWG2hxIpQlLKoKMdM05Sk27cstNO32kbhz+a8uyOJLqT+UpUox0u88oWuu2Wi9ZEW2iMjc7H2pTxWCVWnez5p807J2dtHz5ptFnWJ29wSAAAAAAAAAAAAAAAAAAAAAAAAAAAA5m8kZPYNdRipS6OVotSkm7PTLHWXcuYVt4IjvPhK9LCfK1pJqyUHVUcvo6Kmowh3Jy7ylo0yS8e6tGUq3k1J5+pqU9PeXsfcVp3Inss24dGcMBUjNRv0nOMct24Ru3HLHX05I37Ot9Iacfg05LoAAAAAAAAAAAAAAAAAAAAAAAAAAAA5u8dKpLYVaNG3SunLIm7Jytom+pPkFZfmnenE4uGFi5121P8mnCKgvQtNPZ3HOL1tOpUikebxbt4vGSrKMJyim7XdOLXbrdfeJvSvmmaR5P0Fwt/CHsCUsQo61GoOD0lGKUXJR/J1T09H22idxuE0jTZllwAAAAAAAAAAAAAAAAAAAAAAAAAAAHl2pUy7Nqy/Npyf2RZE+AgmLl/d7P81fuTR4Ga0xdWHk2M7SXpmvuLVt37oWjhzL8WkvzatSP/m3957WL7C0NQdEgAAAAAAAAAAAAAAAAAAAAAAAAAAAOXvTPLu3iH+pn7rK2nsIVi53tp1L9x87mn6cofDZ6+TT7Hf2lv8AsLBwwq5tiVPRXn7Yxf3nu4fsENgdUgAAAAAAAAAAAAAAAAAAAAAAAAAAAOFvnWit36sJTUeki4pvs/KduxK5S/ghD8bjoU5Xu3o+UJ/07jxb8e8232/imIl5tj7QpOrlk5JduSWnLqty0RNcFurv+ZMLBwxqwWz6kYzTz1HUVk1pljFqzS5OPtR6+KNV0iG2OqQAAAAAAAAAAAAAAAAAAAAAAAAAAOLvZt5YLZTquOaTeWEepyabu/Qkmytp1GxHNs7xVcRdznmu+Vmlo9F3IxZs+oXrXbM4qo5N3j6Ov/7qMk5Oru6xV8cJFKfmtesnrmPMmrQbI2vVw9VTpyafPXtXXbtLU5VotqVJosO5W9X4bCUZQy1KaT05Si9Lrsd+fej08eSLw5zGmoOiAAAAAAAAAAAAAAAAAAAAAAAAAAYXiw/mmj4j91nDPP0UwlLep4uafJoq82I109P9EVou+dK2cm29EvvAp5qyovCj6YqeD8cT1+HPZwsqJuUAAAAAAAAAAAAAAAAAAAAAAAAABguL9TLsei/1vws5Za9UJhIqNdzxKhCDcm+1LrPPvxZtO5lF+RGOrTbP3UjNXq4nJJpSyRir2ndxeaTXPLLS11lZ52bk/KnVKdfjG4n0Xx1vkjdr9Hs9dTcZqHyNXpH/AKc4qEno1aM02r96RHG+IcfNfovWazKufjcvFWbY7xaPSWHxeJdLE5JQfP0J6OzTT5NM9KeF6S5cfl/Op3jUx4qPwexKntmpZP8AwOu358TZx8U0ju7WnatGlUAAAAAAAAAAAAAAAAAAAAAAAAAE840StsKi/wBd8EithKNg4mEdqeX5sk02uaUlKLa7sxkz1tOOenxZss1jJSb/AGe8TPptSnRhUl0ik6mdpfJqKSilJJWbenlz6+c3y6vnuLypra1NRSI39r1mXq5+LMxFp3bevs+jobPjGCTnKcYxcJOUpJLRZm5cktVZ2+831y9car0b7/8AmmK9Plz1WmYiNfqUe302jGvvBOcdE5N/bbXvdr+s9PBW1Mda37zpl40Ra18le0TPb8G84IP56q+B/Mia4a1lJAAAAAAAAAAAAAAAAAAAAAAAAAATnje7buUfGXuSK2Eg2HQ6Xa9OHbJR9UpK/suZM+SceK148Yj/AAx82It019ZUBbt044hunVr01fzYT8n1Jpv2nyk/FLXj6ylbT7uuKt8U6xXmsezubI2JTVSLm6lVxd1003JX7cukfXY4x8SyxaIxxFY9odvkfM75Zm0+/wDZGN7sL0W8dSPUpNf8ZOP7kj7XDbrxxb2ZOJGqWr6TKi8CZfPVbwP5kTRDWtZKQAAAAAAAAAAAAAAAAAAAAAAAAATfjm/xZpeMvcmVt4CecLcKqm9cL8o5pa/owlb2tGfJSt6TW3n2ZMs7zUj75WiWzaand2+1HmW+GYI84a4mJl9sPSpLlOGnZJe3sOUcLi1nXVC8XjxQPilCH/dk5QacW7prlrGDftuevg6YxxFWHBP1uSGs4DfTdbwPjiaoaoW0lIAAAAAAAAAAAAAAAAAAAAAAAAAJtx1+rNLx1/DmVlEpdudQlOU8qvKza8qUeuPNp8uehi5VorTv6vPz4L583TTyj+7tYGeJlBUMPCNN/wCa1e8tOTm23bm7aeg863yqT8zJO/T/AA4YcOeerFETvw92i3f2PiIVYwnODb82Kzvq0ajljHS7f2a6HGvIw2v9XWdz7O2PiWwzqdxPonm/UovEKUajms1szVvzl28vJvfrue1x626dWjUqcS311435f1bHgE/nyv4H8yJrh6vmuBIAAAAAAAAAAAAAAAAAAAAAAAAACb8dfqvS8dfw5lbITrcHDKdCrekppRvfNZxefRp3VvNetzz+ZbprXUo4nfkXn2h1tl7Wpwr1KDpSdSm8iyxTqSd7KpNxV1fR9mvYjByeNNp3Ota8PJq4l4nJaenVo/m0Ow1jJYZ1K1aEW4vJbms0bRbdtFzenoOeK/HxZI6N/r0dZjNlxz11iLd9fine/WCjRwlOCk3KKWeT65ZpJ2XUlex7HHzTl6pmNd3ixxI42atY84nf3tR/Z/8Apuv4H8yJshshciUgAAAAAAAAAAAAAAAAAAAAAAAAAm/Hb6qUvHX8OoRImO5kG6V+kyw/LjdrPrNxjp1XX2XPN5t4rWI1376U4cT8+/4NXVxsaso03FZU1ytpZrWPZb/0zx6VyRM9VnrdMV7ubs3eiVSpGM4STdkk3ZK2lmuaXqPQr8PrGp6nn5fi3TNq1pO2V3lnKWGnOV7zlm6+bnd8+89Smvsw8fDkvkz1vadzO20/s+/TVfwP5kTtD1IXMlIAAAAAAAAAAAAAAAAAAAAAAAAAJxx1X4p0/HX8OoVkYDcHZH4Rsapz0lFad8mmjxfiuW+O9bVjbhx7dOS8+8Ols7YspTm4VJTUJuDdkldWutOfPuPMz8q0RETXW423fNmXa2Xu9COPTnpKSvysuaivKtzbkklfW5wpyc81+jHZG4Zfivs6NDBU1CCjmzPvanT5nsfB8mW3XN/WNMGX/kY5j3dL+z/H54rv9SvfR7zRC4BIAAAAAAAAAAAAAAAAAAAAAAAAAJzx0+qlPx4/w5kDMcManR7n4qXSKHlQWZ87PMmofpvkr6XaM+elZjdmbD9u/wB8fk9ctnygqkYYihaEZ1KcoVsR5Dk3V8/o8sqiw+WybbSje2umOcFZd+8b/F0sFu1XqUW6VSk4rzHUq1ZuM40XkUouHkvparlaytljppYmvGme8Qi1ZmJ1+v1LN8Y9nLD7HwtJJXUajdm3eUqlOUnd2vq3rZdy5G3HjjHDPftnp+L0cAl86V/CXvo7tULYEgAAAAAAAAAAAAAAAAAAAAAAAAAnPHJ/irT8ePuTIHH4MUYVNjYiFSEZRzQbjNKS/wAzWz7hMRMaZcP+7f74/KHVxe7VWphlThUw8qUa1WovlJXqxxFRuSnaNo5aUnTSV73vpyMt8N5jUO3b1fSlu7tDoH/e4qbio61qzjmlFyqPzdPLlb/a+qxz+Rk32lMxMx4szxrpqnSwtNcoUsq59UoLr/2myI12cMkfX0+6TgH9K4jwl76/qXaVrCQAAAAAAAAAAAAAAAAAAAAAAAAATjjp9VafjL3JkSiWf4I4xLZ+JfVHovbKrG/cusMtfo5L/h+TS0sLD8F6PpKLawzo3n0i1im41byjz/xNOdkrXsJiExHbT106Chi21VpwXTxmlaatapO1FrJa7hUku27tySJ0eE+PnthOOtZPaNBfqk/tnJ/CVLTvkVj2l6OAkbbTr+F8aLNK1BIAAAAAAAAAAAAAAAAAAAAAAAAAJ1xw+rFPxl7kwhiuEOJhGliqc4ycalNRahzteV+7Sb1MvJ5VOPSL38GfHXqzWj2hR8RgcPLE5+nkm+SsrLzmrK3U2n+zbrd+H7U4v77rODu+tTBUZU5upXlNTvmyxkpPyXFKMuacb3VtU4rXQT8V4kRv5kf1T/8ANNvFKeMuLjV2/HLe0acI6qz0zvl+0asWamasXp3iXCsf6qfaHb4D/Sdbwvjid2mFpCQAAAAAAAAAAAAAAAAAAAAAAAAATnjj9WaXjfBIIlguDTT25Vg45s1Kdle12nTaV/Uzjn4+PNToyRuGfqmvI3HorS2dRUdcC7N62UH3S0eq/qY/2TxP3f52/u7/ADJ9PyfSOyqNlkwrj16KMbWenP1spb4PxZ8p/jKYvMeEIdxTmnvXUjHlFqNm7+bCCab77m/DirhpFKdohlwz1Z8k/c1vAf6UreF8cTs1QtISAAAAAAAAAAAAAAAAAAAAAAAAACc8cPq1S8b4JBEpfwsxnRb3023o24v9qMl++xzyXitOplyzrLSfvWzau2JwcOiSk3mbTTd7OC0Sad/K6vQZ8fLpfwatvbszaLqYKEpqKclfSUZJ9kk1pZrX1kW5lInW071G35v3txnTbwVal9JzlL/lOUl7GjZXvG2LhzuJt6zKicCPpat4PxxJbIWkJAAAAAAAAAAAAAAAAAAAAAAAAABPeNH0BS8X4JFLz2Eb2fV6PHxqJaxkpX7mn9xjndq2p7MvLj6EW9JVPE1lKSzUs6WsX5HX2Xkn1ew+PrbJTer60v8AN9n9xW0HS2TUcYuCpweVPLa70ilZvraOvG+Zkz0r1b3KuXNrHaZjwhG8Thc2LbctL2t6ErH2U59doTxcesUKlwQpqO16tv8AR+OJ1pabeLQshcAAAAAAAAAAAAAAAAAAAAAAAAABOON1S2waPb0rf2Qf9SJjfYlC/wAPtU1iU+RG9uWWOqk1VTd6UMRsqnJ6yppQbu/yfNfpummfH/EYvxuRetfCe7Ng1kpEz4w8O+uLjQ2X0abvN55XbbtHkte2VvsNfwXFbNknLMeHZz5ER2xR5z3Tf/qF35p9JHGje5ehE6jSrcDKjltmt4PxwOkV6VlnJAAAAAAAAAAAAAAAAAAAAAAAAAAYji9syVfdGUoRvKhJVGlzyJNTt3J3/ZBL82Vn5R0hzlpd0d5vwa8XZq1nFuyaXmtPqa5HnfEPh1eVXXhMeDDet8V+uneJ8YeHebbbxOKbve/O3JJebFehGjh8WvHxxSi2DHebTkyeLj03qaWyF/4JbAnR2RLE1ItOukqaej6Na5/2m1b0RT6ykrwphCQAAAAAAAAAAAAAAAAAAAAAAAAAfxq6Ak2+PBmnXxMq2BrRoylq6E03Sv8AoSWtNeizXZbkWi2lZjbDVeD21VOypUJemNaNvaky0WhXoejBcGNpTms7w9JdblUlJ+pRi7/aOuE9DfbpcHMLhq8auJqPFVI6qLjlop9TyXbnb9J29BSbbTEaUxIhZ/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" class="card-img-top img-fluid p-3" alt="Aceite de Oliva Extra Virgen" style="max-height: 100%; object-fit: contain;">
-                                <span class="badge bg-success-subtle text-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Importado</span>
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Gourmet</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Aceite de Oliva Extra Virgen 500ml">Aceite de Oliva Extra Virgen 500ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 24.90 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="data:image/jpeg;base64,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" class="card-img-top img-fluid p-3" alt="Arroz Costeño Extra" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Abarrotes</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Arroz Extra Costeño Superior 750g">Arroz Extra Costeño Superior 750g</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 4.20 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/Mayonesa.jpg" class="card-img-top img-fluid" alt="Mayonesa Alacena 850g" style="object-fit: contain; max-height: 100%;"> 
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Abarrotes</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Mayonesa Alacena 850g">Mayonesa Alacena 850g</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 4.20 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/VinagreManzana.jpg" class="card-img-top img-fluid" alt="Vinagre de Manzana 500ml" style="object-fit: contain; max-height: 100%;"> 
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Abarrotes</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Vinagre de Manzana 500ml">Vinagre de Manzana 500ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 4.20 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="mb-5">
-                <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-                    <div class="d-flex align-items-baseline gap-2">
-                        <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Bebidas y Cavas Selectas</h2>
-                        <span class="text-muted small fw-medium item-counter">10 productos</span>
-                    </div>
-                    <a href="#bebidas" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
-                        <span>Ver Todo</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-                
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                    
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="data:image/jpeg;base64,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" class="card-img-top img-fluid p-3" alt="Vino Tinto Reserva" style="max-height: 100%; object-fit: contain;">
-                                <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Exclusivo</span>
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cava</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Vino Tinto Malbec Reserva 750ml">Vino Tinto Malbec Reserva 750ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 48.00 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/BlueLabel.jpg" class="card-img-top img-fluid p-3" alt="Blue Label" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cavas</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Blue Label">Blue Label 750ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/VinoTabernero.jpg" class="card-img-top img-fluid p-3" alt="Vino Tabernero 750ml" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cavas</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Vino Tabernero">Vino Tabernero 750ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                            <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <img src="Estilos/img_produc/VinoQueirolo.jpg" class="card-img-top img-fluid p-3" alt="Vino Queirolo 750ml" style="max-height: 100%; object-fit: contain;">
-                            </div>
-                            <div class="card-body p-3 d-flex flex-column">
-                                <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cavas</span>
-                                <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Vino Queirolo 750ml">Vino Queirolo 750ml</h3>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="fs-5 fw-black text-dark">S/ 3.80 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                                    <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                <div class="d-flex align-items-baseline gap-2">
+                    <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Lácteos y Derivados Frescos</h2>
+                    <span class="text-muted small fw-medium item-counter">8 variedades</span>
+                    </div>
+                <a href="lacteos.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                    <span>Ver Todo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+                
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-lacteos">
+                </div>
+        </div>
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                <div class="d-flex align-items-baseline gap-2">
+                    <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Carnes y Cortes Selectos</h2>
+                    <span class="text-muted small fw-medium item-counter">5 variedades</span>
+                </div>
+                <a href="carnes.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                    <span>Ver Todo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+                
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-carnes">
+                </div>
+        </div>
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                <div class="d-flex align-items-baseline gap-2">
+                    <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Despensa y Especialidades Gourmet</h2>
+                    <span class="text-muted small fw-medium item-counter">15 variedades</span>
+                </div>
+                <a href="despensa.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                    <span>Ver Todo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+                
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-despensa">
+                </div>
+        </div>
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
+                <div class="d-flex align-items-baseline gap-2">
+                    <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Bebidas y Cavas Selectas</h2>
+                    <span class="text-muted small fw-medium item-counter">10 variedades</span>
+                </div>
+                <a href="bebidas.html" class="btn btn-link p-0 text-success fw-bold text-uppercase small tracking-wider d-flex align-items-center gap-1 premium-view-all">
+                    <span>Ver Todo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-move"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-bebidas">
+                </div>
+        </div>
+    </div>    
+</section>
 
 <section id="ofertas" class="seccion-contenedor seccion-gris">
     <div class="container px-4">
@@ -726,7 +352,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -1028,7 +653,9 @@
     <p>Hecho con ❤️ en Amazonas, Perú</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>

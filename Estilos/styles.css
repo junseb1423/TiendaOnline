@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif; 
+    font-family: 'Rubik', sans-serif; 
 }
 
 :root{
@@ -86,7 +86,7 @@ a{
 }
 
 body{
-    font-family:'Plus Jakarta Sans',sans-serif;
+    font-family:'Rubik',sans-serif;
     background:
     linear-gradient(
         to bottom,
@@ -338,7 +338,7 @@ body{
 }
 
 .canvas-brand-text{
-    font-family:'Syne',sans-serif;
+    font-family:'Rubik',sans-serif;
     font-size:1.5rem;
     font-weight:var(--fw-bold);
     color:var(--color-primary);
@@ -429,7 +429,7 @@ body{
 }
 
 .hero-title{
-    font-family:'Syne',sans-serif;
+    font-family:'Rubik',sans-serif;
     font-size:2.85rem;
     font-weight:800;
     line-height:1.15;
@@ -507,7 +507,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
    ========================================================================== */
 
 .title-categoria {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 800 !important;
 }
 
@@ -563,12 +563,12 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 
 /* Ajustes de tipografía para los textos del encabezado */
 .canvas-brand-text {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 800 !important;
 }
 
 .canvas-brand-subtext {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 10px;
     letter-spacing: 0.08em;
 }
@@ -597,7 +597,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 
 /* Estilo para el botón principal de proceder al pago */
 .custom-checkout-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 13px !important;
     letter-spacing: 0.03em;
     transition: all 0.25s ease;
@@ -659,7 +659,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 }
 
 .banner-promo-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1.6;
 }
 
@@ -675,7 +675,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 
 /* Animación sutil para los botones dentro de los banners */
 .custom-banner-btn, .custom-banner-btn-secondary {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 11px !important;
     letter-spacing: 0.05em;
     transition: all 0.2s ease;
@@ -731,7 +731,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
    ========================================================================== */
 
 .custom-input {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 14px;
     color: #1a202c !important;
     transition: all 0.25s ease;
@@ -745,7 +745,7 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
 }
 
 .custom-submit-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 12px !important;
     letter-spacing: 0.05em;
     transition: all 0.25s ease;
@@ -762,12 +762,12 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
    ========================================================================== */
 
 .header-beneficio {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     letter-spacing: -0.01em;
 }
 
 .body-beneficio {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1.5;
 }
 
@@ -1508,7 +1508,7 @@ OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
 
 /* 1. Base tipográfica y suavizado para los títulos especiales */
 .premium-category-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 800 !important;
     letter-spacing: -0.02em;
 }
@@ -1534,7 +1534,7 @@ OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
 
 /* 4. Corrección de visualización para las insignias (Badges) sobre las fotos */
 .custom-product-card .badge {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 10px !important;
     letter-spacing: 0.03em;
     padding: 6px 10px !important;
@@ -1543,14 +1543,14 @@ OPTIMIZACIONES Y COMPLEMENTOS PREMIUM REQUERIDOS
 
 /* 5. Estilo para las unidades de medida debajo del precio (S/ 8.90 / kg) */
 .p-unit {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 11px !important;
     color: #8a94a6;
     font-weight: 500;
 }
 
 .form-label, .form-control, .btn, .offcanvas {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 @media (max-width: 576px) {
