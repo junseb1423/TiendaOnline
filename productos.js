@@ -13,7 +13,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 40,
         "descripcion": "Arándanos frescos seleccionados de excelente calidad.",
-        "img": "Estilos/img_produc/arandanos.jpg"
+        "img": "Estilos/img/img_produc/arandanos.jpg"
     },
     {
         "id": "arroz-extra",
@@ -24,7 +24,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 100,
         "descripcion": "Arroz extra de grano largo ideal para todo tipo de comidas.",
-        "img": "Estilos/img_produc/ArrozExtra.jpg"
+        "img": "Estilos/img/img_produc/ArrozExtra.jpg"
     },
     {
         "id": "blue-label",
@@ -35,7 +35,7 @@ const productosDB = [
         "origen": "Importado",
         "stock": 10,
         "descripcion": "Whisky premium de edición exclusiva.",
-        "img": "Estilos/img_produc/BlueLabel.jpg"
+        "img": "Estilos/img/img_produc/BlueLabel.jpg"
     },
     {
         "id": "cafe-jaen",
@@ -46,7 +46,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 80,
         "descripcion": "Café peruano de aroma intenso y sabor tradicional.",
-        "img": "Estilos/img_produc/Cafe_Jaen.jpg"
+        "img": "Estilos/img/img_produc/Cafe_Jaen.jpg"
     },
     {
         "id": "carne-pavo",
@@ -57,7 +57,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 30,
         "descripcion": "Carne de pavo fresca y de excelente calidad.",
-        "img": "Estilos/img_produc/CarnePavo.jpg"
+        "img": "Estilos/img/img_produc/CarnePavo.jpg"
     },
     {
         "id": "carne-venado",
@@ -68,7 +68,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 15,
         "descripcion": "Carne de venado seleccionada, ideal para preparaciones gourmet.",
-        "img": "Estilos/img_produc/CarneVenado.jpg"
+        "img": "Estilos/img/img_produc/CarneVenado.jpg"
     },
     {
         "id": "manzana-roja-selecta",
@@ -79,7 +79,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 120,
         "descripcion": "Manzana roja fresca seleccionada.",
-        "img": "Estilos/img_produc/descargar.jpg"
+        "img": "Estilos/img/img_produc/descargar.jpg"
     },
     {
         "id": "fresa",
@@ -90,7 +90,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 60,
         "descripcion": "Fresas frescas de temporada.",
-        "img": "Estilos/img_produc/Fresa.jpg"
+        "img": "Estilos/img/img_produc/Fresa.jpg"
     },
     {
         "id": "juego-cubiertos",
@@ -101,7 +101,7 @@ const productosDB = [
         "origen": "Importado",
         "stock": 20,
         "descripcion": "Juego de cubiertos de acero inoxidable.",
-        "img": "Estilos/img_produc/juego-cubiertos.jpg"
+        "img": "Estilos/img/img_produc/juego-cubiertos.jpg"
     },
     {
         "id": "leche-gloria",
@@ -112,7 +112,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 200,
         "descripcion": "Leche evaporada Gloria.",
-        "img": "Estilos/img_produc/Leche-gloria.jpg"
+        "img": "Estilos/img/img_produc/Leche-gloria.jpg"
     },
     {
         "id": "leche-nestle",
@@ -123,7 +123,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 180,
         "descripcion": "Leche evaporada Nestlé.",
-        "img": "Estilos/img_produc/LecheNestle.jpg"
+        "img": "Estilos/img/img_produc/LecheNestle.jpg"
     },
     {
         "id": "licuadora-profesional",
@@ -134,7 +134,7 @@ const productosDB = [
         "origen": "Importado",
         "stock": 15,
         "descripcion": "Licuadora profesional de alta potencia.",
-        "img": "Estilos/img_produc/licuadora-profesional.jpg"
+        "img": "Estilos/img/img_produc/licuadora-profesional.jpg"
     },
     {
         "id": "mantequilla-gloria",
@@ -145,7 +145,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 90,
         "descripcion": "Mantequilla Gloria de excelente calidad.",
-        "img": "Estilos/img_produc/MantequillaGloria.jpg"
+        "img": "Estilos/img/img_produc/MantequillaGloria.jpg"
     },
     {
         "id": "mayonesa",
@@ -156,7 +156,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 80,
         "descripcion": "Mayonesa cremosa ideal para acompañar tus comidas.",
-        "img": "Estilos/img_produc/Mayonesa.jpg"
+        "img": "Estilos/img/img_produc/Mayonesa.jpg"
     },
     {
         "id": "naranja",
@@ -167,7 +167,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 150,
         "descripcion": "Naranja fresca y jugosa.",
-        "img": "Estilos/img_produc/Naranja.jpg"
+        "img": "Estilos/img/img_produc/Naranja.jpg"
     },
     {
         "id": "palta",
@@ -178,7 +178,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 70,
         "descripcion": "Palta Hass de primera calidad.",
-        "img": "Estilos/img_produc/palta.jpg"
+        "img": "Estilos/img/img_produc/palta.jpg"
     },
     {
         "id": "pera",
@@ -189,7 +189,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 80,
         "descripcion": "Pera fresca y dulce.",
-        "img": "Estilos/img_produc/Pera.jpg"
+        "img": "Estilos/img/img_produc/Pera.jpg"
     },
     {
         "id": "pina",
@@ -200,7 +200,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 50,
         "descripcion": "Piña fresca de sabor dulce.",
-        "img": "Estilos/img_produc/Piña.jpg"
+        "img": "Estilos/img/img_produc/Piña.jpg"
     },
     {
         "id": "pollo-entero",
@@ -211,7 +211,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 40,
         "descripcion": "Pollo entero fresco.",
-        "img": "Estilos/img_produc/pollo-entero.jpg"
+        "img": "Estilos/img/img_produc/pollo-entero.jpg"
     },
     {
         "id": "queso",
@@ -222,7 +222,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 60,
         "descripcion": "Queso fresco artesanal.",
-        "img": "Estilos/img_produc/queso.jpg"
+        "img": "Estilos/img/img_produc/queso.jpg"
     },
     {
         "id": "set-sartenes",
@@ -233,7 +233,7 @@ const productosDB = [
         "origen": "Importado",
         "stock": 15,
         "descripcion": "Set de sartenes antiadherentes.",
-        "img": "Estilos/img_produc/set-sartenes.jpg"
+        "img": "Estilos/img/img_produc/set-sartenes.jpg"
     },
     {
         "id": "tomate",
@@ -244,7 +244,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 100,
         "descripcion": "Tomate fresco de excelente calidad.",
-        "img": "Estilos/img_produc/tomate.jpg"
+        "img": "Estilos/img/img_produc/tomate.jpg"
     },
     {
         "id": "vinagre-manzana",
@@ -255,7 +255,7 @@ const productosDB = [
         "origen": "Importado",
         "stock": 45,
         "descripcion": "Vinagre de manzana natural.",
-        "img": "Estilos/img_produc/VinagreManzana.jpg"
+        "img": "Estilos/img/img_produc/VinagreManzana.jpg"
     },
     {
         "id": "vino-queirolo",
@@ -266,7 +266,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 35,
         "descripcion": "Vino tinto peruano Queirolo.",
-        "img": "Estilos/img_produc/VinoQueirolo.jpg"
+        "img": "Estilos/img/img_produc/VinoQueirolo.jpg"
     },
     {
         "id": "vino-tabernero",
@@ -277,7 +277,7 @@ const productosDB = [
         "origen": "Nacional",
         "stock": 35,
         "descripcion": "Vino Tabernero de excelente calidad.",
-        "img": "Estilos/img_produc/VinoTabernero.jpg"
+        "img": "Estilos/img/img_produc/VinoTabernero.jpg"
     }
 
 ];

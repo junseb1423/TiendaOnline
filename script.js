@@ -1,4 +1,3 @@
-// 1. Estado global del carrito
 const carrito = [];
 const badgeCarrito = document.querySelector('.cart-badge, .cart-count, .contador-carrito');
 const contenedorCarrito = document.querySelector('#carrito-items');
@@ -8,24 +7,20 @@ const elementoToast = document.getElementById('notificacion-carrito');
 const toastBootstrap = new bootstrap.Toast(elementoToast, { delay: 3000 }); // Se ocultará solo en 3 segundos
 const contenedorMensajeToast = document.getElementById('mensaje-toast');
 
-// 2. Función auxiliar para formatear la moneda (Soles Peruanos)
 function formatoSoles(numero) {
     return `S/ ${numero.toFixed(2)}`;
 }
 
-// 3. Función principal para pintar el carrito en la interfaz
 function actualizarCarrito() {
     let cantidadTotal = 0;
     let total = 0;
 
-    // Limpiamos el contenedor para evitar duplicados visuales
     contenedorCarrito.innerHTML = '';
 
     carrito.forEach((producto) => {
         cantidadTotal += producto.cantidad;
         total += producto.precio * producto.cantidad;
 
-        // Renderizado dinámico con diseño premium
         contenedorCarrito.innerHTML += `
             <div class="cart-item d-flex gap-3 align-items-center mb-3 shadow-sm border rounded-4 p-3 bg-white">
                 <div class="cart-item-img-wrap bg-light rounded-3 overflow-hidden d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; flex-shrink: 0;">
