@@ -153,32 +153,42 @@ console.log("Supermercados RB - Sistema de órdenes activo.");
     5. CONTENEDOR DE CATALOGO PARA LOS PRODUCTOS (FRUTAS)
    ========================================================================== */
 
-const contenedorFrutas = document.getElementById('catalogo-frutas');
-const contenedorLacteos = document.getElementById('catalogo-lacteos');
 
-// UNA SOLA FUNCIÓN INTELIGENTE PARA TODO EL SUPERMERCADO
-function renderizarCategoria(nombreCategoria, idContenedor) {
+function renderizarCategoria(nombreCategoriaOBloque, idContenedor) {
     const contenedor = document.getElementById(idContenedor);
-    if (!contenedor) return; // Si no existe el bloque en esta página, se salta
+    if (!contenedor) return; 
 
-    contenedor.innerHTML = '';
+    const tarjetaFija = contenedor.querySelector('.custom-view-more-card')?.parentElement;
 
-    // Filtramos dinámicamente según la categoría que le pasemos y cortamos a 3
-    const productosFiltrados = productosDB.filter(producto => 
-        producto.categoria && producto.categoria.toLowerCase() === nombreCategoria.toLowerCase()
-    ).slice(0, 4);
+    if (tarjetaFija) {
+        contenedor.querySelectorAll('.col:not(#tarjeta-explorar-hogar)').forEach(el => el.remove());
+    } else {
+        contenedor.innerHTML = '';
+    }
+
+    const limiteEspecial = tarjetaFija ? 3 : 4;
+    let productosFiltrados = [];
+    
+    if (Array.isArray(nombreCategoriaOBloque)) {
+        productosFiltrados = nombreCategoriaOBloque.slice(0, limiteEspecial);
+    } else {
+        productosFiltrados = productosDB.filter(producto => 
+            producto.categoria && producto.categoria.toLowerCase() === nombreCategoriaOBloque.toLowerCase()
+        ).slice(0, limiteEspecial);
+    }
 
     if (productosFiltrados.length === 0) {
-        contenedor.innerHTML = `<div class="col-12 text-center text-muted"><p>No hay productos disponibles en esta categoría.</p></div>`;
+        if (!tarjetaFija) {
+            contenedor.innerHTML = `<div class="col-12 text-center text-muted"><p>No hay productos disponibles en esta categoría.</p></div>`;
+        }
         return;
     }
 
-    // Dibujamos las tarjetas (El mismo HTML premium que ya tienes)
     productosFiltrados.forEach(producto => {
-        contenedor.innerHTML += `
+        const htmlTarjeta = `
             <div class="col">
                 <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 160px;">
                         <img src="${producto.img}" class="card-img-top img-fluid p-3" alt="${producto.nombre}" style="max-height: 100%; object-fit: contain;">
                         <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">${producto.origen || 'Nacional'}</span>
                     </div>
@@ -198,14 +208,30 @@ function renderizarCategoria(nombreCategoria, idContenedor) {
                 </div>
             </div>
         `;
+
+        if (tarjetaFija) {
+            tarjetaFija.insertAdjacentHTML('beforebegin', htmlTarjeta);
+        } else {
+            contenedor.innerHTML += htmlTarjeta;
+        }
     });
 }
 
 window.addEventListener('DOMContentLoaded', function() {
     console.log("Comprobando base de datos antes de renderizar...", typeof productosDB !== 'undefined' ? productosDB : "No encontrada");
+    
+    // 1. Filtramos primero los destacados por ID usando productosDB
+    const idsDestacados = ["arandanos", "queso", "vino-queirolo", "cafe-jaen"];
+    const mejoresProductos = productosDB.filter(prod => idsDestacados.includes(prod.id));
+    
+    // 2. Ejecutamos la carga de los destacados pasándole el ARRAY
+    renderizarCategoria(mejoresProductos, "contenedor-mejores-productos");
+
+    // 3. Tus categorías normales pasándole el TEXTO de siempre
     renderizarCategoria("Frutas", "catalogo-frutas");
     renderizarCategoria("Lácteos", "catalogo-lacteos");
     renderizarCategoria("Carnes", "catalogo-carnes");
     renderizarCategoria("Despensa", "catalogo-despensa");
     renderizarCategoria("Bebidas", "catalogo-bebidas");
+    renderizarCategoria("Hogar", "catalogo-hogar");
 });

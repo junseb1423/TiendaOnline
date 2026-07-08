@@ -15,14 +15,18 @@
 <header class="navbar navbar-expand-lg custom-header">
     <div class="container-fluid header-container">
         <div class="row align-items-center header-row">
+            
+            <!-- LOGO: En celulares y tablets grandes toma 6 columnas -->
             <div class="col-6 col-lg-2 d-flex align-items-center">
                 <a href="index.html" class="navbar-brand brand-wrap" title="RB MARKET">
                     <img src="/Estilos/img_categorias/LogoRB.png" alt="RB Market Logo" class="custom-logo-img img-fluid">
                     <span class="brand-subtext">SUPERMERCADO</span>
                 </a>
             </div>
-            <div class="col-3 col-lg-2 order-2 d-flex align-items-center justify-content-start">
-                <button class="custom-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
+
+            <!-- MENÚ PARA PC: Le agregamos d-lg-block para que en menos de 992px NO ocupe espacio físico -->
+            <div class="col-lg-2 order-lg-2 d-none d-lg-flex align-items-center justify-content-start">
+                <button class="custom-toggle-btn d-none d-lg-inline-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-lateral" aria-controls="menu-lateral" title="Explorar Categorías">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 6H20M4 12H20M4 18H20" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -30,19 +34,33 @@
                 </button>
             </div>
             <div class="col-12 col-lg-4 order-4 order-lg-3 mt-2 mt-lg-0">
-                <form class="search-form-wrap" action="#" method="GET">
-                    <div class="input-group custom-search-group">
-                        <input type="text" class="form-control custom-search-input" placeholder="Buscar en RB Market...">
-                        <button type="submit" class="search-btn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
+                <div class="d-flex align-items-center gap-2">
+                    
+                    <button class="custom-toggle-btn d-lg-none d-flex align-items-center justify-content-center border rounded-circle p-0" 
+                            type="button" 
+                            data-bs-toggle="offcanvas" 
+                            data-bs-target="#menu-lateral" 
+                            aria-controls="menu-lateral" 
+                            title="Explorar Categorías">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <form class="search-form-wrap flex-grow-1 m-0" action="#" method="GET">
+                        <div class="input-group custom-search-group">
+                            <input type="text" class="form-control custom-search-input" placeholder="Buscar en RB Market..." style="height: 42px;">
+                            <button type="submit" class="search-btn" style="height: 42px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col-3 col-lg-4 order-3 order-lg-4 d-flex align-items-center justify-content-end gap-2 gap-xl-4">
+            <div class="col-6 col-lg-4 order-3 order-lg-4 d-flex align-items-center justify-content-end gap-2 gap-xl-4">
                 <div class="d-none d-lg-flex align-items-center gap-1 header-action-item">
                     <div class="d-flex flex-column lh-sm">
                         <span class="login-greeting">Hola,</span>
@@ -64,7 +82,7 @@
                     </button>
                 </div>
                 <div class="border-start-lg ps-lg-3">
-                    <button class="btn custom-cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito-lateral" aria-controls="carrito-lateral">
+                    <button class="btn custom-cart-btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito-lateral" aria-controls="carrito-lateral">
                         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-dark">
                             <circle cx="9" cy="21" r="1"></circle>
                             <circle cx="20" cy="21" r="1"></circle>
@@ -75,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-100 d-flex justify-content-between align-items-center default-layout-subbar">
+        <div class="w-100 d-flex justify-content-between align-items-center default-layout-subbar mt-2">
             <div class="subbar-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
@@ -235,7 +253,7 @@
                 </a>
             </div>
             
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-frutas">
+            <div class="row row-cols-3 row-cols-md-4 g-4" id="catalogo-frutas">
                 </div>
         </div>
 
@@ -251,7 +269,7 @@
                 </a>
             </div>
                 
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-lacteos">
+            <div class="row row-cols-3 row-cols-md-4 g-4" id="catalogo-lacteos">
                 </div>
         </div>
 
@@ -267,7 +285,7 @@
                 </a>
             </div>
                 
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-carnes">
+            <div class="row row-cols-3 row-cols-md-4 g-4" id="catalogo-carnes">
                 </div>
         </div>
 
@@ -283,7 +301,7 @@
                 </a>
             </div>
                 
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-despensa">
+            <div class="row row-cols-3 row-cols-md-4 g-4" id="catalogo-despensa">
                 </div>
         </div>
 
@@ -299,7 +317,7 @@
                 </a>
             </div>
             
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="catalogo-bebidas">
+            <div class="row row-cols-3 row-cols-md-4 g-4" id="catalogo-bebidas">
                 </div>
         </div>
     </div>    
@@ -356,6 +374,7 @@
     </div>
 </section>
 
+
 <section id="hogar-cocina" class="seccion-contenedor seccion-blanca-alterna">
     <div class="container px-4">
         
@@ -367,65 +386,9 @@
             <a href="#hogar" class="text-success fw-bold text-uppercase small tracking-wider link-ver-todo">Ver Todo</a>
         </div>
         
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-            
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="Estilos/img_produc/licuadora-profesional.jpg" class="card-img-top img-fluid p-3" alt="Licuadora Profesional Ultra" style="max-height: 100%; object-fit: contain;">
-                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Top Ventas</span>
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Electrohogar</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Licuadora Profesional Premium">Licuadora Profesional Premium</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 189.90</span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="Estilos/img_produc/set-sartenes.jpg" class="card-img-top img-fluid p-3" alt="Set de Sartenes Antiadherentes" style="max-height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Menaje</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Set de Sartenes Antiadherentes x3">Set de Sartenes Antiadherentes x3</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 89.90</span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="Estilos/img_produc/juego-cubiertos.jpg" class="card-img-top img-fluid p-3" alt="Juego de Cubiertos Acero Inoxidable" style="max-height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Mesa</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Juego de Cubiertos Acero Inox">Juego de Cubiertos Inox x24</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 45.00</span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <a href="#hogar" class="card h-100 border-0 shadow-sm rounded-4 text-decoration-none bg-success-subtle d-flex align-items-center justify-content-center p-4 text-center custom-view-more-card" style="min-height: 280px;">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4" id="catalogo-hogar">
+            <div class="col" id="tarjeta-explorar-hogar">
+                <a href="#hogar" class="card h-100 border-0 shadow-sm rounded-4 text-decoration-none bg-success-subtle d-flex align-items-center justify-content-center p-4 text-center custom-view-more-card">
                     <div class="text-success">
                         <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm btn-mas-wrap" style="width: 48px; height: 48px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
@@ -435,110 +398,15 @@
                     </div>
                 </a>
             </div>
-
         </div>
     </div>
 </section>
 
-<section id="mejores-productos" class="py-5 bg-light-subtle mejores-productos-con-logo">
-    <div class="container px-4">
+<section id="mejores-productos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fs-3 fw-bold text-dark mb-4">Los mejores productos para ti</h2>
+        <div id="contenedor-mejores-productos" class="row row-cols-2 row-cols-md-4 g-4"></div>
         
-        <div class="d-flex align-items-center justify-content-between mb-4 custom-category-header">
-            <div class="d-flex align-items-baseline gap-2">
-                <h2 class="fs-3 fw-black text-dark tracking-tight m-0 premium-category-title">Los mejores productos para ti</h2>
-                <span class="text-muted small fw-medium item-counter">Selección Personalizada</span>
-            </div>
-        </div>
-
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 grid-productos-con-logo">
-            
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="Estilos/img_produc/arandanos.jpg" class="card-img-top img-fluid p-3" alt="Arándanos Azules Orgánicos" style="max-height: 100%; object-fit: contain;">
-                        <span class="badge bg-success position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide text-white">100% Orgánico</span>
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Frutas</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Arándanos Azules Selectos 250g">Arándanos Azules Selectos 250g</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 8.90 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="data:image/jpeg;base64,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" class="card-img-top img-fluid p-3" alt="Queso Paria Artesanal" style="max-height: 100%; object-fit: contain;">
-                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Artesanal</span>
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Lácteos</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Queso Paria Maduro Selecto">Queso Paria Maduro Selecto</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 18.50 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="data:image/jpeg;base64,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" class="card-img-top img-fluid p-3" alt="Filete de Salmón Premium" style="max-height: 100%; object-fit: contain;">
-                        <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Fresco</span>
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Pescados</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Filete de Salmón Premium">Filete de Salmón Premium</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 45.00 <small class="text-muted fw-normal p-unit">/ kg</small></span>
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" title="Añadir a la orden" style="width: 36px; height: 36px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm rounded-4 custom-product-card">
-                    <div class="position-relative overflow-hidden card-img-wrap bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <img src="/Estilos/img_produc/Cafe_Jaen.jpg" class="card-img-top img-fluid p-3" alt="Café de Chachapoyas Gourmet" style="max-height: 100%; object-fit: contain;">
-                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 px-2 py-1 rounded small fw-bold tracking-wide">Local</span>
-                    </div>
-                    <div class="card-body p-3 d-flex flex-column">
-                        <span class="text-muted text-uppercase fw-semibold tracking-wider mb-1" style="font-size: 10px;">Cafetería</span>
-                        <h3 class="card-title fs-6 fw-bold text-dark mb-2 text-truncate" title="Café de Origen Chachapoyas 500g">Café Gourmet Jaen</h3>
-                        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                            <span class="fs-5 fw-black text-dark">S/ 26.00 <small class="text-muted fw-normal p-unit">/ und</small></span>
-                            
-                            <button class="btn btn-success p-0 d-flex align-items-center justify-content-center rounded-circle btn-agregar-orden" 
-                                    title="Añadir a la orden" 
-                                    style="width: 36px; height: 36px;"
-                                    data-id="cafe-jaen" 
-                                    data-nombre="Café Gourmet Jaen" 
-                                    data-precio="26.00" 
-                                    data-img="/Estilos/img_produc/Cafe_Jaen.jpg">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
 </section>
 

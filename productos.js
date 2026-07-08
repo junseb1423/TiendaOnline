@@ -130,7 +130,7 @@ const productosDB = [
         "nombre": "Licuadora Profesional",
         "marca": "Oster",
         "precio": 249.90,
-        "categoria": "Electrodomésticos",
+        "categoria": "Hogar",
         "origen": "Importado",
         "stock": 15,
         "descripcion": "Licuadora profesional de alta potencia.",
