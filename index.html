@@ -109,30 +109,65 @@
     </div>
 </header>
 
-<section id="banner-principal">
-    <div class="container"> 
-        <div id="carruselPromociones" class="carousel slide custom-carousel rounded-1 overflow-hidden" data-bs-ride="carousel">
+<section id="banner-principal" class="w-100 overflow-hidden">
+    <!-- Cambiado a container-fluid y p-0 para eliminar márgenes laterales -->
+    <div class="container-fluid p-0"> 
+        <div id="carruselPromociones" class="carousel slide custom-carousel overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-indicators custom-indicators">
                 <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
+                
+                <!-- SLIDE 1: CYBER RB -->
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <a href="#">
-                        <img src="Estilos/img/img_categorias/imgCyberBanner.png" class="d-block w-100 custom-carousel-img" alt="Promoción Cyber RB">
+                    <a href="#" class="position-relative d-block text-decoration-none">
+                        <img src="Estilos/img/img_categorias/Banner_Promo.png" class="d-block w-100 custom-carousel-img" alt="Promoción Cyber RB">
+                        <div class="carousel-caption custom-caption-left text-start">
+                            <span class="badge bg-danger text-white px-3 py-2 rounded-pill mb-2 text-uppercase fw-bold text-tracking">Cyber RB</span>
+                            <h2 class="display-5 fw-bold text-dark mb-1 banner-title">Descuentos de Locura</h2>
+                            <p class="text-secondary mb-3 d-none d-md-block banner-sub">Aprovecha las mejores ofertas de la semana sin salir de casa.</p>
+                            <span class="btn btn-success btn-lg px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm btn-banner-cta">
+                                Comprar Ahora
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ms-1" style="transform: translateY(-1px);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
                     </a>
                 </div>
+
+                <!-- SLIDE 2: FRUTAS Y VERDURAS -->
                 <div class="carousel-item" data-bs-interval="5000">
-                    <a href="frutas.html">
-                        <img src="Estilos/img/img_categorias/imgVerdurasBanner.png" class="d-block w-100 custom-carousel-img" alt="Descuento en Frutas y Verduras">
+                    <a href="frutas.html" class="position-relative d-block text-decoration-none">
+                        <img src="Estilos/img/img_categorias/Banner_Verduras.png" class="d-block w-100 custom-carousel-img" alt="Descuento en Frutas y Verduras">
+                        <div class="carousel-caption custom-caption-left text-start">
+                            <span class="badge bg-success text-white px-3 py-2 rounded-pill mb-2 text-uppercase fw-bold text-tracking">100% Fresco</span>
+                            <h2 class="display-5 fw-bold text-dark mb-1 banner-title">Frutas & Verduras</h2>
+                            <p class="text-secondary mb-3 d-none d-md-block banner-sub">Selección premium del campo directamente a tu mesa con rebajas top.</p>
+                            <span class="btn btn-success btn-lg px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm btn-banner-cta">
+                                Ver Catálogo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ms-1" style="transform: translateY(-1px);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
                     </a>
                 </div>
+
+                <!-- SLIDE 3: CARNES -->
                 <div class="carousel-item" data-bs-interval="5000">
-                    <a href="carnes.html">
-                        <img src="Estilos/img/img_categorias/imgCarneBanner.png" class="d-block w-100 custom-carousel-img" alt="Especial de Carnes Seleccionadas">
+                    <a href="carnes.html" class="position-relative d-block text-decoration-none">
+                        <img src="Estilos/img/img_categorias/Banner_Carne.png" class="d-block w-100 custom-carousel-img" alt="Especial de Carnes Seleccionadas">
+                        <div class="carousel-caption custom-caption-left text-start">
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-2 text-uppercase fw-bold text-tracking">Cortes Selectos</span>
+                            <h2 class="display-5 fw-bold text-dark mb-1 banner-title">Carnes Premium</h2>
+                            <p class="text-secondary mb-3 d-none d-md-block banner-sub">Máxima frescura, textura y sabor garantizados para tus parrillas.</p>
+                            <span class="btn btn-success btn-lg px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm btn-banner-cta">
+                                Compra Ya
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ms-1" style="transform: translateY(-1px);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
                     </a>
                 </div>
+
             </div>
             <button class="carousel-control-prev custom-control-btn" type="button" data-bs-target="#carruselPromociones" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -507,7 +542,7 @@
     </div>
 </section>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="notificacion-carrito" class="toast align-items-center text-white bg-success border-0 rounded-4 shadow" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex p-2 align-items-center">
             <div class="toast-body fw-medium d-flex align-items-center gap-2" id="mensaje-toast"></div>
