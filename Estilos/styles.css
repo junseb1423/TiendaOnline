@@ -894,6 +894,23 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
     z-index: 2; 
 }
 
+/*
+    ==========================================================================
+    FIN INTEGRACIÓN DEL LOGO DE FONDO EN SECCIÓN RECOMENDADOS
+    ==========================================================================
+*/
+/*
+==========================================
+    iniscio de sesion
+==========================================
+*/
+.login-card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+
 
 @media (min-width: 481px) {
 
