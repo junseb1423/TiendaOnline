@@ -147,9 +147,7 @@ console.log("Supermercados RB - Sistema de órdenes activo.");
 /* ==========================================================================
     5. CONTENEDOR DE CATALOGO PARA LOS PRODUCTOS (FRUTAS)
    ========================================================================== */
-
-
-function renderizarCategoria(nombreCategoriaOBloque, idContenedor) {
+function renderizarCategoria(nombreCategoriaOBloque, idContenedor, esBusqueda = false) {    
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return; 
 
@@ -165,11 +163,12 @@ function renderizarCategoria(nombreCategoriaOBloque, idContenedor) {
     let productosFiltrados = [];
     
     if (Array.isArray(nombreCategoriaOBloque)) {
-        productosFiltrados = nombreCategoriaOBloque.slice(0, limiteEspecial);
+        productosFiltrados = esBusqueda ? nombreCategoriaOBloque : nombreCategoriaOBloque.slice(0, limiteEspecial);
     } else {
-        productosFiltrados = productosDB.filter(producto => 
+        const resultadoFiltro = productosDB.filter(producto => 
             producto.categoria && producto.categoria.toLowerCase() === nombreCategoriaOBloque.toLowerCase()
-        ).slice(0, limiteEspecial);
+        );
+        productosFiltrados = esBusqueda ? resultadoFiltro : resultadoFiltro.slice(0, limiteEspecial);
     }
 
     if (productosFiltrados.length === 0) {
@@ -222,7 +221,6 @@ window.addEventListener('DOMContentLoaded', function() {
     // 2. Ejecutamos la carga de los destacados pasándole el ARRAY
     renderizarCategoria(mejoresProductos, "contenedor-mejores-productos");
 
-    // 3. Tus categorías normales pasándole el TEXTO de siempre
     renderizarCategoria("Frutas", "catalogo-frutas");
     renderizarCategoria("Lácteos", "catalogo-lacteos");
     renderizarCategoria("Carnes", "catalogo-carnes");
@@ -230,3 +228,31 @@ window.addEventListener('DOMContentLoaded', function() {
     renderizarCategoria("Bebidas", "catalogo-bebidas");
     renderizarCategoria("Hogar", "catalogo-hogar");
 });
+
+// ============================================================
+// PROCESADOR PROFESIONAL PARA PÁGINA DE BÚSQUEDA
+// ============================================================
+function procesarPaginaBusqueda() {
+    const idContenedorResultados = "catalogo-resultados";
+    const contenedorResultados = document.getElementById(idContenedorResultados);
+
+    if (!contenedorResultados) return; 
+
+    const parametrosURL = new URLSearchParams(window.location.search);
+    const terminoBuscado = parametrosURL.get('q')?.toLowerCase().trim() || "";
+
+    const txtTitulo = document.getElementById('titulo-busqueda');
+    if (txtTitulo && terminoBuscado) {
+        txtTitulo.innerHTML = `Resultados para: <span class="text-success">"${terminoBuscado}"</span>`;
+    }
+
+    const productosEncontrados = productosDB.filter(producto => {
+        return producto.nombre.toLowerCase().includes(terminoBuscado) || 
+            (producto.descripcion && producto.descripcion.toLowerCase().includes(terminoBuscado));
+    });
+
+    renderizarCategoria(productosEncontrados, idContenedorResultados, true);
+    
+}
+
+procesarPaginaBusqueda();

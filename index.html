@@ -47,9 +47,9 @@
                         </svg>
                     </button>
 
-                    <form class="search-form-wrap flex-grow-1 m-0" action="#" method="GET">
+                    <form class="search-form-wrap flex-grow-1 m-0" action="busqueda.html" method="GET">
                         <div class="input-group custom-search-group">
-                            <input type="text" class="form-control custom-search-input" placeholder="Buscar en RB Market..." style="height: 42px;">
+                            <input type="text" name="q" class="form-control custom-search-input" placeholder="Buscar en RB Market..." style="height: 42px;">
                             <button type="submit" class="search-btn" style="height: 42px;">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="11" cy="11" r="8"></circle>
@@ -235,6 +235,40 @@
     </div>
 </div>
 
+<div class="offcanvas offcanvas-end border-0 cart-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label">
+    
+    <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between bg-white">
+        <div class="d-flex flex-column" id="carrito-lateral-label">
+            <span class="fs-4 fw-black text-dark tracking-tight canvas-brand-text">Mi<span class="text-success fw-light">Orden</span></span>
+            <small class="text-muted canvas-brand-subtext tracking-wider text-uppercase" style="font-size: 10px;">Resumen de Compra</small>
+        </div>
+        <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+    </div>
+
+    <div class="offcanvas-body p-4 cart-offcanvas-body">
+        <div id="carrito-items" class="d-flex flex-column gap-3">
+            </div>
+    </div>
+
+    <div class="cart-offcanvas-footer p-4 bg-white border-top">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="text-muted fw-medium">Subtotal</span>
+            <strong id="carrito-subtotal" class="text-dark fw-semibold">S/ 0.00</strong>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="text-dark fw-bold fs-5">Total Estimado</span>
+            <strong id="carrito-total" class="text-success fw-black fs-4">S/ 0.00</strong>
+        </div>
+
+        <button class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm custom-checkout-btn" id="btn-pagar">
+            Proceder al Pago
+        </button>
+    </div>
+</div>
+
 <section class="custom-hero py-5 mb-5 d-flex align-items-center">
     <div class="container px-4">
         <div class="row align-items-center g-4">
@@ -409,7 +443,6 @@
     </div>
 </section>
 
-
 <section id="hogar-cocina" class="seccion-contenedor seccion-blanca-alterna">
     <div class="container px-4">
         
@@ -444,40 +477,6 @@
         
     </div>
 </section>
-
-<div class="offcanvas offcanvas-end border-0 cart-offcanvas" tabindex="-1" id="carrito-lateral" aria-labelledby="carrito-lateral-label">
-    
-    <div class="offcanvas-header border-bottom py-4 px-4 d-flex align-items-center justify-content-between bg-white">
-        <div class="d-flex flex-column" id="carrito-lateral-label">
-            <span class="fs-4 fw-black text-dark tracking-tight canvas-brand-text">Mi<span class="text-success fw-light">Orden</span></span>
-            <small class="text-muted canvas-brand-subtext tracking-wider text-uppercase" style="font-size: 10px;">Resumen de Compra</small>
-        </div>
-        <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-    </div>
-
-    <div class="offcanvas-body p-4 cart-offcanvas-body">
-        <div id="carrito-items" class="d-flex flex-column gap-3">
-            </div>
-    </div>
-
-    <div class="cart-offcanvas-footer p-4 bg-white border-top">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <span class="text-muted fw-medium">Subtotal</span>
-            <strong id="carrito-subtotal" class="text-dark fw-semibold">S/ 0.00</strong>
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <span class="text-dark fw-bold fs-5">Total Estimado</span>
-            <strong id="carrito-total" class="text-success fw-black fs-4">S/ 0.00</strong>
-        </div>
-
-        <button class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase tracking-wide shadow-sm custom-checkout-btn" id="btn-pagar">
-            Proceder al Pago
-        </button>
-    </div>
-</div>
 
 <section id="contacto" class="py-5 bg-light-subtle">
     <div class="container px-4">
