@@ -493,13 +493,28 @@ body{
    ========================================================================== */
 
 .custom-hero{
-    background: radial-gradient(
-        circle at 90% 10%,
-        var(--hero-bg-start) 0%,
-        var(--hero-bg-end) 60%
-    );
-    min-height:var(--hero-min-height);
-    overflow:hidden;
+    position: relative;
+    background-color: #e7f0ec;
+    min-height: var(--hero-min-height);
+    overflow: hidden;
+}
+
+.custom-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("img/img_categorias/i-like-food.svg");
+    background-repeat: repeat;
+    background-size: 190px 190px;
+    background-position: center;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.custom-hero > .container {
+    position: relative;
+    z-index: 1;
+
 }
 
 .hero-title{
