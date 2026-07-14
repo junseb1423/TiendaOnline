@@ -255,16 +255,42 @@ window.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    const idsDestacados = ["arandanos", "queso", "vino-queirolo", "cafe-jaen"];
-    const mejoresProductos = productosDB.filter(prod => idsDestacados.includes(prod.id));
-    
-    renderizarCategoria(mejoresProductos, "contenedor-mejores-productos");
-    renderizarCategoria("Frutas", "catalogo-frutas");
-    renderizarCategoria("Lácteos", "catalogo-lacteos");
-    renderizarCategoria("Carnes", "catalogo-carnes");
-    renderizarCategoria("Despensa", "catalogo-despensa");
-    renderizarCategoria("Bebidas", "catalogo-bebidas");
-    renderizarCategoria("Hogar", "catalogo-hogar");
+    if (document.getElementById('catalogo-frutas')) {
+        const idsDestacados = ["arandanos", "queso", "vino-queirolo", "cafe-jaen"];
+        const mejoresProductos = productosDB.filter(prod => idsDestacados.includes(prod.id));
+        
+        renderizarCategoria(mejoresProductos, "contenedor-mejores-productos");
+        renderizarCategoria("Frutas", "catalogo-frutas");
+        renderizarCategoria("Lácteos", "catalogo-lacteos");
+        renderizarCategoria("Carnes", "catalogo-carnes");
+        renderizarCategoria("Despensa", "catalogo-despensa");
+        renderizarCategoria("Bebidas", "catalogo-bebidas");
+        renderizarCategoria("Hogar", "catalogo-hogar");
+    }
+
+    const contenedorDinamico = document.getElementById('catalogo-categoria-dinamica');
+    if (contenedorDinamico) {
+        // Obtenemos los parámetros de la URL (ej: ?cat=Lácteos)
+        const parametrosURL = new URLSearchParams(window.location.search);
+        const categoriaSeleccionada = parametrosURL.get('cat'); // Captura el valor de 'cat'
+
+        if (categoriaSeleccionada) {
+            // Actualizamos el título de la pestaña del navegador
+            document.title = `${categoriaSeleccionada} - Supermercado RB`;
+            
+            // Actualizamos el título H2 visual en la página
+            const tituloDinamico = document.getElementById('nombre-categoria-dinamica');
+            if (tituloDinamico) {
+                tituloDinamico.textContent = categoriaSeleccionada;
+            }
+
+            // Renderizamos todos los productos que coincidan con esa categoría exacta
+            renderizarCategoria(categoriaSeleccionada, 'catalogo-categoria-dinamica', true);
+        } else {
+            // Por si alguien entra a 'categoria.html' sin especificar ninguna categoría
+            contenedorDinamico.innerHTML = `<p class="text-muted text-center col-12">Por favor, selecciona una categoría válida.</p>`;
+        }
+    }
 });
 
 function procesarPaginaBusqueda() {
