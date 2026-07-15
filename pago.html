@@ -26,12 +26,9 @@
 
     <main class="container mb-5">
         <div class="row g-5">
-            
-            <!-- COLUMNA IZQUIERDA: FORMULARIO DE CLIENTE -->
             <div class="col-lg-7">
                 <div class="card p-4 shadow-sm border-0" style="border-radius: 12px;">
-                    <h3 class="fw-bold mb-4">Datos de Facturación y Envío</h3>
-                    
+                    <h3 class="fw-bold mb-4">Datos de Facturación y Envío</h3>                   
                     <form id="form-pasarela-pago">
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -42,7 +39,6 @@
                                 <label class="form-label small fw-semibold">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="pago-correo" required placeholder="juan@ejemplo.com">
                             </div>
-
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold">Tipo de Comprobante</label>
                                 <select class="form-select" id="pago-tipo-doc" required>
@@ -54,13 +50,11 @@
                                 <label class="form-label small fw-semibold" id="label-documento">Número de DNI</label>
                                 <input type="text" class="form-control" id="pago-documento" required placeholder="Escribe tus 8 dígitos">
                             </div>
-
                             <div class="col-12">
                                 <label class="form-label small fw-semibold">Dirección de Entrega</label>
                                 <input type="text" class="form-control" id="pago-direccion" required placeholder="Av. Larco 123, Miraflores">
                             </div>
                         </div>
-
                         <hr class="my-4">
                         <h4 class="fw-bold mb-3">Método de Pago Simulado</h4>
                         
@@ -70,7 +64,6 @@
                                 <input type="text" class="form-control" id="pago-tarjeta" required placeholder="4111 2222 3333 4444" maxlength="16">
                             </div>
                         </div>
-
                         <!-- Botón principal cambiado a btn-danger (Rojo definitivo) -->
                         <button type="submit" class="btn btn-danger w-100 py-3 fw-bold mt-4" style="border-radius: 8px; letter-spacing: 0.5px;">
                             Confirmar y Pagar S/ <span id="total-boton-pago">0.00</span>
@@ -78,7 +71,6 @@
                     </form>
                 </div>
             </div>
-
             <!-- COLUMNA DERECHA: RESUMEN DEL PEDIDO -->
             <div class="col-lg-5">
                 <div class="card p-4 shadow-sm border-0 text-bg-dark" style="border-radius: 12px;">
@@ -87,9 +79,7 @@
                     <div id="resumen-productos-pago" class="mb-4" style="max-height: 250px; overflow-y: auto;">
                         <!-- JS inyectará los productos aquí -->
                     </div>
-
                     <hr class="border-secondary">
-
                     <div class="d-flex justify-content-between mb-2">
                         <span class="text-secondary">Subtotal</span>
                         <span id="subtotal-pago">S/ 0.00</span>
@@ -101,7 +91,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
