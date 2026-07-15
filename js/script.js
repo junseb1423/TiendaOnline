@@ -357,22 +357,14 @@ if (btnProcederPago) {
     btnProcederPago.addEventListener('click', function (e) {
         e.preventDefault();
 
-        // Seguridad: No puedes pagar si no has comprado nada
+        // Si el carrito está vacío, no lo dejamos pasar
         if (carrito.length === 0) {
-            alert("Tu carrito está vacío. Agrega algunos productos antes de proceder al pago.");
+            alert("Tu carrito está vacío. Agrega productos antes de pagar, hermano.");
             return;
         }
 
-        // Si el carrito tiene productos, mostramos el formulario de pago
-        // Nota: Aquí puedes activar un modal de Bootstrap o mostrar una sección oculta
-        const seccionPago = document.getElementById('seccion-checkout');
-        if (seccionPago) {
-            seccionPago.classList.remove('d-none'); // Quitamos la clase que lo oculta
-            seccionPago.scrollIntoView({ behavior: 'smooth' }); // Efecto visual para bajar al formulario
-        } else {
-            // Si prefieres hacerlo simple con un prompt por ahora, o si no tienes la sección HTML creada:
-            abrirPasarelaSimulada();
-        }
+        // Si todo está bien, lo enviamos directamente a la nueva página de pago
+        window.location.href = "pago.html";
     });
 }
 

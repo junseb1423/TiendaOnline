@@ -371,13 +371,13 @@ body{
    ========================================================================== */
 
 .btn-banner-cta {
-    background: var(--color-primary) !important;
-    border: none !important;
+    background: var(--color-primary);
+    border: none;
     font-size: .95rem;
     font-weight: 600;
     padding: .9rem 1.8rem;
     border-radius: 50px;
-    transition: all .3s ease !important;
+    transition: all .3s ease;
 }
 
 .btn-banner-cta:hover {
@@ -908,6 +908,14 @@ SECCIÓN DE PRODUCTOS & CATÁLOGO PREMIUM
             border: none;
             border-radius: 1rem;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+.nav-pills .nav-link.active {
+            background-color: #dc3545 !important; /* Rojo Bootstrap (danger) */
+            color: #fff !important;
+        }
+        .nav-pills .nav-link:not(.active) {
+            color: #495057 !important; /* Gris oscuro elegante */
         }
 
 
